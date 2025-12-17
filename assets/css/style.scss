@@ -1,0 +1,21 @@
+
+/*########## ミックスイン ##########*/
+@import 'mixin.scss';
+
+/*########## 共通レイアウト ##########*/
+@import 'common/animation.scss';
+@import 'common/reset.scss';
+@import 'common/form.scss';
+@import 'common/common.scss';
+@import 'common/header.scss';
+
+/*########## ページ個別レイアウト ##########*/
+@import 'pages/izuhonten.scss';
+
+
+/*########## コンポーネント ##########*/
+
+@import 'component/comp-page-background.scss';
+@import 'component/comp-index-loading.scss';
+@import 'component/comp-scroll-bar.scss';
+@import 'component/comp-scroll-indicator.scss';

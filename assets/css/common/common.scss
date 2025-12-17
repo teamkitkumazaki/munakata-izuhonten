@@ -1,0 +1,118 @@
+html{
+	font-size: 9px;
+	overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+	scrollbar-width: thin;
+	-webkit-overflow-scrolling: touch;
+	height: -webkit-fill-available;
+	/*scroll-behavior: smooth;*/
+	&::-webkit-scrollbar {
+		width: 0 !important;
+  	height: 0 !important;
+  	display: none !important;
+	}
+	&::-webkit-scrollbar-thumb {
+  	background: transparent !important;
+	}
+	@media screen and (min-width: 351px){
+		font-size: 10px;
+	}
+	@media screen and (min-width: 980px){
+		font-size: 9px;
+	}
+	@media screen and (min-width: 1341px){
+		font-size: 10px;
+	}
+	@media screen and (min-width: 1700px){
+		font-size: 11px;
+	}
+}
+
+body {
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+	font-size: 1.4rem;
+  line-height: 1;
+	letter-spacing: 0.02em;
+  color: $fontColor;
+	background: #000;
+	font-weight: 500; // M 500, B 600
+	font-family: "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	padding-right: 1px;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: none !important;
+	background: #fff;
+	-webkit-overflow-scrolling: touch;
+	height: -webkit-fill-available;
+	overflow-x: unset !important;
+	h1,h2,h3,h4,h5{
+		font-weight: 400;
+	}
+	&.notoserif{
+		font-family: "Noto Serif JP","YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+		font-weight: 500;
+		h1,h2,h3,h4,h5{
+			font-weight: 400;
+		}
+	}
+	&.shippori{
+		font-family: "Shippori Mincho","YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+		font-weight: 500;
+		h1,h2,h3,h4,h5{
+			font-weight: 400;
+		}
+	}
+	&.zenold{
+		font-family: "Zen Old Mincho", "YuMincho", "游明朝", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "MS PMincho", serif;
+		font-weight: 500;
+		h1,h2,h3,h4,h5{
+			font-weight: 400;
+		}
+	}
+}
+body.bind {
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	margin: auto;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+article{
+	padding-top: 0px;
+	transition: opacity 2s;
+	will-change: opacity;
+	&.loading{
+		opacity: 0;
+	}
+}
+
+section{
+	.section_inner{
+		@include wrapper;
+		@media screen and (min-width: 720px){
+			min-width: 1200px;
+		}
+	}
+}
+
+button{
+	font-family: inherit;
+	font-weight: inherit;
+	background: transparent;
+	appearance: none;
+	border: none;
+	margin:0;
+	padding: 0;
+	color: inherit;
+	cursor: pointer;
+	&:focus{
+		outline: none;
+	}
+}
