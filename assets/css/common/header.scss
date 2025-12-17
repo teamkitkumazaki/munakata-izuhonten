@@ -9,32 +9,101 @@ header{
   pointer-events: none;
   .header_inner{
     padding: 20px 15px;
-    .header_logo{
-      position: relative;
-      width: 160px;
-      height: 36px;
-      img{
-        position: absolute;
-        top:0;
-        left:0;
-        transition: opacity .3s;
-        will-change: opacity;
-        &.black{
-          opacity: 0;
-        }
-      }
-    }
-  }
-  &.black_{
-    .header_inner{
+    @include flexSet;
+    align-items: center;
+    justify-content: space-between;
+    .header_left{
       .header_logo{
+        position: relative;
+        width: 160px;
+        height: 36px;
         img{
-          &.white{
+          position: absolute;
+          top:0;
+          left:0;
+          transition: opacity .3s;
+          will-change: opacity;
+          &.black{
             opacity: 0;
           }
-          &.black{
-            opacity: 1;
+        }
+      }
+      .header_navigation{
+        display: none;
+      }
+    }
+    .header_right{
+      @include flexSet;
+      align-items: center;
+      .lang_shifter{
+        display: none;
+        margin-right: 5px;
+        .header_lang{
+          font-size: 1.5rem;
+          @include flexSet;
+          align-items: center;
+          margin-right: 5px;
+          a{
+            display: block;
+            color: #acacac;
+            pointer-events: none;
+            &.en{
+              padding-right: 5px;
+            }
+            &.jp{
+              font-family: inherit !important;
+              padding-left: 5px;
+            }
+            &.active{
+              color: $fontColor;
+              pointer-events: all;
+            }
           }
+        }
+      }
+      .navigation_wrapper{
+        @include flexSet;
+        margin-right: 5px;
+        .nav_item{
+          margin-right: 10px;
+          a{
+            display: block;
+            img{
+              width: auto;
+              height: 24px;
+            }
+          }
+        }
+
+      }
+      .hummenu_wrap{
+        button{
+          position: relative;
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: $keyColor;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          span {
+						position: absolute;
+						width: 20px;
+						height: 1px;
+						left: 0;
+						right: 0;
+						margin: auto;
+						background: #fff;
+						margin: auto;
+						transition: background 0.1s, transform 0.1s;
+						will-change: background, transform;
+						&:nth-of-type(1) {
+							top: 22px;
+						}
+
+						&:nth-of-type(2) {
+							bottom: 22px;
+						}
+					}
         }
       }
     }

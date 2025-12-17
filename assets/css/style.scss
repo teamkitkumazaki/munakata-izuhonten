@@ -8,14 +8,19 @@
 @import 'common/form.scss';
 @import 'common/common.scss';
 @import 'common/header.scss';
+@import 'common/footer.scss';
 
 /*########## ページ個別レイアウト ##########*/
-@import 'pages/izuhonten.scss';
+@import 'pages/company.scss';
 
 
 /*########## コンポーネント ##########*/
 
-@import 'component/comp-page-background.scss';
+/*@import 'component/comp-page-background.scss';
 @import 'component/comp-index-loading.scss';
-@import 'component/comp-scroll-bar.scss';
-@import 'component/comp-scroll-indicator.scss';
+@import 'component/comp-scroll-bar.scss';*/
+
+/* 共通 */
+@import 'component/common/comp-page-bread.scss';
+@import 'component/common/comp-underpage-ttl.scss';
+@import 'component/common/comp-company-profile.scss';

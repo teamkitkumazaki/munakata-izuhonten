@@ -1,0 +1,18 @@
+.comp-company-profile{
+  border-top: 1px solid $fontColor;
+  .profile_item{
+    padding: 20px 0;
+    border-bottom: 1px solid $fontColor;
+    &:nth-last-of-type(1){
+      padding-bottom: 0;
+      border-bottom: 0px;
+    }
+    .ttl{
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .content{
+      @include basicP;
+    }
+  }
+}

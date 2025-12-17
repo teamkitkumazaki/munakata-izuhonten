@@ -1,0 +1,10 @@
+.comp-underpage-ttl{
+  .page_ttl{
+    font-size: 2.8rem;
+    line-height: 1.5;
+  }
+  .ttl_description{
+    margin-top: 10px;
+    @include basicP;
+  }
+}
