@@ -1,0 +1,185 @@
+.comp-hummenu{
+  position: fixed;
+  top:0;
+  left:0;
+  margin: auto;
+  width: 100%;
+  z-index: 1;
+  height: var(--wHeightPx);
+  overflow: hidden;
+  background: $keyColor;
+  pointer-events: none;
+  opacity:0;
+  line-height: 1;
+  will-change: opacity;
+  transition: opacity 0.3s;
+  &.open{
+    opacity:1;
+    z-index: 999;
+    pointer-events: all;
+    .hum_close{
+      opacity:1;
+      pointer-events: all;
+    }
+  }
+  .contents{
+    position: relative;
+    @include wrapper;
+    height: var(--wHeightPx);
+    margin: 0 auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .hummenu_inner{
+      padding: 100px 0 30px;
+      .hummenu_navigation{
+        margin-bottom: 20px;
+        .parent_ul{
+          @include flexSet;
+          align-items: flex-start;
+          .parent_li{
+            width: 50%;
+            margin-bottom: 35px;
+            .parent{
+              display: block;
+              font-size: 1.6rem;
+              color: #fff;
+              padding: 5px 0;
+            }
+            .children{
+              margin-top: 10px;
+              li{
+                margin-bottom: 10px;
+                a{
+                  position: relative;
+                  display: block;
+                  padding: 3px 0;
+                  font-size: 1.3rem;
+                  color: #fff;
+                  padding-left: 15px;
+                  &::before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    bottom:0;
+                    left:0;
+                    margin: auto;
+                    width: 7px;
+                    height: 1px;
+                    background: #fff;
+                  }
+                }
+              }
+            }
+            .outer_link_wrap{
+              margin-top: 10px;
+              .nav_item{
+                margin-bottom: 5px;
+                &:nth-last-of-type(1){
+                  margin-top: 10px;
+                }
+                a{
+                  padding: 5px 0;
+                  color: #fff;
+                  font-size: 1.4rem;
+                  @include flexSet;
+                  align-items: center;
+                  .img_wrap{
+                    width: 20px;
+                    text-align: center;
+                    margin-right: 10px;
+                    img{
+                      width: auto;
+                      height: 20px;
+                      margin: 0 auto;
+                      filter: invert(1);
+                    }
+                  }
+                  .caret{
+                    margin-left:9px;
+                    img{
+                      width: 9px;
+                      transform: translate(0,-2px);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .hummenu_lower{
+        position: absolute;
+        width: 100%;
+        left:0;
+        right:0;
+        bottom: 40px;
+        margin: auto;
+        .corp_sns_wrap{
+          @include flexSet;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+          .sns_item{
+            margin-right: 15px;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+            a{
+              display: block;
+              img{
+                width: auto;
+                height: 20px;
+              }
+            }
+          }
+        }
+        ul{
+          @include flexSet;
+          justify-content: center;
+          li{
+            position: relative;
+            line-height: 2.2;
+            padding-right: 10px;
+            margin-right: 10px;
+            &::before{
+              display: block;
+              content: "";
+              position: absolute;
+              top:0;
+              bottom:0;
+              right:0;
+              margin: auto;
+              width: 1px;
+              height: 12px;
+              background: #fff;
+            }
+            a{
+              display: block;
+              font-size: 1.3rem;
+              color: #fff;
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(5){
+              padding-right: 0px;
+              margin-right: 0px;
+              &::before{
+                display: none;
+              }
+            }
+            &.reline{
+              width: 100%;
+              &::before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

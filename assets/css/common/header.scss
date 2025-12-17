@@ -5,8 +5,6 @@ header{
   left:0;
   right: 0;
   margin: auto;
-  direction: ltr;
-  pointer-events: none;
   .header_inner{
     padding: 20px 15px;
     @include flexSet;
@@ -17,6 +15,8 @@ header{
         position: relative;
         width: 160px;
         height: 36px;
+        transition: filter .3s;
+        will-change: filter;
         img{
           position: absolute;
           top:0;
@@ -38,6 +38,8 @@ header{
       .lang_shifter{
         display: none;
         margin-right: 5px;
+        transition: filter .3s;
+        will-change: filter;
         .header_lang{
           font-size: 1.5rem;
           @include flexSet;
@@ -66,6 +68,8 @@ header{
         margin-right: 5px;
         .nav_item{
           margin-right: 10px;
+          transition: filter .3s;
+          will-change: filter;
           a{
             display: block;
             img{
@@ -99,11 +103,42 @@ header{
 						&:nth-of-type(1) {
 							top: 22px;
 						}
-
 						&:nth-of-type(2) {
 							bottom: 22px;
 						}
 					}
+        }
+      }
+    }
+  }
+  &.hum_open{
+    .header_inner{
+      .header_left{
+        .header_logo{
+          filter:invert(1);
+        }
+      }
+      .header_right{
+        .lang_shifter{
+          filter:invert(1);
+        }
+        .navigation_wrapper{
+          .nav_item{
+            filter:invert(1);
+          }
+
+        }
+        .hummenu_wrap{
+          button{
+            span {
+  						&:nth-of-type(1) {
+                transform:translateY(-3.5px) rotate(45deg);
+  						}
+  						&:nth-of-type(2) {
+                transform:translateY(3.5px) rotate(-45deg);
+  						}
+  					}
+          }
         }
       }
     }
