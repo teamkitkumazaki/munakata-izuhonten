@@ -10,3 +10,23 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .page-company{
+    padding-top: 180px;
+    padding-bottom: 160px;
+    .section-company{
+      .section_inner{
+        max-width: 980px;
+        min-width: unset;
+      }
+      .comp-page-bread{
+        margin-bottom: 10px;
+      }
+      .comp-underpage-ttl{
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+}

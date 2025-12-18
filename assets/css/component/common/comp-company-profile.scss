@@ -16,3 +16,38 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-company-profile{
+    border-top: 1px solid $fontColor;
+    .profile_item{
+      position: relative;
+      @include flexSet;
+      align-items: baseline;
+      padding: 30px 0;
+      border-bottom: 1px solid $fontColor;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        top:-1px;
+        left: 160px;
+        width: 15px;
+        height: 2px;
+        background: #fff;
+      }
+      .ttl{
+        width: 170px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        font-size: 1.6rem;
+        margin-bottom: 0px;
+      }
+      .content{
+        width: calc(100% - 170px);
+        padding-left: 5px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

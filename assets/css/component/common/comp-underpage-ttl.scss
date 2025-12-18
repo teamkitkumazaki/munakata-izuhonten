@@ -8,3 +8,14 @@
     @include basicP;
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-underpage-ttl{
+    .page_ttl{
+      font-size: 3.8rem;
+    }
+    .ttl_description{
+      margin-top: 15px;
+    }
+  }
+}
