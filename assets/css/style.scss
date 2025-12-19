@@ -13,6 +13,7 @@
 
 /*########## ページ個別レイアウト ##########*/
 @import 'pages/company.scss';
+@import 'pages/product.scss';
 
 
 /*########## コンポーネント ##########*/
@@ -25,3 +26,10 @@
 @import 'component/common/comp-page-bread.scss';
 @import 'component/common/comp-underpage-ttl.scss';
 @import 'component/common/comp-company-profile.scss';
+@import 'component/common/comp-ttl-group.scss';
+@import 'component/common/comp-underpage-main.scss';
+@import 'component/common/comp-arrow-button.scss';
+
+/* 商品 */
+@import 'component/product/comp-product-list.scss';
+@import 'component/product/comp-craft-detail.scss';

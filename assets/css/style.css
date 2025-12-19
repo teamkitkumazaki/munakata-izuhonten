@@ -1086,40 +1086,11 @@ footer .footer_inner .footer_lower .copyright {
     margin-bottom: 5px;
   }
   footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item:nth-last-of-type(1) {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item a {
     padding: 5px 0;
-    color: #fff;
-    font-size: 1.4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item a .img_wrap {
-    width: 20px;
-    text-align: center;
-    margin-right: 10px;
-  }
-  footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item a .img_wrap img {
-    width: auto;
-    height: 20px;
-    margin: 0 auto;
-    -webkit-filter: invert(1);
-            filter: invert(1);
-  }
-  footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item a .caret {
-    margin-left: 9px;
-  }
-  footer .footer_inner .footer_navigation .parent_ul .parent_li .outer_link_wrap .nav_item a .caret img {
-    width: 9px;
-    -webkit-transform: translate(0, -2px);
-            transform: translate(0, -2px);
+    font-size: 1.5rem;
   }
   footer .footer_inner .footer_corp_info .footer_logo {
     margin-bottom: 40px;
@@ -1455,6 +1426,77 @@ footer .footer_inner .footer_lower .copyright {
     margin-bottom: 50px;
   }
 }
+.page-product {
+  padding-bottom: 50px;
+}
+.page-product .section-main {
+  margin-bottom: 50px;
+}
+.page-product .section-products {
+  margin-bottom: 80px;
+}
+.page-product .section-products .ttl_wrapper {
+  margin-bottom: 40px;
+}
+.page-product .section-products2 {
+  margin-bottom: 80px;
+}
+.page-product .section-products2 .ttl_wrapper {
+  margin-bottom: 40px;
+}
+.page-product .section-gift {
+  margin-bottom: 80px;
+}
+.page-product .section-gift .gift_inner .gift_main_wrap .gift_ttl {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.page-product .section-gift .gift_inner .gift_main_wrap .gift_main_img {
+  margin-bottom: 50px;
+}
+.page-product .section-gift .gift_inner .gift_main_wrap .gift_main_img .pc_img {
+  display: none;
+}
+.page-product .section-gift .gift_inner .flex_wrapper {
+  width: 87vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 720px) {
+  .page-product .section-gift .gift_inner .flex_wrapper {
+    width: 83%;
+    max-width: 1590px;
+  }
+}
+.page-product .section-gift .gift_inner .flex_wrapper .gift_flex_wrap {
+  margin-bottom: 50px;
+}
+.page-product .section-gift .gift_inner .flex_wrapper .gift_flex_wrap:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.page-product .section-gift .gift_inner .flex_wrapper .gift_flex_wrap .gift_sub_ttl {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page-product .section-craftmanship .main_ttl_wrap .comp-ttl-group {
+  text-align: center;
+}
+.page-product .section-craftmanship .craftman_flex_wrap {
+  margin-bottom: 50px;
+}
+.page-product .section-craftmanship .craftman_flex_wrap .craft_ttl {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.page-product .section-craftmanship .craftman_flex_wrap .craft_img_wrap .pc_img {
+  display: none;
+}
+
 /*########## コンポーネント ##########*/
 /*@import 'component/comp-page-background.scss';
 @import 'component/comp-index-loading.scss';
@@ -1517,6 +1559,7 @@ footer .footer_inner .footer_lower .copyright {
 .comp-underpage-ttl .page_ttl {
   font-size: 2.8rem;
   line-height: 1.5;
+  text-indent: -0.1em;
 }
 .comp-underpage-ttl .ttl_description {
   margin-top: 10px;
@@ -1622,5 +1665,202 @@ footer .footer_inner .footer_lower .copyright {
     padding-left: 5px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+  }
+}
+.comp-ttl-group {
+  margin-bottom: 30px;
+}
+.comp-ttl-group .ttl_jp {
+  font-size: 2.8rem;
+  text-indent: -0.1em;
+  margin-bottom: 12px;
+}
+.comp-ttl-group .ttl_en {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.comp-underpage-main {
+  padding-top: 80px;
+}
+.comp-underpage-main .under_main_wrapper {
+  width: calc(100% - 20px);
+  margin-left: 20px;
+}
+.comp-underpage-main .under_main_wrapper .under_main_img {
+  margin-bottom: 30px;
+}
+.comp-underpage-main .under_main_wrapper .under_main_img .pc_img {
+  display: none;
+}
+.comp-underpage-main .under_main_wrapper .under_main_txt .comp-page-bread {
+  margin-bottom: 10px;
+}
+
+.comp-arrow-button a, .comp-arrow-button button {
+  width: 50%;
+  position: relative;
+  font-size: 1.6rem;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.comp-arrow-button a .caret, .comp-arrow-button button .caret {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.comp-arrow-button a .caret.down, .comp-arrow-button button .caret.down {
+  background-size: 16px;
+  background-image: url(../img/common/caret_down.svg);
+  background-position: center top 0px;
+}
+.comp-arrow-button a .line, .comp-arrow-button button .line {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: relative;
+  overflow: hidden;
+}
+.comp-arrow-button a .line::before, .comp-arrow-button a .line::after, .comp-arrow-button button .line::before, .comp-arrow-button button .line::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.comp-arrow-button a .line::before, .comp-arrow-button button .line::before {
+  left: -600%;
+  width: 0;
+}
+.comp-arrow-button a:hover .line::before, .comp-arrow-button button:hover .line::before {
+  left: 0;
+  width: 100%;
+}
+.comp-arrow-button a:hover .line::after, .comp-arrow-button button:hover .line::after {
+  left: 100%;
+}
+
+/* 商品 */
+.comp-product-list .product_item {
+  margin-bottom: 45px;
+}
+.comp-product-list .product_item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.comp-product-list .product_item .product_img {
+  margin-bottom: 25px;
+}
+.comp-product-list .product_item .product_img a {
+  display: block;
+}
+.comp-product-list .product_item .product_txt .prod_name {
+  margin-bottom: 10px;
+}
+.comp-product-list .product_item .product_txt .prod_name a {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  color: inherit;
+}
+.comp-product-list .product_item .product_txt .prod_description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.comp-product-list .product_item .product_txt .prod_description p {
+  margin-bottom: 1em;
+}
+.comp-product-list .product_item .product_txt .prod_description p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 980px) {
+  .comp-product-list .product_item .product_txt .prod_description {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+}
+.comp-product-list .product_item .product_txt .prod_spec {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 30px auto 25px;
+}
+.comp-product-list .product_item .product_txt .prod_button_wrap {
+  margin-top: 25px;
+}
+.comp-product-list .product_item .product_txt .prod_button_wrap a {
+  display: block;
+  padding: 15px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  background: #44413C;
+}
+.comp-product-list .product_item .product_txt .prod_button_wrap .button_description {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.comp-craft-detail {
+  width: 87vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 720px) {
+  .comp-craft-detail {
+    width: 83%;
+    max-width: 1590px;
+  }
+}
+.comp-craft-detail .craft_item {
+  margin-bottom: 50px;
+}
+.comp-craft-detail .craft_item .craft_detail_img {
+  margin-bottom: 25px;
+}
+.comp-craft-detail .craft_item .craft_detail_ttl {
+  font-size: 2rem;
+  line-height: 1.76;
+  margin-bottom: 15px;
+}
+.comp-craft-detail .craft_item .craft_detail_desc {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: justify;
+}
+.comp-craft-detail .craft_item .craft_detail_desc p {
+  margin-bottom: 1em;
+}
+.comp-craft-detail .craft_item .craft_detail_desc p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 980px) {
+  .comp-craft-detail .craft_item .craft_detail_desc {
+    font-size: 1.6rem;
+    padding: 0;
   }
 }

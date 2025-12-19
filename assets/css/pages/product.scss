@@ -1,0 +1,72 @@
+.page-product{
+  padding-bottom: 50px;
+  .section-main{
+    margin-bottom: 50px;
+  }
+  .section-products{
+    margin-bottom: 80px;
+    .ttl_wrapper{
+      margin-bottom: 40px;
+    }
+  }
+  .section-products2{
+    margin-bottom: 80px;
+    .ttl_wrapper{
+      margin-bottom: 40px;
+    }
+  }
+  .section-gift{
+    margin-bottom: 80px;
+    .gift_inner{
+      .gift_main_wrap{
+        .gift_ttl{
+          font-size: 2.2rem;
+          line-height: 1.6;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .gift_main_img{
+          margin-bottom: 50px;
+          .pc_img{
+            display: none;
+          }
+        }
+      }
+      .flex_wrapper{
+        @include wrapper;
+        .gift_flex_wrap{
+          margin-bottom: 50px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+          .gift_sub_ttl{
+            font-size: 1.8rem;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .section-craftmanship{
+    .main_ttl_wrap{
+      .comp-ttl-group{
+        text-align: center;
+      }
+    }
+    .craftman_flex_wrap{
+      margin-bottom: 50px;
+      .craft_ttl{
+        font-size:  2.0rem;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+      .craft_img_wrap{
+        .pc_img{
+          display: none;
+        }
+      }
+    }
+  }
+}

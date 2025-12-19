@@ -1,0 +1,12 @@
+.comp-ttl-group{
+  margin-bottom: 30px;
+  .ttl_jp{
+    font-size: 2.8rem;
+    text-indent: -0.1em;
+    margin-bottom: 12px;
+  }
+  .ttl_en{
+    @include lato;
+    font-size: 1.3rem;
+  }
+}
