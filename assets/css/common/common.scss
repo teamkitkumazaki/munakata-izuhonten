@@ -96,7 +96,7 @@ section{
 	.section_inner{
 		@include wrapper;
 		@media screen and (min-width: 720px){
-			min-width: 1200px;
+			/*min-width: 1200px;*/
 		}
 	}
 }

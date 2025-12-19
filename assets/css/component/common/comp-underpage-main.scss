@@ -16,3 +16,27 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-underpage-main{
+    padding-top: 110px;
+    .under_main_wrapper{
+      width: calc(100% - 120px);
+      margin-left: 120px;
+      .under_main_img{
+        margin-bottom: 40px;
+        .sp_img{
+          display: none;
+        }
+        .pc_img{
+          display: block;
+        }
+      }
+      .under_main_txt{
+        .comp-page-bread{
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
