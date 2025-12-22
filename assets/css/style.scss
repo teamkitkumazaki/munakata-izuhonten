@@ -15,6 +15,7 @@
 
 @import 'pages/history.scss';
 @import 'pages/product.scss';
+@import 'pages/facility.scss';
 @import 'pages/company.scss';
 
 
@@ -39,3 +40,6 @@
 
 /* 歩み */
 @import 'component/history/comp-history-list.scss';
+
+/* 施設 */
+@import 'component/facility/comp-facility-detail.scss';

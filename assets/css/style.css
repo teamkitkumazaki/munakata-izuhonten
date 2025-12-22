@@ -2022,6 +2022,83 @@ footer .footer_inner .footer_lower .copyright {
     display: block;
   }
 }
+.page-facility {
+  padding-bottom: 20px;
+}
+.page-facility .section-main {
+  margin-bottom: 8vw;
+}
+.page-facility .section-facility-map {
+  margin-bottom: 16vw;
+}
+.page-facility .section-facility-map .map_img_wrap .pc_img {
+  display: none;
+}
+.page-facility .section-facility-detail {
+  margin-bottom: 20vw;
+}
+.page-facility .section-facility-detail .facility_inner {
+  width: 86vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 720px) {
+  .page-facility .section-facility-detail .facility_inner {
+    width: 83%;
+    max-width: 1590px;
+  }
+}
+.page-facility .section-access {
+  margin-bottom: 20vw;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 40px;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description p {
+  margin-bottom: 1em;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 980px) {
+  .page-facility .section-access .aceess_flex_wrap .access_content .access_description {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description p {
+  margin-bottom: 0;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description p span {
+  margin-top: 10px;
+  display: block;
+  font-size: 0.9em;
+  color: #686868;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_description p br {
+  display: none;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_map {
+  position: relative;
+  width: 100vw;
+  height: 80vw;
+  margin-left: -7vw;
+}
+.page-facility .section-access .aceess_flex_wrap .access_content .access_map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 .page-company {
   padding-top: 110px;
   padding-bottom: 60px;
@@ -2730,5 +2807,41 @@ footer .footer_inner .footer_lower .copyright {
     font-size: 1.8rem;
     line-height: 1.8;
     padding-left: 30px;
+  }
+}
+/* 施設 */
+.comp-facility-detail .facility_item {
+  margin-bottom: 50px;
+}
+.comp-facility-detail .facility_item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.comp-facility-detail .facility_item .facility_img {
+  width: 93vw;
+  margin-bottom: 25px;
+}
+.comp-facility-detail .facility_item .facility_txt .facility_ttl {
+  font-size: 2.2rem;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+.comp-facility-detail .facility_item .facility_txt .facility_description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: justify;
+}
+.comp-facility-detail .facility_item .facility_txt .facility_description p {
+  margin-bottom: 1em;
+}
+.comp-facility-detail .facility_item .facility_txt .facility_description p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 980px) {
+  .comp-facility-detail .facility_item .facility_txt .facility_description {
+    font-size: 1.6rem;
+    padding: 0;
   }
 }

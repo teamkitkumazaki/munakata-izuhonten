@@ -1,0 +1,23 @@
+.comp-facility-detail{
+  .facility_item{
+    margin-bottom: 50px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    .facility_img{
+      width: 93vw;
+      margin-bottom: 25px;
+    }
+    .facility_txt{
+      .facility_ttl{
+        font-size: 2.2rem;
+        line-height: 1.65;
+        margin-bottom: 10px;
+      }
+      .facility_description{
+        @include basicP;
+        text-align:justify;
+      }
+    }
+  }
+}
