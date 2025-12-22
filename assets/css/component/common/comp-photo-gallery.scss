@@ -17,3 +17,18 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-photo-gallery{
+    width: calc(100% - 40px);
+    margin: 20px auto 0;
+    .gallery_item{
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+      height: 52vw;
+      &.full{
+        width: 100%;
+      }
+    }
+  }
+}

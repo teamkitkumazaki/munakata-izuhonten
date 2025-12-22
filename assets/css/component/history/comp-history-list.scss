@@ -49,3 +49,57 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-history-list{
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    &::before{
+      top: 5px;
+      left: 160px;
+    }
+    .history_item{
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      @include flexSet;
+      align-items: baseline;
+      &:nth-last-of-type(1){
+        padding-bottom: 100px;
+      }
+      .year{
+        width: 160px;
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 0px;
+        font-size: 1.8rem;
+        &::before{
+          display: none;
+        }
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 15;
+          top:2px;
+          left: unset;
+          right: -5px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: $keyColor;
+        }
+      }
+      .content{
+        max-width: calc(100% - 160px);
+        box-sizing: border-box;
+        margin-top: 0px;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        padding-left: 30px;
+      }
+    }
+  }
+
+}

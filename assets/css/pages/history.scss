@@ -33,8 +33,12 @@
         line-height: 1.65;
         writing-mode: vertical-rl;
         margin-bottom: 13vw;
+        strong{
+          font-weight: inherit;
+        }
         span{
           display: block;
+          text-indent: -0.5em;
         }
       }
       .sakamai_main_img{
@@ -110,6 +114,144 @@
       margin-left: -3vw;
       .history_img_item{
         margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .page-history{
+    padding-bottom: 160px;
+    .section-history-lead{
+      margin-top: 120px;
+      padding-top: 160px;
+      background-image: url(../img/history/lead_bg_pc.jpg);
+      background-size: cover;
+      background-position: center bottom;
+      padding-bottom: 40vw;
+      .txt_flex_wrap{
+        @include flexSet;
+        justify-content: space-between;
+        .lead_ttl{
+          font-size: 3.0rem;
+          text-align: left;
+          margin-bottom: 0px;
+        }
+        .lead_description{
+          width: 50%;
+        }
+      }
+    }
+    .section-sakamai{
+      padding-bottom: 160px;
+      .sakamai_main_wrapper{
+        padding-top: 120px;
+        @include flexSet;
+        flex-direction:row-reverse;
+        justify-content: flex-start;
+        margin-bottom: 160px;
+        .sakamai_ttl{
+          width: 160px;
+          font-size: 3.0rem;
+          line-height: 1.65;
+          writing-mode: vertical-rl;
+          margin-bottom: 0;
+          @include flexSet;
+          align-items: center;
+          span{
+            display: block;
+          }
+        }
+        .sakamai_main_img{
+          width: calc(100% - 160px);
+          .sp_img{
+            display: none;
+          }
+          .pc_img{
+            display: block;
+          }
+        }
+      }
+      .sakamai_detail_wrapper{
+        width: 100%;
+        .sakamai_detail_flex{
+          @include flexSet;
+          align-items: flex-end;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          margin-bottom: 160px;
+          &:nth-last-of-type(1){
+            flex-direction: unset;
+            margin-bottom: 0;
+          }
+          .sakamai_txt{
+            width: 40%;
+            padding: 0 80px 50px;
+            font-size: 1.6rem;
+            line-height: 2;
+          }
+          .sakamai_img{
+            width: 60%;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .section-method{
+      .method_main_ttl{
+        font-size: 3.0rem;
+        text-align: center;
+        line-height: 1.67;
+        margin-bottom: 60px;
+      }
+      .method_img{
+        width: 80%;
+        margin: 0 auto 60px;
+        .sp_img{
+          display: none;
+        }
+        .pc_img{
+          display: block;
+        }
+      }
+      .method_description{
+        width: 80%;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+    }
+    .section-renovation{
+      padding-bottom: 140px;
+      .renovation_upper{
+        margin-top: 160px;
+        padding-top: 160px;
+        background-image: url(../img/history/renewal_bg_pc.jpg);
+        background-size: cover;
+        padding-bottom: 50vw;
+      }
+      .renovation_ttl{
+        font-size: 3.0rem;
+        margin-bottom: 50px;
+      }
+      .renovation_description{
+        max-width: 820px;
+        margin: 0 auto;
+      }
+    }
+    .section-history{
+      .history_main_ttl{
+        font-size: 3.0rem;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .history_img_wrap{
+        width: 100%;
+        margin: 0 auto;
+        @include flexSet;
+        .history_img_item{
+          width: 33%;
+          margin-bottom: 0;
+        }
       }
     }
   }
