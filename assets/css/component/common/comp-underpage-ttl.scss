@@ -6,7 +6,12 @@
   }
   .ttl_description{
     margin-top: 10px;
+    padding-right: 6vw;
     @include basicP;
+    text-align:justify;
+    br{
+      display: none;
+    }
   }
 }
 
@@ -16,7 +21,12 @@
       font-size: 3.8rem;
     }
     .ttl_description{
+      max-width: 50%;
       margin-top: 15px;
+      padding-right: 0;
+      br{
+        display: block;
+      }
     }
   }
 }

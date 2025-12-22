@@ -1,0 +1,51 @@
+.comp-history-list{
+  position: relative;
+  &::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 1px;
+    height: calc(100% + 60px);
+    border-left: 1px dotted $keyColor;
+  }
+  .history_item{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    .year{
+      position: relative;
+      padding-left: 26px;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        top:6px;
+        left:0;
+        margin: auto;
+        width: 20px;
+        height: 1px;
+        background: $keyColor;
+      }
+      &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 15;
+        top:2px;
+        left:-5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $keyColor;
+      }
+    }
+    .content{
+      margin-top: 10px;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      padding-left: 26px;
+    }
+  }
+}

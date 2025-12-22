@@ -1,0 +1,116 @@
+.page-history{
+  padding-bottom: 20px;
+  .section-history-lead{
+    margin-top: 16vw;
+    padding-top: 20vw;
+    background-image: url(../img/history/lead_bg.jpg);
+    background-size: 100vw;
+    background-position: center bottom;
+    padding-bottom: 75vw;
+    .txt_flex_wrap{
+      color: #fff;
+      .lead_ttl{
+        font-size: 2.2rem;
+        line-height: 1.67;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      .lead_description{
+        @include basicP;
+      }
+    }
+  }
+  .section-sakamai{
+    padding-bottom: 15vw;
+    .sakamai_main_wrapper{
+      padding-top: 13vw;
+      @include flexSet;
+      justify-content: center;
+      margin-bottom: 13vw;
+      .sakamai_ttl{
+        font-size: 2.8rem;
+        line-height: 1.65;
+        writing-mode: vertical-rl;
+        margin-bottom: 13vw;
+        span{
+          display: block;
+        }
+      }
+      .sakamai_main_img{
+        .pc_img{
+          display: none;
+        }
+      }
+    }
+    .sakamai_detail_wrapper{
+      @include wrapper;
+      .sakamai_detail_flex{
+        margin-bottom: 40px;
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
+        }
+        .sakamai_txt{
+          @include basicP;
+        }
+        .sakamai_img{
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  .section-method{
+    .method_main_ttl{
+      font-size: 2.4rem;
+      text-align: center;
+      line-height: 1.67;
+      margin-bottom: 30px;
+    }
+    .method_img{
+      width: 100vw;
+      margin-left: -7vw;
+      margin-bottom: 35px;
+      .pc_img{
+        display: none;
+      }
+    }
+    .method_description{
+      @include basicP;
+    }
+  }
+  .section-renovation{
+    padding-bottom: 16vw;
+    .renovation_upper{
+      margin-top: 16vw;
+      padding-top: 16vw;
+      background-image: url(../img/history/renewal_bg.jpg);
+      background-size: 100vw;
+      background-position: center bottom;
+      padding-bottom: 55vw;
+    }
+    .renovation_ttl{
+      font-size: 2.2rem;
+      line-height: 1.67;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .renovation_description{
+      @include basicP;
+    }
+  }
+  .section-history{
+    .history_main_ttl{
+      font-size: 2.2rem;
+      line-height: 1.67;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .history_img_wrap{
+      width: 92vw;
+      margin-left: -3vw;
+      .history_img_item{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
