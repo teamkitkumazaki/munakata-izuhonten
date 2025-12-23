@@ -18,6 +18,27 @@
         @include basicP;
         text-align:justify;
       }
+      .kamenoo_wrap{
+        @include flexSet;
+        align-items: center;
+        margin-top: 25px;
+        .kamenoo_img{
+          width: 80px;
+          margin-right: 20px;
+        }
+        .kamenoo_txt{
+          width: calc(100% - 100px);
+          .kamenoo_ttl{
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            text-indent: -0.5em;
+          }
+          .kamenoo_description{
+            font-size: 1.1rem;
+            line-height: 1.67;
+          }
+        }
+      }
     }
   }
 }
@@ -45,6 +66,23 @@
         }
         .facility_description{
           text-align:justify;
+        }
+        .kamenoo_wrap{
+          margin-top: 35px;
+          .kamenoo_img{
+            width: 80px;
+            margin-right: 25px;
+          }
+          .kamenoo_txt{
+            width: calc(100% - 105px);
+            .kamenoo_ttl{
+              font-size: 1.8rem;
+              margin-bottom: 10px;
+            }
+            .kamenoo_description{
+              font-size: 1.3rem;
+            }
+          }
         }
       }
     }
