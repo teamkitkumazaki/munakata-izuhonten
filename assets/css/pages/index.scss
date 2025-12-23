@@ -1,0 +1,111 @@
+.page-index{
+  .section-index-lead{
+    padding-top: 16vw;
+    .lead_txt_wrapper{
+      @include flexSet;
+      justify-content: center;
+      .lead_ttl{
+        font-size: 2.8rem;
+        line-height: 1.5;
+        writing-mode: vertical-rl;
+        margin-bottom: 20px;
+      }
+      .lead_desciption{
+        @include wrapper;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2;
+        p{
+          margin-bottom: 1.25rem;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .lead_img_wrapper{
+      padding-top: 16vw;
+      .pc_img{
+        display: none;
+      }
+    }
+  }
+  .section-index-links{
+    padding-top: 20vw;
+    .links_inner{
+      @include wrapper;
+    }
+  }
+  .section-index-product{
+    padding-top: 20vw;
+    .product_ttl_wrapper{
+      .comp-ttl-group{
+        text-align: center;
+      }
+      .product_main_img{
+        margin-bottom: 10vw;
+        .pc_img{
+          display: none;
+        }
+      }
+    }
+  }
+  .section-craftmanship{
+    margin-top: 16vw;
+    padding-top: 10vw;
+    padding-bottom: 16vw;
+    background: $keyColor;
+    color: #fff;
+    .craftman_wrapper{
+      .craftman_img{
+        width: 93vw;
+        margin-left: 7vw;
+        margin-bottom: 25px;
+      }
+      .craftman_txt{
+        @include wrapper;
+        .craftman_ttl{
+          font-size: 2.2rem;
+          line-height: 1.76;
+          margin-bottom: 10px;
+        }
+        .craftman_description{
+          @include basicP;
+        }
+        .comp-arrow-button{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .section-journal-feed{
+    padding-top: 16vw;
+    padding-bottom: 16vw;
+    .journal_ttl_wrap{
+      margin-bottom: 30px;
+      .ttl_description{
+        margin-top: -10px;
+        @include basicP;
+      }
+      .comp-arrow-button{
+        display: none;
+      }
+    }
+  }
+  .section-instagram{
+    padding-top: 13vw;
+    padding-bottom: 13vw;
+    border-top: 1px solid $borderColor;
+    .insta_ttl_wrap{
+      text-align: center;
+      margin-bottom: 35px;
+      .insta_ttl{
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+      }
+      .insta_lead_txt{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

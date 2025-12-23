@@ -1,0 +1,32 @@
+.comp-journal-list{
+  .journal_item{
+    width: 100vw;
+    margin-left: -7vw;
+    margin-bottom: 50px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    a{
+      display:block;
+      color: inherit;
+      .img_wrap{
+        display: block;
+        margin-bottom: 25px;
+      }
+      .ttl_wrap{
+        display: block;
+        padding: 0 7vw;
+        .date{
+          display: block;
+          font-size: 1.4rem;
+          margin-bottom: 7px;
+        }
+        .ttl{
+          display: block;
+          font-size: 1.8rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}

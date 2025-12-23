@@ -18,6 +18,9 @@
         @include basicP;
         text-align:justify;
       }
+      .comp-arrow-button{
+        margin-top: 25px;
+      }
       .kamenoo_wrap{
         @include flexSet;
         align-items: center;

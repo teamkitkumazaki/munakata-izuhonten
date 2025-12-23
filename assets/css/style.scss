@@ -13,6 +13,7 @@
 
 /*########## ページ個別レイアウト ##########*/
 
+@import 'pages/index.scss';
 @import 'pages/history.scss';
 @import 'pages/product.scss';
 @import 'pages/facility.scss';
@@ -33,6 +34,13 @@
 @import 'component/common/comp-underpage-main.scss';
 @import 'component/common/comp-arrow-button.scss';
 @import 'component/common/comp-photo-gallery.scss';
+
+/* トップページ */
+@import 'component/index/comp-index-kv.scss';
+@import 'component/index/comp-insta-feed.scss';
+@import 'component/index/comp-journal-list.scss';
+
+
 
 /* 商品 */
 @import 'component/product/comp-product-list.scss';
