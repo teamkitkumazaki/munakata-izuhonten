@@ -4,7 +4,6 @@
     margin-bottom: 8vw;
   }
   .section-facility-map{
-    margin-bottom: 16vw;
     .map_img_wrap{
       .pc_img{
         display: none;
@@ -12,7 +11,7 @@
     }
   }
   .section-facility-detail{
-    margin-bottom: 20vw;
+    padding-top: 16vw;
     .facility_inner{
       @include wrapper;
       .comp-ttl-group{
@@ -21,7 +20,7 @@
     }
   }
   .section-access{
-    margin-bottom: 20vw;
+    padding-top: 20vw;
     .aceess_flex_wrap{
       .access_content{
         .access_description{
@@ -58,6 +57,7 @@
     }
   }
   .section-calendar{
+    padding-top: 20vw;
     margin-bottom: 13vw;
   }
 }
@@ -69,7 +69,6 @@
       margin-bottom: 80px;
     }
     .section-facility-map{
-      margin-bottom: 160px;
       .map_img_wrap{
         @include wrapper;
         .sp_img{
@@ -81,7 +80,7 @@
       }
     }
     .section-facility-detail{
-      margin-bottom: 160px;
+      padding-top: 160px;
       .facility_inner{
         /*width: 100%;*/
         .comp-ttl-group{
@@ -91,7 +90,7 @@
       }
     }
     .section-access{
-      margin-bottom: 160px;
+      padding-top: 160px;
       .aceess_flex_wrap{
         @include flexSet;
         justify-content: space-between;
@@ -116,6 +115,7 @@
       }
     }
     .section-calendar{
+      padding-top: 160px;
       margin-bottom: 160px;
       .calendar_flex_wrap{
         @include flexSet;

@@ -1,22 +1,21 @@
 .page-product{
   padding-bottom: 50px;
   .section-main{
-    margin-bottom: 50px;
   }
   .section-products{
-    margin-bottom: 80px;
+    padding-top: 20vw;
     .ttl_wrapper{
       margin-bottom: 40px;
     }
   }
   .section-products2{
+    padding-top: 20vw;
     margin-bottom: 80px;
     .ttl_wrapper{
       margin-bottom: 40px;
     }
   }
   .section-gift{
-    margin-bottom: 80px;
     .gift_inner{
       .gift_main_wrap{
         .gift_ttl{
@@ -50,6 +49,7 @@
     }
   }
   .section-craftmanship{
+    padding-top: 20vw;
     .main_ttl_wrap{
       .comp-ttl-group{
         text-align: center;
@@ -76,10 +76,9 @@
   .page-product{
     padding-bottom: 160px;
     .section-main{
-      margin-bottom: 120px;
     }
     .section-products{
-      margin-bottom: 160px;
+      padding-top: 120px;
       .ttl_wrapper{
         @include flexSet;
         align-items: flex-end;
@@ -97,13 +96,13 @@
       }
     }
     .section-products2{
+      padding-top: 160px;
       margin-bottom: 200px;
       .ttl_wrapper{
         margin-bottom: 60px;
       }
     }
     .section-gift{
-      margin-bottom: 200px;
       .gift_inner{
         .gift_main_wrap{
           @include flexSet;
@@ -164,6 +163,7 @@
       }
     }
     .section-craftmanship{
+      padding-top: 200px;
       .main_ttl_wrap{
         .comp-ttl-group{
           text-align: center;

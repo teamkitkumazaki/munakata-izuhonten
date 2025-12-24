@@ -178,7 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  loadingAnimation();
+  if (document.getElementById('index')) {
+    loadingAnimation();
+  };
 
 
   // ===============================
@@ -239,6 +241,51 @@ document.addEventListener('DOMContentLoaded', () => {
     /* setTimeout(() => {
       loadingKvShifter();
     }, 1000); */
+  }
+
+
+  // ===============================
+  // アンカーリンク
+  // ===============================
+  function indexAnker(target) {
+    const ankerButtons = target.querySelectorAll('.func-anker-link');
+    const scrollTargets = [];
+
+    // スクロール処理
+    function windowMove(index) {
+      const targetSelector = scrollTargets[index];
+      const scrollToElement = document.querySelector(targetSelector);
+      if (scrollToElement) {
+        const top = scrollToElement.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: top,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    // 初期化処理
+    function init() {
+      ankerButtons.forEach((btn, index) => {
+        const jumpSelector = btn.getAttribute('jump');
+        scrollTargets[index] = jumpSelector;
+
+        btn.addEventListener('click', function(e) {
+          e.preventDefault(); // 必要であれば
+          windowMove(index);
+        });
+      });
+    }
+
+    init();
+  }
+
+  // 'product' 要素が存在する場合に発火
+  if (document.getElementById('product')) {
+    const article = document.querySelector('article');
+    if (article) {
+      indexAnker(article);
+    }
   }
 
 

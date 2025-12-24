@@ -1846,7 +1846,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-history .section-history-lead {
   margin-top: 16vw;
   padding-top: 20vw;
-  background-image: url(../img/history/lead_bg.jpg);
+  background-image: url(/img/izuhonten/history/lead_bg.jpg);
   background-size: 100vw;
   background-position: center bottom;
   padding-bottom: 75vw;
@@ -1879,9 +1879,6 @@ footer .footer_inner .footer_lower .copyright {
     font-size: 1.6rem;
     padding: 0;
   }
-}
-.page-history .section-sakamai {
-  padding-bottom: 15vw;
 }
 .page-history .section-sakamai .sakamai_main_wrapper {
   padding-top: 13vw;
@@ -1952,6 +1949,9 @@ footer .footer_inner .footer_lower .copyright {
 .page-history .section-sakamai .sakamai_detail_wrapper .sakamai_detail_flex .sakamai_img {
   margin-bottom: 25px;
 }
+.page-history .section-method {
+  padding-top: 15vw;
+}
 .page-history .section-method .method_main_ttl {
   font-size: 2.4rem;
   text-align: center;
@@ -1985,13 +1985,10 @@ footer .footer_inner .footer_lower .copyright {
     padding: 0;
   }
 }
-.page-history .section-renovation {
-  padding-bottom: 16vw;
-}
 .page-history .section-renovation .renovation_upper {
   margin-top: 16vw;
   padding-top: 16vw;
-  background-image: url(../img/history/renewal_bg.jpg);
+  background-image: url(/img/izuhonten/history/renewal_bg.jpg);
   background-size: 100vw;
   background-position: center bottom;
   padding-bottom: 55vw;
@@ -2021,6 +2018,9 @@ footer .footer_inner .footer_lower .copyright {
     padding: 0;
   }
 }
+.page-history .section-history {
+  padding-top: 16vw;
+}
 .page-history .section-history .history_main_ttl {
   font-size: 2.2rem;
   line-height: 1.67;
@@ -2042,7 +2042,7 @@ footer .footer_inner .footer_lower .copyright {
   .page-history .section-history-lead {
     margin-top: 120px;
     padding-top: 160px;
-    background-image: url(../img/history/lead_bg_pc.jpg);
+    background-image: url(/img/izuhonten/history/lead_bg_pc.jpg);
     background-size: cover;
     background-position: center bottom;
     padding-bottom: 40vw;
@@ -2064,9 +2064,6 @@ footer .footer_inner .footer_lower .copyright {
   }
   .page-history .section-history-lead .txt_flex_wrap .lead_description {
     width: 50%;
-  }
-  .page-history .section-sakamai {
-    padding-bottom: 160px;
   }
   .page-history .section-sakamai .sakamai_main_wrapper {
     padding-top: 120px;
@@ -2151,6 +2148,9 @@ footer .footer_inner .footer_lower .copyright {
     width: 60%;
     margin-bottom: 0px;
   }
+  .page-history .section-method {
+    padding-top: 160px;
+  }
   .page-history .section-method .method_main_ttl {
     font-size: 3rem;
     text-align: center;
@@ -2173,13 +2173,10 @@ footer .footer_inner .footer_lower .copyright {
             box-sizing: border-box;
     margin: 0 auto;
   }
-  .page-history .section-renovation {
-    padding-bottom: 140px;
-  }
   .page-history .section-renovation .renovation_upper {
     margin-top: 160px;
     padding-top: 160px;
-    background-image: url(../img/history/renewal_bg_pc.jpg);
+    background-image: url(/img/izuhonten/history/renewal_bg_pc.jpg);
     background-size: cover;
     padding-bottom: 50vw;
   }
@@ -2190,6 +2187,9 @@ footer .footer_inner .footer_lower .copyright {
   .page-history .section-renovation .renovation_description {
     max-width: 820px;
     margin: 0 auto;
+  }
+  .page-history .section-history {
+    padding-top: 140px;
   }
   .page-history .section-history .history_main_ttl {
     font-size: 3rem;
@@ -2213,23 +2213,18 @@ footer .footer_inner .footer_lower .copyright {
 .page-product {
   padding-bottom: 50px;
 }
-.page-product .section-main {
-  margin-bottom: 50px;
-}
 .page-product .section-products {
-  margin-bottom: 80px;
+  padding-top: 20vw;
 }
 .page-product .section-products .ttl_wrapper {
   margin-bottom: 40px;
 }
 .page-product .section-products2 {
+  padding-top: 20vw;
   margin-bottom: 80px;
 }
 .page-product .section-products2 .ttl_wrapper {
   margin-bottom: 40px;
-}
-.page-product .section-gift {
-  margin-bottom: 80px;
 }
 .page-product .section-gift .gift_inner .gift_main_wrap .gift_ttl {
   font-size: 2.2rem;
@@ -2266,6 +2261,9 @@ footer .footer_inner .footer_lower .copyright {
   text-align: center;
   margin-bottom: 20px;
 }
+.page-product .section-craftmanship {
+  padding-top: 20vw;
+}
 .page-product .section-craftmanship .main_ttl_wrap .comp-ttl-group {
   text-align: center;
 }
@@ -2285,11 +2283,8 @@ footer .footer_inner .footer_lower .copyright {
   .page-product {
     padding-bottom: 160px;
   }
-  .page-product .section-main {
-    margin-bottom: 120px;
-  }
   .page-product .section-products {
-    margin-bottom: 160px;
+    padding-top: 120px;
   }
   .page-product .section-products .ttl_wrapper {
     display: -webkit-box;
@@ -2315,13 +2310,11 @@ footer .footer_inner .footer_lower .copyright {
     width: 100%;
   }
   .page-product .section-products2 {
+    padding-top: 160px;
     margin-bottom: 200px;
   }
   .page-product .section-products2 .ttl_wrapper {
     margin-bottom: 60px;
-  }
-  .page-product .section-gift {
-    margin-bottom: 200px;
   }
   .page-product .section-gift .gift_inner .gift_main_wrap {
     display: -webkit-box;
@@ -2416,6 +2409,9 @@ footer .footer_inner .footer_lower .copyright {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .page-product .section-craftmanship {
+    padding-top: 200px;
+  }
   .page-product .section-craftmanship .main_ttl_wrap .comp-ttl-group {
     text-align: center;
     margin-bottom: 70px;
@@ -2469,14 +2465,11 @@ footer .footer_inner .footer_lower .copyright {
 .page-facility .section-main {
   margin-bottom: 8vw;
 }
-.page-facility .section-facility-map {
-  margin-bottom: 16vw;
-}
 .page-facility .section-facility-map .map_img_wrap .pc_img {
   display: none;
 }
 .page-facility .section-facility-detail {
-  margin-bottom: 20vw;
+  padding-top: 16vw;
 }
 .page-facility .section-facility-detail .facility_inner {
   width: 86vw;
@@ -2490,7 +2483,7 @@ footer .footer_inner .footer_lower .copyright {
   }
 }
 .page-facility .section-access {
-  margin-bottom: 20vw;
+  padding-top: 20vw;
 }
 .page-facility .section-access .aceess_flex_wrap .access_content .access_description {
   font-size: 1.4rem;
@@ -2540,6 +2533,7 @@ footer .footer_inner .footer_lower .copyright {
           filter: grayscale(100%);
 }
 .page-facility .section-calendar {
+  padding-top: 20vw;
   margin-bottom: 13vw;
 }
 
@@ -2549,9 +2543,6 @@ footer .footer_inner .footer_lower .copyright {
   }
   .page-facility .section-main {
     margin-bottom: 80px;
-  }
-  .page-facility .section-facility-map {
-    margin-bottom: 160px;
   }
   .page-facility .section-facility-map .map_img_wrap {
     width: 86vw;
@@ -2573,7 +2564,7 @@ footer .footer_inner .footer_lower .copyright {
     display: block;
   }
   .page-facility .section-facility-detail {
-    margin-bottom: 160px;
+    padding-top: 160px;
   }
   .page-facility .section-facility-detail .facility_inner {
     /*width: 100%;*/
@@ -2583,7 +2574,7 @@ footer .footer_inner .footer_lower .copyright {
     margin-bottom: 80px;
   }
   .page-facility .section-access {
-    margin-bottom: 160px;
+    padding-top: 160px;
   }
   .page-facility .section-access .aceess_flex_wrap {
     display: -webkit-box;
@@ -2614,6 +2605,7 @@ footer .footer_inner .footer_lower .copyright {
     margin-left: 0;
   }
   .page-facility .section-calendar {
+    padding-top: 160px;
     margin-bottom: 160px;
   }
   .page-facility .section-calendar .calendar_flex_wrap {
@@ -2632,7 +2624,7 @@ footer .footer_inner .footer_lower .copyright {
 }
 .page-company {
   padding-top: 110px;
-  padding-bottom: 60px;
+  padding-bottom: 16vw;
 }
 .page-company .section-company .comp-page-bread {
   margin-bottom: 10px;
@@ -2927,14 +2919,14 @@ footer .footer_inner .footer_lower .copyright {
   width: 16px;
   height: 16px;
   background-size: 16px;
-  background-image: url(../img/common/caret_down.svg);
+  background-image: url(/img/izuhonten/common/caret_down.svg);
   background-position: center top 0px;
 }
 .comp-arrow-button a .caret.right, .comp-arrow-button button .caret.right {
   width: 12px;
   height: 12px;
   background-size: 12px;
-  background-image: url(../img/common/caret_right.svg);
+  background-image: url(/img/izuhonten/common/caret_right.svg);
   background-position: center left 0px;
   margin-right: 5px;
 }
@@ -2985,14 +2977,14 @@ footer .footer_inner .footer_lower .copyright {
     width: 16px;
     height: 16px;
     background-size: 16px;
-    background-image: url(../img/common/caret_down.svg);
+    background-image: url(/img/izuhonten/common/caret_down.svg);
     background-position: center top 0px;
   }
   .comp-arrow-button a .caret.right, .comp-arrow-button button .caret.right {
     width: 12px;
     height: 12px;
     background-size: 12px;
-    background-image: url(../img/common/caret_right.svg);
+    background-image: url(/img/izuhonten/common/caret_right.svg);
     background-position: center left 0px;
     margin-right: 5px;
   }
@@ -3476,7 +3468,7 @@ footer .footer_inner .footer_lower .copyright {
   height: 14px;
   margin-left: 10px;
   background-size: 14px;
-  background-image: url(../img/product/prod_button_caret.svg);
+  background-image: url(/img/izuhonten/product/prod_button_caret.svg);
   background-position: center left 0px;
 }
 .comp-product-list .product_item .product_txt .prod_button_wrap .button_description {

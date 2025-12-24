@@ -3,7 +3,7 @@
   .section-history-lead{
     margin-top: 16vw;
     padding-top: 20vw;
-    background-image: url(../img/history/lead_bg.jpg);
+    background-image: url(/img/izuhonten/history/lead_bg.jpg);
     background-size: 100vw;
     background-position: center bottom;
     padding-bottom: 75vw;
@@ -22,7 +22,6 @@
     }
   }
   .section-sakamai{
-    padding-bottom: 15vw;
     .sakamai_main_wrapper{
       padding-top: 13vw;
       @include flexSet;
@@ -64,6 +63,7 @@
     }
   }
   .section-method{
+    padding-top: 15vw;
     .method_main_ttl{
       font-size: 2.4rem;
       text-align: center;
@@ -83,11 +83,10 @@
     }
   }
   .section-renovation{
-    padding-bottom: 16vw;
     .renovation_upper{
       margin-top: 16vw;
       padding-top: 16vw;
-      background-image: url(../img/history/renewal_bg.jpg);
+      background-image: url(/img/izuhonten/history/renewal_bg.jpg);
       background-size: 100vw;
       background-position: center bottom;
       padding-bottom: 55vw;
@@ -103,6 +102,7 @@
     }
   }
   .section-history{
+    padding-top: 16vw;
     .history_main_ttl{
       font-size: 2.2rem;
       line-height: 1.67;
@@ -125,7 +125,7 @@
     .section-history-lead{
       margin-top: 120px;
       padding-top: 160px;
-      background-image: url(../img/history/lead_bg_pc.jpg);
+      background-image: url(/img/izuhonten/history/lead_bg_pc.jpg);
       background-size: cover;
       background-position: center bottom;
       padding-bottom: 40vw;
@@ -143,7 +143,6 @@
       }
     }
     .section-sakamai{
-      padding-bottom: 160px;
       .sakamai_main_wrapper{
         padding-top: 120px;
         @include flexSet;
@@ -198,6 +197,7 @@
       }
     }
     .section-method{
+      padding-top: 160px;
       .method_main_ttl{
         font-size: 3.0rem;
         text-align: center;
@@ -221,11 +221,10 @@
       }
     }
     .section-renovation{
-      padding-bottom: 140px;
       .renovation_upper{
         margin-top: 160px;
         padding-top: 160px;
-        background-image: url(../img/history/renewal_bg_pc.jpg);
+        background-image: url(/img/izuhonten/history/renewal_bg_pc.jpg);
         background-size: cover;
         padding-bottom: 50vw;
       }
@@ -239,6 +238,7 @@
       }
     }
     .section-history{
+      padding-top: 140px;
       .history_main_ttl{
         font-size: 3.0rem;
         text-align: center;
