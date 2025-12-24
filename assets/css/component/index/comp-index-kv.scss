@@ -12,3 +12,20 @@
     }
   }
 }
+
+@media screen and (min-width: 980px){
+  .comp-index-kv{
+    .main_img{
+      width: 100%;
+      height: 100vh;
+      img{
+        &.sp_img{
+          display: none;
+        }
+        &.pc_img{
+          display: block;
+        }
+      }
+    }
+  }
+}

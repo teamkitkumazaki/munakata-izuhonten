@@ -32,6 +32,10 @@
   }
   .section-index-links{
     padding-top: 20vw;
+    .comp-ttl-group{
+      text-align: center;
+      margin-bottom: 50px;
+    }
     .links_inner{
       @include wrapper;
     }
@@ -81,14 +85,16 @@
   .section-journal-feed{
     padding-top: 16vw;
     padding-bottom: 16vw;
-    .journal_ttl_wrap{
-      margin-bottom: 30px;
-      .ttl_description{
-        margin-top: -10px;
-        @include basicP;
-      }
-      .comp-arrow-button{
-        display: none;
+    .journal_flex_wrap{
+      .journal_ttl_wrap{
+        margin-bottom: 30px;
+        .ttl_description{
+          margin-top: -10px;
+          @include basicP;
+        }
+        .comp-arrow-button{
+          display: none;
+        }
       }
     }
   }
@@ -105,6 +111,152 @@
       }
       .insta_lead_txt{
         font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .page-index{
+    .section-index-lead{
+      padding-top: 160px;
+      .lead_txt_wrapper{
+        width: 100%;
+        @include flexSet;
+        flex-direction: row-reverse;
+        justify-content: center;
+        .lead_ttl{
+          width: auto;
+          font-size: 3.2rem;
+          line-height: 1.5;
+          margin-left: 30px;
+          margin-bottom: 0px;
+        }
+        .lead_desciption{
+          width: auto;
+          min-width: unset;
+          margin: unset;
+          text-align: left;
+          font-size: 1.8rem;
+          line-height: 2;
+          writing-mode: vertical-rl;
+          p{
+            margin-left: 10px;
+            margin-bottom: 0;
+            span{
+              display: block;
+            }
+            &:nth-last-of-type(1){
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+      .lead_img_wrapper{
+        padding-top: 120px;
+        max-width: 1000px;
+        margin:0 auto;
+        .sp_img{
+          display: none;
+        }
+        .pc_img{
+          display: block;
+        }
+      }
+    }
+    .section-index-links{
+      padding-top: 200px;
+      .comp-ttl-group{
+        text-align: center;
+        margin-bottom: 100px;
+      }
+    }
+    .section-index-product{
+      padding-top: 160px;
+      .product_ttl_wrapper{
+        .comp-ttl-group{
+          text-align: center;
+          margin-bottom: 80px;
+        }
+        .product_main_img{
+          margin-bottom: 160px;
+          .sp_img{
+            display: none;
+          }
+          .pc_img{
+            display: block;
+          }
+        }
+      }
+    }
+    .section-craftmanship{
+      margin-top: 120px;
+      padding-top: 0;
+      padding-bottom: 0;
+      .craftman_wrapper{
+        @include flexSet;
+        align-items: center;
+        .craftman_img{
+          width: 55%;
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+        .craftman_txt{
+          width: 45%;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0 120px;
+          .craftman_ttl{
+            font-size: 3.0rem;
+            margin-bottom: 15px;
+          }
+          .comp-arrow-button{
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .section-journal-feed{
+      padding-top: 160px;
+      padding-bottom: 80px;
+      .journal_flex_wrap{
+        @include flexSet;
+        justify-content: space-between;
+        .journal_ttl_wrap{
+          width: 35%;
+          box-sizing: border-box;
+          padding-right: 80px;
+          margin-top: 15px;
+          margin-bottom: 0px;
+          .ttl_description{
+            margin-top: -10px;
+            @include basicP;
+          }
+          .comp-arrow-button{
+            position: static;
+            display: block;
+            margin-top: 30px;
+          }
+        }
+        .comp-journal-list{
+          width: 65%;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .section-instagram{
+      padding-top: 120px;
+      padding-bottom: 160px;
+      .insta_ttl_wrap{
+        text-align: center;
+        margin-bottom: 40px;
+        .insta_ttl{
+          font-size: 4.0rem;
+          margin-bottom: 30px;
+        }
+        .insta_lead_txt{
+          font-size: 1.6rem;
+        }
       }
     }
   }
