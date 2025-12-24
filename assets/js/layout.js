@@ -146,5 +146,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   humMenuToggle();
 
+  // ===============================
+  // ローディングアニメーション
+  // ===============================
+  function loadingAnimation() {
+    console.log('loading');
+    const duration = 1000;
+    const duration2 = 2500;
+    const loadingLogo = document.getElementById('loadingLogo');
+    const loading = document.getElementById('loading');
+    const article = document.querySelector('article');
+    const body = document.body;
+
+    loadingLogo.classList.add('load');
+    loadingDelete();
+
+    function loadingDelete() {
+      console.log('loadingDelete');
+      deleteState = 1;
+      setTimeout(() => {
+        loadingLogo.classList.remove('load');
+        setTimeout(() => {
+          loading.classList.add('loaded');
+          article.classList.remove('loading');
+          setTimeout(() => {
+            body.classList.remove('bind');
+          }, duration);
+        }, duration);
+      }, duration2);
+    }
+  }
+
+  loadingAnimation();
+
 
 });
