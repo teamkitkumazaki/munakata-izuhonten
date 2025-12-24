@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           loading.classList.add('loaded');
           article.classList.remove('loading');
+          loadingKvShifter();
           setTimeout(() => {
             body.classList.remove('bind');
           }, duration);
@@ -178,6 +179,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   loadingAnimation();
+
+
+  // ===============================
+  // トップページ MVスライダー
+  // ===============================
+  function loadingKvShifter() {
+    const slider = document.getElementById('loadingImgBox');
+    const slides = slider.querySelectorAll('li');
+    const sliderLength = slides.length;
+    let current = 0;
+    let timeId;
+    const interval = 3000;
+
+    // スライド状態を変更
+    function slideChange(index) {
+      // 全ての display_slide を削除
+      slider.querySelectorAll('.display_slide').forEach(el => {
+        el.classList.remove('display_slide');
+      });
+
+      // 対象のスライドにクラスを追加
+      const target = slider.querySelector('.slide' + index);
+      if (target) {
+        target.classList.add('display_slide');
+      }
+
+      current = index;
+      startAuto(); // 次のスライド切り替え予約
+    }
+
+    // スライド自動切り替え
+    function changeState() {
+      current = (current + 1) % sliderLength;
+      slideChange(current);
+    }
+
+    function startAuto() {
+      clearTimeout(timeId); // 前のタイマーをクリア
+      timeId = setTimeout(changeState, interval);
+    }
+
+    // 初期化処理
+    function init() {
+      slides.forEach((li, index) => {
+        li.classList.add('slide' + index);
+        if (index === 0) {
+          li.classList.add('display_slide');
+        }
+      });
+      startAuto();
+    }
+
+    init();
+  }
+
+  // id="loadingImgBox" がある場合、1秒後に起動
+  if (document.getElementById('loadingImgBox')) {
+    /* setTimeout(() => {
+      loadingKvShifter();
+    }, 1000); */
+  }
 
 
 });
