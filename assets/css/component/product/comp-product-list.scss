@@ -71,6 +71,17 @@
         margin-bottom: 0px;
         a{
           display: block;
+          overflow: hidden;
+          img{
+            transition: transform .3s, filter .3s;
+            will-change: transform, filter;
+          }
+          &:hover{
+            img{
+              transform: scale(1.1);
+              filter:brightness(110%);
+            }
+          }
         }
       }
       .product_txt{
@@ -81,6 +92,7 @@
           margin-bottom: 20px;
           a{
             font-size: 3.0rem;
+            @include hover;
           }
         }
         .prod_spec{
@@ -97,6 +109,11 @@
             padding: 15px 15px;
             text-align: center;
             font-size: 1.6rem;
+            transition: background .3s;
+            will-change: background;
+            &:hover{
+              background: $keyColor;
+            }
           }
           .button_description{
             margin-top: 20px;

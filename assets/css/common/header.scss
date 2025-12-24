@@ -170,6 +170,7 @@ header{
       align-items: flex-start;
       .header_left{
         @include flexSet;
+        height: 70px;
         .header_logo{
           position: relative;
           width: 70px;
@@ -257,6 +258,7 @@ header{
             }
             a{
               display: block;
+              @include hover;
               line-height: 1;
               img{
                 width: auto;

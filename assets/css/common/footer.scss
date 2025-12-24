@@ -193,6 +193,7 @@ footer{
               margin-right: 0;
             }
             .parent{
+              @include hover;
               display: block;
               font-size: 1.7rem;
               padding: 5px 0;
@@ -202,6 +203,7 @@ footer{
               li{
                 margin-bottom: 10px;
                 a{
+                  @include hover;
                   padding: 5px 0;
                   font-size: 1.4rem;
                   padding-left: 15px;
@@ -216,6 +218,7 @@ footer{
                   margin-top: 20px;
                 }
                 a{
+                  @include hover;
                   padding: 5px 0;
                   font-size: 1.5rem;
                 }
@@ -228,6 +231,7 @@ footer{
         .footer_logo{
           margin-bottom: 40px;
           a{
+            @include hover;
             display: block;
             width: 120px;
             margin: 0;
@@ -250,6 +254,7 @@ footer{
           .sns_item{
             margin-right: 20px;
             a{
+              @include hover;
               img{
                 height: 24px;
               }
@@ -273,6 +278,7 @@ footer{
               height: 14px;
             }
             a{
+              @include hover;
               display: block;
               font-size: 1.4rem;
             }
