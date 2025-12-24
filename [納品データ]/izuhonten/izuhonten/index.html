@@ -76,235 +76,572 @@
 	<!-- ==================== wrapper ==================== -->
 	<div id="work_wrap">
 
-		<header>
+		<header id="header" class="index">
 			<div class="header_inner">
-				<div class="header_logo">
-					<img class="white" src="/img/izuhonten/h_logo.png">
-					<img class="black" src="/img/izuhonten/h_logo_black.png">
+				<div class="header_left">
+					<div class="header_logo">
+						<a href="/izuhonten">
+							<img class="horizonal" src="/img/izuhonten/common/horizonal_logo.svg">
+							<img class="vertical" src="/img/izuhonten/common/vertical_logo.svg">
+						</a>
+					</div>
+					<ul class="header_navigation">
+						<li><a href="/izuhonten/history">伊豆本店の歩み</a></li>
+						<li><a href="/izuhonten/product">日本酒「宗像」</a></li>
+						<li><a href="/izuhonten/facility">酒蔵について</a></li>
+						<li><a href="/izuhonten/company">会社概要</a></li>
+						<li><a href="/izuhonten/facility#access">アクセス</a></li>
+					</ul>
 				</div>
+				<div class="header_right">
+					<div class="lang_shifter">
+						<div class="header_lang">
+							<a id="hEnLink" linktype="langChange" class="en active" href="#aaaa">EN</a>
+							<span class="devider">/</span>
+							<a id="hJpLink" linktype="langChange" class="jp" href="#aaaa">JP</a>
+						</div>
+					</div>
+					<div class="navigation_wrapper">
+						<div class="nav_item">
+							<a href="/mypage"><img src="/img/izuhonten/common/header_login.svg"></a>
+						</div>
+						<div class="nav_item">
+							<a href="/carts/view"><img src="/img/izuhonten/common/header_cart.svg"></a>
+						</div>
+					</div><!-- navigation_wrapper -->
+					<div class="hummenu_wrap">
+						<button id="humButton">
+							<span></span><span></span>
+						</button>
+					</div>
+				</div><!-- header_right -->
 			</div><!-- header_inner -->
 		</header>
+
 		<div id="loading" class="comp-index-loading">
 			<div id="loadInner" class="load_inner">
 				<div id="loadingLogo" class="loading_logo">
-					<img src="/img/izuhonten/munakata_logo.svg">
+					<img src="/img/izuhonten/index/izuhon_logo.svg">
 				</div>
 			</div>
 		</div>
 
-		<article id="izuhonten" class="page-izuhonten">
-			<div id="outerWrapper" class="outer_wrapper">
-				<section id="sec1" class="section-main">
-					<div class="section_wrapper">
-						<div class="munakata_logo">
-							<img src="/img/izuhonten/munakata_logo.svg">
-						</div>
-					</div><!-- section_wrapper -->
-					<div class="comp-scroll-bar bar01">
-						<button>
-							<span class="txt_wrap">Scroll To Read</span>
-							<span class="line"></span>
-						</button>
+		<article id="index" class="page-index">
+			<section class="section-main comp-index-kv">
+				<div class="kv_inner">
+					<ul id="loadingImgBox" class="img_box">
+						<li class="slide0 display_slide">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide01.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide01_pc.jpg">
+						</li>
+						<li class="slide1">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide02.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide02_pc.jpg">
+						</li>
+						<li class="slide2">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide03.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide03_pc.jpg">
+						</li>
+						<li class="slide3">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide04.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide04_pc.jpg">
+						</li>
+						<li class="slide4">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide05.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide05_pc.jpg">
+						</li>
+						<li class="slide5">
+							<img class="sp_img" src="/img/izuhonten/index/slide/slide06.jpg">
+							<img class="pc_img" src="/img/izuhonten/index/slide/slide06_pc.jpg">
+						</li>
+					</ul>
+				</div><!-- kv_inner -->
+			</section>
+			<section class="section-index-lead">
+				<div class="lead_txt_wrapper">
+					<h2 class="lead_ttl">ひとしずくに、<br>物語を。</h2>
+					<div class="lead_desciption">
+						<p>風土の恵みを、五感で醸す。<br>素材に導かれながら行う酒造りは、<br>ひとつひとつ物語があります。</p>
+						<p>その一滴が、味わう人のこころに。<br>新銘柄「宗像」</p>
+						<p>大切な人と囲む食卓に、<span>ささやかな彩りを。</span></p>
 					</div>
-				</section>
-				<section id="sec2" class="section-lead01">
-					<div class="section_wrapper">
-						<div class="section_txt_wrap">
-							<h2 class="lead_ttl">宗像に縁とゆかりを。</h2>
-						</div>
-					</div><!-- section_wrapper -->
-				</section>
-				<section class="section-lead02">
-					<div class="section_wrapper">
-						<div class="section_txt_wrap">
-							<div class="desc_wrapper">
-								<p class="func-width-setter">福岡県北部にある宗像市は、<br>雄大な海と神話が息づく場所です。<br>その歴史の中心には、世界遺産に<br>登録された宗像大社が静かに佇みます。<br>古くから海を渡る人を見守ってきた神々は、<br>日本が世界と結びつく歴史のうえで<br>大切な役目を果たしてきました。</p>
+				</div><!-- lead_txt_wrapper -->
+				<div class="lead_img_wrapper">
+					<img class="sp_img" src="/img/izuhonten/index/lead_img.jpg">
+					<img class="pc_img" src="/img/izuhonten/index/lead_img_pc.jpg">
+				</div>
+			</section>
+			<section class="section-index-links">
+				<div class="links_inner">
+					<hgroup class="comp-ttl-group">
+						<h2 class="ttl_jp">伊豆本店について</h2>
+						<span class="ttl_en">About us</span>
+					</hgroup>
+					<div class="comp-facility-detail">
+						<div class="facility_item">
+							<div class="facility_img">
+								<img src="/img/izuhonten/index/link_img01.jpg">
+							</div>
+							<div class="facility_txt">
+								<h3 class="facility_ttl">伊豆本店の歩み</h3>
+								<div class="facility_description">
+									<p>煉瓦造りの煙突、茅葺き屋根。一七一七年、世界遺産の地 神宿る福岡・宗像で創業しました。三百余年の歴史を礎に、蔵を再興しています。</p>
+								</div>
+								<div class="comp-arrow-button">
+									<a href="/izuhonten/history">
+										<span class="txt">詳細を見る</span>
+										<span class="caret right"></span>
+										<span class="line"></span>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div><!-- section_wrapper -->
-				</section>
-				<div class="sake_slider_wrapper">
-					<div class="sake_wrapper_txt">
-						<div class="txt_inner">
-							<h2 class="lead_ttl">神の地 福岡・宗像から、<br>日本酒『宗像』誕生。</h2>
-							<div class="desc_wrapper">
-								<p>創業一七一七年の伊豆本店。<br>世界遺産の地 神宿る 福岡・宗像で<br>酒を醸し続けてきました。</p>
-								<p>三百余年の歴史を礎に、今、新しい時代に<br>向けた酒造りを目指し蔵を再興しています。</p>
-								<p>神に守られた宗像の恵みを大切にしながら<br>地域とともに歩む日本酒を造る。<br>新たな銘柄は 「宗像(むなかた)」 と名付けました。</p>
+						<div class="facility_item">
+							<div class="facility_img">
+								<img src="/img/izuhonten/index/link_img02.jpg">
+							</div>
+							<div class="facility_txt">
+								<h3 class="facility_ttl">日本酒「宗像」</h3>
+								<div class="facility_description">
+									<p>地域とともに歩む日本酒を造るー。<br>その想いを込めて、新しい銘柄を「宗像」と命名。神さまとのご縁が深い土地で山々を巡った地下水と、地元の酒米などで仕込みます。オンラインでもご購入いただけます。</p>
+								</div>
+								<div class="comp-arrow-button">
+									<a href="/izuhonten/product">
+										<span class="txt">詳細を見る</span>
+										<span class="caret right"></span>
+										<span class="line"></span>
+									</a>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="sake_section_wrapper">
-						<section class="section-sake01">
-							<div class="section_wrapper">
-								<div class="section_txt_wrap">
-									<div class="ttl_wrapper">
-										<h2 class="lead_ttl func-width-setter">神の地 福岡・宗像から、<br>日本酒『宗像』誕生。</h2>
-									</div>
+						<div class="facility_item">
+							<div class="facility_img">
+								<img src="/img/izuhonten/index/link_img03.jpg">
+							</div>
+							<div class="facility_txt">
+								<h3 class="facility_ttl">福岡 宗像 酒蔵 伊豆本店</h3>
+								<div class="facility_description">
+									<p>「福岡 宗像 酒蔵 伊豆本店」は、田畑広がるのどかな宗像市の東部にございます。酒蔵見学ができる「醸造蔵」、酒粕を使った饅頭などを販売する「甘味」、茅葺き屋根のお買い物施設「直売所」などお楽しみいただけます。伝統的な槽搾り製法で用いた設備を再活用した「酒蔵BAR」では、上質な空間で酒肴とのペアリングをご用意しています。ごゆっくりとお過ごしください。</p>
 								</div>
-							</div><!-- section_wrapper -->
-						</section>
-						<section class="section-sake02">
-							<div class="section_wrapper">
-								<div class="section_txt_wrap">
-									<div class="desc_wrapper">
-										<p class="func-width-setter">創業一七一七年の伊豆本店。<br>世界遺産の地 神宿る 福岡・宗像で<br>酒を醸し続けてきました。</p>
-									</div>
+								<div class="comp-arrow-button">
+									<a href="/izuhonten/facility">
+										<span class="txt">詳細を見る</span>
+										<span class="caret right"></span>
+										<span class="line"></span>
+									</a>
 								</div>
-							</div><!-- section_wrapper -->
-						</section>
-						<section class="section-sake03">
-							<div class="section_wrapper">
-								<div class="section_txt_wrap">
-									<div class="desc_wrapper">
-										<p class="func-width-setter">三百余年の歴史を礎に、今、新しい時代に<br>向けた酒造りを目指し蔵を再興しています。</p>
-									</div>
-								</div>
-							</div><!-- section_wrapper -->
-						</section>
-						<section class="section-sake04">
-							<div class="section_wrapper">
-								<div class="section_txt_wrap">
-									<div class="desc_wrapper">
-										<p class="func-width-setter">神に守られた宗像の恵みを大切にしながら<br>地域とともに歩む日本酒を造る。<br>新たな銘柄は 「宗像(むなかた)」 と名付けました。</p>
-									</div>
-								</div>
-							</div><!-- section_wrapper -->
-						</section>
-					</div><!-- sake_section_wrapper -->
-				</div><!-- sake_slider_wrapper -->
-				<section class="section-bottle"></section>
-				<section class="section-store01">
-					<div class="store_wrapper">
-						<div class="img_wrap">
-							<img src="/img/izuhonten/izuhon_logo.svg">
-							<div class="txt_wrap">
-								<p>2026年1月7日<br>新生「福岡 宗像 酒蔵 伊豆本店」開業</p>
 							</div>
 						</div>
-					</div>
-				</section>
-				<div class="store_slider_wrapper">
-					<div class="sake_wrapper_txt">
-						<div class="txt_inner">
-							<h2 class="lead_ttl">三百余年の時を超え、新たな物語へ。<br>新生「福岡 宗像 酒蔵 伊豆本店」。</h2>
-							<div class="desc_wrapper">
-								<p>築三百年を超える酒蔵を全面改築いたします。<br>煉瓦造りの聳え立つ煙突、茅葺きの屋根は、<br>これからも蔵の歴史を物語り続け、</p>
-								<p><span>「醸造蔵」「酒蔵BAR」「直売所」</span><br><span>「歴史展示」「甘味」エリアを改築・新設します。</span></p>
-								<p>酒を知り、酒を嗜み、酒を感じる。<br>日本酒の文化に触れながら体験ができる酒蔵として<br>新しく生まれ変わります。</p>
-							</div>
-						</div>
-					</div>
-					<div class="sake_section_wrapper">
-						<section class="section-store02">
-							<div class="store_content_wrapper">
-								<div class="store_content_txt">
-									<div class="ttl_wrap">
-										<h2 class="lead_ttl func-width-setter">三百余年の時を超え、新たな物語へ。<br>新生「福岡 宗像 酒蔵 伊豆本店」。</h2>
-									</div>
-								</div>
-							</div><!-- store_content_wrapper -->
-						</section>
-						<section class="section-store03">
-							<div class="store_content_wrapper">
-								<div class="store_content_txt">
-									<div class="desc_wrapper">
-										<p class="func-width-setter">築三百年を超える酒蔵を全面改築いたします。<br>煉瓦造りの聳え立つ煙突、茅葺きの屋根は、<br>これからも蔵の歴史を物語り続け、</p>
-									</div>
-								</div>
-							</div><!-- store_content_wrapper -->
-						</section>
-						<section class="section-store04">
-							<div class="store_content_wrapper">
-								<div class="store_content_txt">
-									<div class="desc_wrapper">
-										<p class="func-width-setter"><span>「醸造蔵」「酒蔵BAR」「直売所」</span><br><span>「歴史展示」「甘味」エリアを改築・新設します。</span></p>
-									</div>
-								</div>
-							</div><!-- store_content_wrapper -->
-						</section>
-						<section class="section-store05">
-							<div class="store_content_wrapper">
-								<div class="store_content_txt">
-									<div class="desc_wrapper">
-										<p class="func-width-setter">酒を知り、酒を嗜み、酒を感じる。<br>日本酒の文化に触れながら体験ができる酒蔵として<br>新しく生まれ変わります。</p>
-									</div>
-								</div>
-							</div><!-- store_content_wrapper -->
-						</section>
+
+					</div><!-- comp-facility-detail -->
+				</div><!-- facility_inner -->
+			</section>
+			<section class="section-index-product">
+				<div class="product_ttl_wrapper">
+					<hgroup class="comp-ttl-group">
+						<h2 class="ttl_jp">商品一覧</h2>
+						<span class="ttl_en">Item List</span>
+					</hgroup>
+					<div class="product_main_img">
+						<img class="sp_img" src="/img/izuhonten/index/product_img.jpg">
+						<img class="pc_img" src="/img/izuhonten/index/product_img_pc.jpg">
 					</div>
 				</div>
-			</div><!-- outerWrapper -->
-			<section class="section-map02">
-				<div class="map_content_wrapper">
-					<div class="map_copntent_txt">
-						<h2 class="map_copntent_ttl">2026年1月7日<span>新生「福岡 宗像 酒蔵 伊豆本店」開業</span></h2>
-						<div class="map_copntent_description">
-							<p>株式会社伊豆本店<br>〒811-4152 福岡県宗像市武丸1060番地<br>TEL:0940-32-3001. / FAX:0940-33-0512</p>
-							<div class="map_link">
-								<a target="_blank" href="https://maps.app.goo.gl/RE4KbfpUxorXg3GQ8">
-									<span class="icon"><img src="/img/izuhonten/map_icon.svg"></span>
-									<span class="txt">MAP</span>
+				<div class="section_inner">
+					<div class="comp-product-list flex">
+						<div class="product_item">
+							<div class="product_img">
+								<a href="#aaaa">
+									<img src="/img/izuhonten/product/product01.jpg">
 								</a>
 							</div>
+							<div class="product_txt">
+								<h3 class="prod_name"><a href="#aaaa">宗像 特別純米 山田錦</a></h3>
+								<div class="prod_description">
+									<p>酒米の王様と言われる山田錦の品格を感じるエレガントさ。花のような香りが広がり、余韻が長く続きます。うまみ・甘味が豊かで気品のある味わいです。</p>
+								</div>
+								<div class="prod_spec">【精米歩合】60％&nbsp;【酒米産地】福岡・宗像</div>
+								<div class="prod_button_wrap">
+									<a href="#aaaa">
+										<span class="txt">商品を購入する</span>
+										<span class="caret"></span>
+									</a>
+									<div class="button_description">
+										<p>※久原本家公式オンラインショップにてご購入いただけます。<br>※20歳未満のお客様はご購入いただけません。</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- product_item -->
+						<div class="product_item">
+							<div class="product_img">
+								<a href="#aaaa">
+									<img src="/img/izuhonten/product/product02.jpg">
+								</a>
+							</div>
+							<div class="product_txt">
+								<h3 class="prod_name"><a href="#aaaa">宗像 純米 夢一献</a></h3>
+								<div class="prod_description">
+									<p>味のふくらみや奥ゆきなど、重層的な味の表情を大切に仕込みました。〝甘・辛・酸・旨・苦〞のバランスがよく、 口に含むと、華やかな香りが鼻を抜けます。 飲み口もやさしく、なめらかです。</p>
+								</div>
+								<div class="prod_spec">【精米歩合】70％&nbsp; 【酒米産地】福岡・宗像</div>
+								<div class="prod_button_wrap">
+									<a href="#aaaa">
+										<span class="txt">商品を購入する</span>
+										<span class="caret"></span>
+									</a>
+									<div class="button_description">
+										<p>※久原本家公式オンラインショップにてご購入いただけます。<br>※20歳未満のお客様はご購入いただけません。</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- product_item -->
+						<div class="product_item">
+							<div class="product_img">
+								<a href="#aaaa">
+									<img src="/img/izuhonten/product/product03.jpg">
+								</a>
+							</div>
+							<div class="product_txt">
+								<h3 class="prod_name"><a href="#aaaa">宗像 特別純米 寿限無</a></h3>
+								<div class="prod_description">
+									<p>軽快な甘い香りと、辛口のようなすっきり感。キレのいい後味です。米、仕込み、麹の奇遇な巡り合わせから、想像を超えた味わいが生まれました。熟練の杜氏が酒造りのおもしろさを改めて感じたお酒です。</p>
+								</div>
+								<div class="prod_spec">【精米歩合】60％&nbsp; 【酒米産地】福岡・宗像</div>
+								<div class="prod_button_wrap">
+									<a href="#aaaa">
+										<span class="txt">商品を購入する</span>
+										<span class="caret"></span>
+									</a>
+									<div class="button_description">
+										<p>※久原本家公式オンラインショップにてご購入いただけます。<br>※20歳未満のお客様はご購入いただけません。</p>
+									</div>
+								</div>
+							</div>
+						</div><!-- product_item -->
+					</div><!-- comp-product-list -->
+				</div><!-- section_inner -->
+			</section>
+			<section class="section-craftmanship">
+				<div class="craftman_wrapper">
+					<div class="craftman_img">
+						<img src="/img/izuhonten/index/craftman_img.jpg">
+					</div>
+					<div class="craftman_txt">
+						<div class="txt_inner">
+							<h3 class="craftman_ttl">酒造りのこだわり</h3>
+							<div class="craftman_description">
+								<p>ひとしずくに物語を。米や麹に導かれながら自然に醸すことが伊豆本店の酒造りです。</p>
+							</div>
+							<div class="comp-arrow-button">
+								<a class="white" href="/product#craftmanShip">
+									<span class="txt">詳細を見る</span>
+									<span class="caret right"></span>
+									<span class="line"></span>
+								</a>
+							</div>
+						</div><!-- txt_inner -->
+					</div><!-- craftman_txt -->
+				</div><!-- craftman_wrapper -->
+			</section>
+			<section class="section-journal-feed">
+				<div class="section_inner">
+					<div class="journal_flex_wrap">
+						<div class="journal_ttl_wrap">
+							<hgroup class="comp-ttl-group">
+								<h2 class="ttl_jp">宗像だより</h2>
+								<span class="ttl_en">Journal</span>
+							</hgroup>
+							<div class="ttl_description">
+								<p>宗像酒造及び、蔵の庭からのイベント新商品などの情報をお知らせします。</p>
+							</div>
+							<div class="comp-arrow-button">
+								<a target="_blank" href="#aaaa">
+									<span class="txt">記事一覧へ</span>
+									<span class="caret right"></span>
+									<span class="line"></span>
+								</a>
+							</div>
+						</div><!-- journal_ttl_wrap -->
+						<div class="comp-journal-list">
+							<div class="journal_item">
+								<a target="_blank" href="#aaaa">
+									<span class="img_wrap">
+										<img src="/img/izuhonten/index/journal01.jpg">
+									</span>
+									<span class="ttl_wrap">
+										<span class="date">2025.10.10</span>
+										<span class="ttl">酒・食・器の３つの要素をペアリングするトリプリングの体験を提供開始</span>
+									</span>
+								</a>
+							</div>
+							<div class="journal_item">
+								<a target="_blank" href="#aaaa">
+									<span class="img_wrap">
+										<img src="/img/izuhonten/index/journal02.jpg">
+									</span>
+									<span class="ttl_wrap">
+										<span class="date">2025.10.10</span>
+										<span class="ttl">イチゴとブルーチーズの白和他 魚介類とのペアリング等</span>
+									</span>
+								</a>
+							</div>
+							<div class="journal_item">
+								<a target="_blank" href="#aaaa">
+									<span class="img_wrap">
+										<img src="/img/izuhonten/index/journal03.jpg">
+									</span>
+									<span class="ttl_wrap">
+										<span class="date">2025.10.10</span>
+										<span class="ttl">蔵の意匠を巡る vol.6 - 覚悟を決めて手掛けた「宗像酵母」の波及効果】</span>
+									</span>
+								</a>
+							</div>
+							<div class="journal_item">
+								<a target="_blank" href="#aaaa">
+									<span class="img_wrap">
+										<img src="/img/izuhonten/index/journal04.jpg">
+									</span>
+									<span class="ttl_wrap">
+										<span class="date">2025.10.10</span>
+										<span class="ttl">宗像に根付く・手仕事の担い手たち Vol.4 - 好きなものを、純粋に、どこまでも突き詰める。ガラス作家・波多野裕子氏</span>
+									</span>
+								</a>
+							</div>
+						</div><!-- comp-journal-list -->
+					</div><!-- journal_flex_wrap -->
+				</div><!-- section_inner -->
+			</section>
+			<section class="section-instagram">
+				<div class="section_inner">
+					<div class="insta_ttl_wrap">
+						<h2 class="insta_ttl">Instagram</h2>
+						<div class="insta_lead_txt">伊豆本店のインスタグラム</div>
+					</div><!-- insta_ttl_wrap -->
+					<div class="comp-insta-feed">
+						<div id="insta-feed" class="feed_inner">
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post01.jpg">
+								</a>
+							</div>
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post02.jpg">
+								</a>
+							</div>
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post03.jpg">
+								</a>
+							</div>
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post04.jpg">
+								</a>
+							</div>
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post05.jpg">
+								</a>
+							</div>
+							<div class="insta-post">
+								<a target="_blank" href="aaaa" target="_blank" rel="noopener">
+									<img src="/img/izuhonten/index/post06.jpg">
+								</a>
+							</div>
+						</div><!-- feed_inner -->
+						<div class="link_button">
+							<a target="_blank" href="#aaaa">
+								<span class="icon"><img src="/img/izuhonten/common/button_instagram.svg"></span>
+								<span class="txt">izuhonten</span>
+							</a>
 						</div>
-					</div>
-					<div class="comp-scroll-bar bar02">
-						<button id="scrollTop">
-							<span class="txt_wrap">Page Top</span>
-							<span class="line"></span>
-						</button>
-					</div>
+					</div><!-- comp-insta-feed -->
+				</div><!-- section_inner -->
 			</section>
 		</article>
 
-		<div id="pageBg" class="comp-page-background loaded">
-			<div class="img_wrapper wrap00">
-				<img class="pc_img" src="/img/izuhonten/main_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap01" style="background-image: url(/img/izuhonten/bg01.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg01_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap02" style="background-image: url(/img/izuhonten/bg02.jpg?ver3);">
-				<img class="pc_img" src="/img/izuhonten/bg02_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap03" style="background-image: url(/img/izuhonten/bg03.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg03_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap04" style="background-image: url(/img/izuhonten/bg04.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg04_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap05" style="background-image: url(/img/izuhonten/bg05.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg05_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap06" style="background-image: url(/img/izuhonten/bg06.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg06_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap07" style="background-image: url(/img/izuhonten/bg07.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg07_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap08" style="background-image: url(/img/izuhonten/bg08.jpg?ver3);">
-				<img class="pc_img" src="/img/izuhonten/bg08_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap09" style="background-image: url(/img/izuhonten/bg09.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg09_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap10" style="background-image: url(/img/izuhonten/bg10.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg10_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap11" style="background-image: url(/img/izuhonten/bg11.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg11_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap12" style="background-image: url(/img/izuhonten/bg12.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg12_pc.jpg?ver3">
-			</div>
-			<div class="img_wrapper wrap13" style="background-image: url(/img/izuhonten/bg13.svg)">
-				<img class="pc_img" src="/img/izuhonten/bg13_pc.svg">
-			</div>
-			<div class="img_wrapper wrap14" style="background-image: url(/img/izuhonten/bg14.jpg?ver3)">
-				<img class="pc_img" src="/img/izuhonten/bg14_pc.jpg?ver3">
-			</div>
+		<div id="hummenu" class="comp-hummenu">
+			<div class="contents">
+				<div class="hummenu_inner">
+					<nav class="hummenu_navigation">
+						<ul class="parent_ul">
+							<li class="parent_li">
+								<a class="parent" href="/izuhonten/history">伊豆本店の歩み</a>
+								<ul class="children">
+									<li><a href="/izuhonten/history#section01">酒米について</a></li>
+									<li><a href="/izuhonten/history#section02">伝統の“槽搾り”製法</a></li>
+									<li><a href="/izuhonten/history#section03">沿革</a></li>
+								</ul>
+							</li>
+							<li class="parent_li">
+								<a class="parent" href="/izuhonten/facility">酒蔵について</a>
+								<ul class="children">
+									<li><a href="/izuhonten/facility#section01">施設紹介</a></li>
+									<li><a href="/izuhonten/facility#section02">酒蔵限定酒・亀の尾</a></li>
+									<li><a href="/izuhonten/facility#section03">アクセス</a></li>
+									<li><a href="/izuhonten/facility#section04">営業カレンダー</a></li>
+								</ul>
+							</li>
+							<li class="parent_li">
+								<a class="parent" href="/izuhonten/product">日本酒「宗像」</a>
+								<ul class="children">
+									<li><a href="/izuhonten/product#section01">日本酒・宗像</a></li>
+									<li><a href="/izuhonten/product#section02">伊豆本店のお酒</a></li>
+									<li><a href="/izuhonten/product#section03">酒造りのこだわり</a></li>
+								</ul>
+							</li>
+							<li class="parent_li">
+								<a class="parent" href="/izuhonten/company">会社概要</a>
+								<div class="outer_link_wrap">
+									<div class="nav_item">
+										<a href="https://www.kubara.jp/mypage/">
+											<span class="img_wrap">
+												<img src="/img/izuhonten/common/header_login.svg">
+											</span>
+											<span class="txt">マイページ</span>
+										</a>
+									</div>
+									<div class="nav_item">
+										<a href="https://www.kubara.jp/carts/view/">
+											<span class="img_wrap">
+												<img src="/img/izuhonten/common/header_cart.svg">
+											</span>
+											<span class="txt">カート</span>
+										</a>
+									</div>
+									<div class="nav_item">
+										<a target="_blank" href="https://www.kubara.jp/">
+											<span class="txt">オンラインショップ</span>
+											<span class="caret">
+												<img class="outer" src="/img/izuhonten/common/outer_link.svg">
+											</span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+					<div class="hummenu_lower">
+						<div class="corp_sns_wrap">
+							<div class="sns_item">
+								<a target="_blank" href="#aaaa">
+									<img src="/img/izuhonten/common/icon_instagram.svg">
+								</a>
+							</div>
+							<div class="sns_item">
+								<a target="_blank" href="#aaaa">
+									<img src="/img/izuhonten/common/icon_note.svg">
+								</a>
+							</div>
+						</div><!-- corp_sns_wrap -->
+						<ul>
+							<li><a target="_blank" href="https://www.kubara.jp/law/">特商法に基づく表示</a></li>
+							<li><a target="_blank" href="https://www.kubara.jp/privacy/">プライバシーポリシー</a></li>
+							<li class="reline"></li>
+							<li><a target="_blank" href="https://kubarahonke.com/">運営会社</a></li>
+							<li><a target="_blank" href="https://www.kubara.jp/support/">お問い合わせ</a></li>
+						</ul>
+					</div><!-- hummenu_lower -->
+				</div><!-- hummenu_inner -->
+			</div><!-- contents -->
 		</div>
+
+		<footer>
+			<div class="footer_inner">
+				<nav class="footer_navigation">
+					<ul class="parent_ul">
+						<li class="parent_li">
+							<a class="parent" href="/izuhonten/history">伊豆本店の歩み</a>
+							<ul class="children">
+								<li><a href="/izuhonten/history#section01">酒米について</a></li>
+								<li><a href="/izuhonten/history#section02">伝統の“槽搾り”製法</a></li>
+								<li><a href="/izuhonten/history#section03">沿革</a></li>
+							</ul>
+						</li>
+						<li class="parent_li">
+							<a class="parent" href="/izuhonten/facility">酒蔵について</a>
+							<ul class="children">
+								<li><a href="/izuhonten/facility#section01">施設紹介</a></li>
+								<li><a href="/izuhonten/facility#section02">酒蔵限定酒・亀の尾</a></li>
+								<li><a href="/izuhonten/facility#section03">アクセス</a></li>
+								<li><a href="/izuhonten/facility#section04">営業カレンダー</a></li>
+							</ul>
+						</li>
+						<li class="parent_li">
+							<a class="parent" href="/izuhonten/product">日本酒「宗像」</a>
+							<ul class="children">
+								<li><a href="/izuhonten/product#section01">日本酒・宗像</a></li>
+								<li><a href="/izuhonten/product#section02">伊豆本店のお酒</a></li>
+								<li><a href="/izuhonten/product#section03">酒造りのこだわり</a></li>
+							</ul>
+						</li>
+						<li class="parent_li">
+							<a class="parent" href="/izuhonten/company">会社概要</a>
+							<div class="outer_link_wrap">
+								<div class="nav_item">
+									<a href="https://www.kubara.jp/mypage/">
+										<span class="img_wrap">
+											<img src="/img/izuhonten/common/header_login.svg">
+										</span>
+										<span class="txt">マイページ</span>
+									</a>
+								</div>
+								<div class="nav_item">
+									<a href="https://www.kubara.jp/carts/view/">
+										<span class="img_wrap">
+											<img src="/img/izuhonten/common/header_cart.svg">
+										</span>
+										<span class="txt">カート</span>
+									</a>
+								</div>
+								<div class="nav_item">
+									<a target="_blank" href="https://www.kubara.jp/">
+										<span class="txt">オンラインショップ</span>
+										<span class="caret">
+											<img class="outer" src="/img/izuhonten/common/outer_link.svg">
+										</span>
+									</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer_corp_info">
+					<div class="footer_logo">
+						<a href="/izuhonten">
+							<img src="/img/izuhonten/common/footer_logo.svg">
+						</a>
+					</div>
+					<div class="corp_name">福岡 宗像 酒蔵 伊豆本店</div>
+					<div class="corp_address">
+						<p>〒811-4152 福岡県宗像市武丸1060番地<br>TEL : 0940-32-3001　 FAX : 0940-33-0512</p>
+					</div>
+					<div class="corp_sns_wrap">
+						<div class="sns_item">
+							<a target="_blank" href="#aaaa">
+								<img src="/img/izuhonten/common/icon_instagram.svg">
+							</a>
+						</div>
+						<div class="sns_item">
+							<a target="_blank" href="#aaaa">
+								<img src="/img/izuhonten/common/icon_note.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer_lower">
+					<ul>
+						<li><a target="_blank" href="https://www.kubara.jp/law/">特商法に基づく表示</a></li>
+						<li><a target="_blank" href="https://www.kubara.jp/privacy/">プライバシーポリシー</a></li>
+						<li class="reline"></li>
+						<li><a target="_blank" href="https://kubarahonke.com/">運営会社</a></li>
+						<li><a target="_blank" href="https://www.kubara.jp/support/">お問い合わせ</a></li>
+					</ul>
+					<p class="copyright">Copyright 株式会社伊豆本店 All Rights Reserved.</p>
+				</div>
+			</div><!-- footer_inner -->
+		</footer>
 
 	</div><!-- /#work_wrap -->
 	<!-- ==================== /wrapper ==================== -->
