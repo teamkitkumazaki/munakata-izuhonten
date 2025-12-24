@@ -7,19 +7,14 @@ $borderColor: #d8d8d8;
 
 /* ----- Google Fonts ----- */
 
-@mixin rotunda{
-  font-family: rotunda-variable, sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-@mixin mincho{
-  font-family: dnp-shuei-nshogomincho-std, sans-serif;
-  letter-spacing: 0.06em;
+@mixin lato{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @mixin wrapper{
-  width: 87vw;
+  width: 86vw;
   margin-left: auto;
   margin-right: auto;
   @media screen and (min-width: 720px){

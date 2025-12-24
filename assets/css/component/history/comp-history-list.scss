@@ -1,0 +1,105 @@
+.comp-history-list{
+  position: relative;
+  &::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 1px;
+    height: calc(100% + 60px);
+    border-left: 1px dotted $keyColor;
+  }
+  .history_item{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    .year{
+      position: relative;
+      padding-left: 26px;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        top:6px;
+        left:0;
+        margin: auto;
+        width: 20px;
+        height: 1px;
+        background: $keyColor;
+      }
+      &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        z-index: 15;
+        top:2px;
+        left:-5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $keyColor;
+      }
+    }
+    .content{
+      margin-top: 10px;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      padding-left: 26px;
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-history-list{
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    &::before{
+      top: 5px;
+      left: 160px;
+    }
+    .history_item{
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      @include flexSet;
+      align-items: baseline;
+      &:nth-last-of-type(1){
+        padding-bottom: 100px;
+      }
+      .year{
+        width: 160px;
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 0px;
+        font-size: 1.8rem;
+        &::before{
+          display: none;
+        }
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          z-index: 15;
+          top:2px;
+          left: unset;
+          right: -5px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: $keyColor;
+        }
+      }
+      .content{
+        max-width: calc(100% - 160px);
+        box-sizing: border-box;
+        margin-top: 0px;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        padding-left: 30px;
+      }
+    }
+  }
+
+}

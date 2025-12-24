@@ -21,10 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // トップに戻るボタン + スクロール + ウィンドウサイズ系の対策処理
   function scrollAnimationSet(target) {
     const scButtonWrap = document.querySelector('#scrollTopWrap');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
     const position = document.documentElement;
     let wHeight = window.innerHeight;
     let preSetWidth = window.innerWidth;
     let scrollCount = 0;
+
+    let footerTop;
 
     // jQuery .offset().top の代替関数
     function getOffsetTop(el) {
@@ -34,12 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setHeightProperty() {
       wHeight = window.innerHeight;
-
+      footerTop = footer.getBoundingClientRect().top + window.scrollY;
       position.style.setProperty('--wHeight', window.innerHeight);
       position.style.setProperty('--wHeightPx', window.innerHeight + 'px');
       position.style.setProperty('--scroll', window.scrollY);
 
       requestAnimationFrame(setHeightProperty);
+
+      if (document.getElementById('index')) {
+        if (window.scrollY > window.innerHeight) {
+          header.classList.remove('index');
+        } else {
+          header.classList.add('index');
+        }
+      }
+
+      if (window.scrollY > footerTop) {
+        header.classList.add('index2');
+      } else {
+        header.classList.remove('index2');
+      }
 
       // jQuery $(".effect").each()
       document.querySelectorAll('.effect').forEach(function(el) {
@@ -127,6 +145,101 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   humMenuToggle();
+
+  // ===============================
+  // ローディングアニメーション
+  // ===============================
+  function loadingAnimation() {
+    console.log('loading');
+    const duration = 1000;
+    const duration2 = 2500;
+    const loadingLogo = document.getElementById('loadingLogo');
+    const loading = document.getElementById('loading');
+    const article = document.querySelector('article');
+    const body = document.body;
+
+    loadingLogo.classList.add('load');
+    loadingDelete();
+
+    function loadingDelete() {
+      console.log('loadingDelete');
+      deleteState = 1;
+      setTimeout(() => {
+        loadingLogo.classList.remove('load');
+        setTimeout(() => {
+          loading.classList.add('loaded');
+          article.classList.remove('loading');
+          loadingKvShifter();
+          setTimeout(() => {
+            body.classList.remove('bind');
+          }, duration);
+        }, duration);
+      }, duration2);
+    }
+  }
+
+  loadingAnimation();
+
+
+  // ===============================
+  // トップページ MVスライダー
+  // ===============================
+  function loadingKvShifter() {
+    const slider = document.getElementById('loadingImgBox');
+    const slides = slider.querySelectorAll('li');
+    const sliderLength = slides.length;
+    let current = 0;
+    let timeId;
+    const interval = 3000;
+
+    // スライド状態を変更
+    function slideChange(index) {
+      // 全ての display_slide を削除
+      slider.querySelectorAll('.display_slide').forEach(el => {
+        el.classList.remove('display_slide');
+      });
+
+      // 対象のスライドにクラスを追加
+      const target = slider.querySelector('.slide' + index);
+      if (target) {
+        target.classList.add('display_slide');
+      }
+
+      current = index;
+      startAuto(); // 次のスライド切り替え予約
+    }
+
+    // スライド自動切り替え
+    function changeState() {
+      current = (current + 1) % sliderLength;
+      slideChange(current);
+    }
+
+    function startAuto() {
+      clearTimeout(timeId); // 前のタイマーをクリア
+      timeId = setTimeout(changeState, interval);
+    }
+
+    // 初期化処理
+    function init() {
+      slides.forEach((li, index) => {
+        li.classList.add('slide' + index);
+        if (index === 0) {
+          li.classList.add('display_slide');
+        }
+      });
+      startAuto();
+    }
+
+    init();
+  }
+
+  // id="loadingImgBox" がある場合、1秒後に起動
+  if (document.getElementById('loadingImgBox')) {
+    /* setTimeout(() => {
+      loadingKvShifter();
+    }, 1000); */
+  }
 
 
 });

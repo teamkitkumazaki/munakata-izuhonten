@@ -15,8 +15,8 @@ header{
         position: relative;
         width: 160px;
         height: 36px;
-        transition: filter .3s;
-        will-change: filter;
+        transition: filter .3s, opacity .3s;
+        will-change: filter, opacity;
         img{
           position: absolute;
           top:0;
@@ -87,7 +87,6 @@ header{
           width: 40px;
           height: 40px;
           background: $keyColor;
-          border: 1px solid #fff;
           border-radius: 50%;
           span {
 						position: absolute;
@@ -107,6 +106,25 @@ header{
 							bottom: 22px;
 						}
 					}
+        }
+      }
+    }
+  }
+  &.index, &.index2{
+    .header_inner{
+      .header_left{
+        .header_logo{
+          filter:invert(1);
+        }
+      }
+      .header_right{
+        .lang_shifter{
+          filter:invert(1);
+        }
+        .navigation_wrapper{
+          .nav_item{
+            filter:invert(1);
+          }
         }
       }
     }
@@ -132,10 +150,10 @@ header{
           button{
             span {
   						&:nth-of-type(1) {
-                transform:translateY(-3.5px) rotate(45deg);
+                transform:translateY(-2px) rotate(45deg);
   						}
   						&:nth-of-type(2) {
-                transform:translateY(3.5px) rotate(-45deg);
+                transform:translateY(3px) rotate(-45deg);
   						}
   					}
           }
@@ -152,6 +170,7 @@ header{
       align-items: flex-start;
       .header_left{
         @include flexSet;
+        height: 70px;
         .header_logo{
           position: relative;
           width: 70px;
@@ -159,6 +178,9 @@ header{
           margin-right: 30px;
           transition: filter .3s;
           will-change: filter;
+          a{
+            @include hover;
+          }
           img{
             position: absolute;
             top:0;
@@ -186,6 +208,8 @@ header{
               font-size: 1.6rem;
               color: inherit;
               @include hover;
+              transition: color .3s, opacity .3s;
+              will-change: color, opacity;
             }
           }
         }
@@ -234,6 +258,7 @@ header{
             }
             a{
               display: block;
+              @include hover;
               line-height: 1;
               img{
                 width: auto;
@@ -252,6 +277,32 @@ header{
         }
         .hummenu_wrap{
           display: none;
+        }
+      }
+    }
+    &.index, &.index2{
+      .header_inner{
+        .header_left{
+          .header_logo{
+            filter:invert(1);
+          }
+          .header_navigation{
+            li{
+              a{
+                color: #fff;
+              }
+            }
+          }
+        }
+        .header_right{
+          .lang_shifter{
+            filter:invert(1);
+          }
+          .navigation_wrapper{
+            .nav_item{
+              filter:invert(1);
+            }
+          }
         }
       }
     }

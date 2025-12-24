@@ -1,0 +1,178 @@
+.comp-business-calendar{
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  .calendar_inner{
+    padding: 25px;
+    background: #fff;
+    border-bottom: 1px solid $borderColor;
+    border-radius: 5px 5px 0 0;
+    .fc-left, .fc-center{
+      display: none;
+    }
+    .fc-header-toolbar{
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .fc-view-container{
+      position: relative;
+      .fc-month-view{
+        thead, tbody, table, tr, td{
+          display: block;
+          width: 100%;
+        }
+        .fc-head > tr{
+          border: none;
+        }
+        .fc-body > tr{
+          border: none;
+        }
+        .fc-body > tr > .fc-widget-content{
+          width: 100%;
+          padding: 0;
+        }
+        .fc-body{
+          .fc-widget-content{
+            .fc-scroller{
+              height: auto !important;
+              overflow: visible !important;
+            }
+          }
+        }
+        .fc-head-container{
+          width: 100%;
+        }
+        .fc-bg{
+          display: none;
+        }
+        .fc-content-skeleton > table{
+          border: none;
+        }
+        .fc-content-skeleton{
+          thead{
+
+          }
+          tbody{
+            display: none;
+          }
+        }
+        thead, tr{
+          display: block;
+          width: 100%;
+        }
+        table{
+          border-top: 1px solid $borderColor;
+          tr{
+            @include flexSet;
+            border-bottom: 1px solid $borderColor;
+            .fc-day-top{
+              display: block;
+              width: calc(100% / 7);
+              text-align: center;
+              padding: 3px 0;
+              span, .fc-day-number{
+                display: block;
+                font-size: 1.2rem;
+                line-height: 26px;
+                &.lastmonth, &.nextmonth{
+                  color: #acacac;
+                }
+              }
+              &.fc-past{
+                opacity: 0.5;
+              }
+              &.fc-today{
+                background: #f4f4f4;
+              }
+              &.fc-other-month{
+                opacity: 0.5;
+              }
+              &.dayoff{
+                opacity: 1;
+                background: #C53C3C;
+                color: #fff;
+              }
+            }
+            .fc-day-header{
+              display: block;
+              width: calc(100% / 7);
+              text-align: center;
+              padding: 3px 0;
+              span, .fc-day-number{
+                display: block;
+                font-size: 1.2rem;
+                line-height: 26px;
+                &.lastmonth, &.nextmonth{
+                  color: #acacac;
+                }
+              }
+            }
+            th, td{
+              width: calc(100% / 7);
+              text-align: center;
+              padding: 3px 0;
+              .weekDay{
+                font-size: 1.2rem;
+              }
+              p{
+                font-size: 1.2rem;
+                line-height: 26px;
+                &.lastmonth, &.nextmonth{
+                  color: #acacac;
+                }
+              }
+            }
+          }
+        }
+      }
+      .fc-month-view > table{
+        border: none;
+      }
+    }
+  }
+  .calendar_description{
+    font-size: 1.2rem;
+    line-height: 1.78;
+    padding: 20px 25px;
+    background: $bgColor;
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .comp-business-calendar2{
+    border-radius: 10px;
+    .calendar_inner{
+      padding: 30px 40px;
+      border-radius: 10px 10px 0 0;
+      .calendar_header{
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .calendar_table{
+        position: relative;
+        table{
+          tr{
+            th, td{
+              .weekDay{
+                font-size: 1.4rem;
+              }
+              p{
+                font-size: 1.4rem;
+                line-height: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .calendar_description{
+      font-size: 1.4rem;
+      padding: 25px 40px;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+}

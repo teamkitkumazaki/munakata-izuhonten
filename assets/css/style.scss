@@ -12,6 +12,11 @@
 @import 'common/hummenu.scss';
 
 /*########## ページ個別レイアウト ##########*/
+
+@import 'pages/index.scss';
+@import 'pages/history.scss';
+@import 'pages/product.scss';
+@import 'pages/facility.scss';
 @import 'pages/company.scss';
 
 
@@ -25,3 +30,26 @@
 @import 'component/common/comp-page-bread.scss';
 @import 'component/common/comp-underpage-ttl.scss';
 @import 'component/common/comp-company-profile.scss';
+@import 'component/common/comp-ttl-group.scss';
+@import 'component/common/comp-underpage-main.scss';
+@import 'component/common/comp-arrow-button.scss';
+@import 'component/common/comp-photo-gallery.scss';
+
+/* トップページ */
+@import 'component/index/comp-index-loading.scss';
+@import 'component/index/comp-index-kv.scss';
+@import 'component/index/comp-insta-feed.scss';
+@import 'component/index/comp-journal-list.scss';
+
+
+
+/* 商品 */
+@import 'component/product/comp-product-list.scss';
+@import 'component/product/comp-craft-detail.scss';
+
+/* 歩み */
+@import 'component/history/comp-history-list.scss';
+
+/* 施設 */
+@import 'component/facility/comp-facility-detail.scss';
+@import 'component/facility/comp-business-calendar.scss';

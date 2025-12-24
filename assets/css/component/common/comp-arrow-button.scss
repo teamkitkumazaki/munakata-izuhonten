@@ -1,0 +1,124 @@
+.comp-arrow-button{
+  a,button{
+    width: 50%;
+    position: relative;
+    font-size: 1.6rem;
+    color: inherit;
+    @include flexSet;
+    align-items: center;
+    justify-content: space-between;
+    .caret{
+      display: block;
+      &.down{
+        width: 16px;
+        height: 16px;
+        background-size: 16px;
+        background-image: url(../img/common/caret_down.svg);
+        background-position: center top 0px;
+      }
+      &.right{
+        width: 12px;
+        height: 12px;
+        background-size: 12px;
+        background-image: url(../img/common/caret_right.svg);
+        background-position: center left 0px;
+        margin-right: 5px;
+      }
+    }
+    .line{
+      margin-top: 10px;
+      display: block;
+    	width: 100%;
+    	height: 1px;
+    	position: relative;
+    	overflow: hidden;
+      &::before, &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+      }
+      &::before{
+        left: -600%;
+        width: 0;
+      }
+    }
+    &.white{
+      .caret{
+        filter:invert(1);
+      }
+      .line{
+        &::before, &::after{
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-arrow-button{
+    a,button{
+      max-width: 220px;
+      font-size: 1.6rem;
+      .caret{
+        display: block;
+        transition: background .3s;
+        will-change: background;
+        &.down{
+          width: 16px;
+          height: 16px;
+          background-size: 16px;
+          background-image: url(../img/common/caret_down.svg);
+          background-position: center top 0px;
+        }
+        &.right{
+          width: 12px;
+          height: 12px;
+          background-size: 12px;
+          background-image: url(../img/common/caret_right.svg);
+          background-position: center left 0px;
+          margin-right: 5px;
+        }
+      }
+      .line{
+        margin-top: 15px;
+      }
+      &:hover{
+        .caret{
+          display: block;
+          /*&.down{
+            background-position: center top 16px;
+          }
+          &.right{
+            background-position: center left 12px;
+          }*/
+        }
+        .line{
+          &::before{
+            left: 0;
+            width: 100%;
+          }
+          &::after{
+            left: 100%;
+          }
+        }
+      }
+      &.white{
+        .caret{
+          filter:invert(1);
+        }
+        .line{
+          &::before, &::after{
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}

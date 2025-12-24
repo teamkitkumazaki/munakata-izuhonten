@@ -193,6 +193,7 @@ footer{
               margin-right: 0;
             }
             .parent{
+              @include hover;
               display: block;
               font-size: 1.7rem;
               padding: 5px 0;
@@ -202,6 +203,7 @@ footer{
               li{
                 margin-bottom: 10px;
                 a{
+                  @include hover;
                   padding: 5px 0;
                   font-size: 1.4rem;
                   padding-left: 15px;
@@ -213,32 +215,12 @@ footer{
               .nav_item{
                 margin-bottom: 5px;
                 &:nth-last-of-type(1){
-                  margin-top: 10px;
+                  margin-top: 20px;
                 }
                 a{
+                  @include hover;
                   padding: 5px 0;
-                  color: #fff;
-                  font-size: 1.4rem;
-                  @include flexSet;
-                  align-items: center;
-                  .img_wrap{
-                    width: 20px;
-                    text-align: center;
-                    margin-right: 10px;
-                    img{
-                      width: auto;
-                      height: 20px;
-                      margin: 0 auto;
-                      filter: invert(1);
-                    }
-                  }
-                  .caret{
-                    margin-left:9px;
-                    img{
-                      width: 9px;
-                      transform: translate(0,-2px);
-                    }
-                  }
+                  font-size: 1.5rem;
                 }
               }
             }
@@ -249,6 +231,7 @@ footer{
         .footer_logo{
           margin-bottom: 40px;
           a{
+            @include hover;
             display: block;
             width: 120px;
             margin: 0;
@@ -271,6 +254,7 @@ footer{
           .sns_item{
             margin-right: 20px;
             a{
+              @include hover;
               img{
                 height: 24px;
               }
@@ -294,6 +278,7 @@ footer{
               height: 14px;
             }
             a{
+              @include hover;
               display: block;
               font-size: 1.4rem;
             }

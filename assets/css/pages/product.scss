@@ -1,0 +1,201 @@
+.page-product{
+  padding-bottom: 50px;
+  .section-main{
+    margin-bottom: 50px;
+  }
+  .section-products{
+    margin-bottom: 80px;
+    .ttl_wrapper{
+      margin-bottom: 40px;
+    }
+  }
+  .section-products2{
+    margin-bottom: 80px;
+    .ttl_wrapper{
+      margin-bottom: 40px;
+    }
+  }
+  .section-gift{
+    margin-bottom: 80px;
+    .gift_inner{
+      .gift_main_wrap{
+        .gift_ttl{
+          font-size: 2.2rem;
+          line-height: 1.6;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .gift_main_img{
+          margin-bottom: 50px;
+          .pc_img{
+            display: none;
+          }
+        }
+      }
+      .flex_wrapper{
+        @include wrapper;
+        .gift_flex_wrap{
+          margin-bottom: 50px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+          .gift_sub_ttl{
+            font-size: 1.8rem;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .section-craftmanship{
+    .main_ttl_wrap{
+      .comp-ttl-group{
+        text-align: center;
+      }
+    }
+    .craftman_flex_wrap{
+      margin-bottom: 50px;
+      .craft_ttl{
+        font-size:  2.0rem;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+      .craft_img_wrap{
+        .pc_img{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 980px){
+  .page-product{
+    padding-bottom: 160px;
+    .section-main{
+      margin-bottom: 120px;
+    }
+    .section-products{
+      margin-bottom: 160px;
+      .ttl_wrapper{
+        @include flexSet;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        .comp-ttl-group{
+          margin-bottom: 0;
+        }
+        .comp-arrow-button{
+          width: 200px;
+          a,button{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .section-products2{
+      margin-bottom: 200px;
+      .ttl_wrapper{
+        margin-bottom: 60px;
+      }
+    }
+    .section-gift{
+      margin-bottom: 200px;
+      .gift_inner{
+        .gift_main_wrap{
+          @include flexSet;
+          align-items: flex-start;
+          flex-direction: row-reverse;
+          margin-bottom: 100px;
+          .gift_ttl{
+            width: 120px;
+            writing-mode: vertical-rl;
+            font-size: 2.8rem;
+            text-align: left;
+            padding-top: 25px;
+            margin-bottom: 0px;
+            @include flexSet;
+            justify-content: center;
+            align-items: center;
+            br{
+              display: none;
+            }
+          }
+          .gift_main_img{
+            width: calc(100% - 120px);
+            margin-bottom: 0px;
+            .sp_img{
+              display: none;
+            }
+            .pc_img{
+              display: block;
+            }
+          }
+        }
+        .flex_wrapper{
+          max-width: 100%;
+          width: 100%;
+          .gift_flex_wrap{
+            @include flexSet;
+            align-items: center;
+            flex-direction: row-reverse;
+            margin-bottom: 100px;
+            &:nth-last-of-type(1){
+              flex-direction: unset;
+              margin-bottom: 0;
+            }
+            .flex_img{
+              width: 60%;
+            }
+            .gift_sub_ttl{
+              width: 40%;
+              font-size: 2.8rem;
+              line-height: 1.6;
+              text-align: left;
+              margin-bottom: 0px;
+              @include flexSet;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+    .section-craftmanship{
+      .main_ttl_wrap{
+        .comp-ttl-group{
+          text-align: center;
+          margin-bottom: 70px;
+        }
+      }
+      .craftman_flex_wrap{
+        @include flexSet;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        margin-bottom: 100px;
+        .craft_ttl{
+          width: 120px;
+          writing-mode: vertical-rl;
+          font-size: 2.8rem;
+          text-align: left;
+          padding-top: 25px;
+          margin-bottom: 0px;
+          @include flexSet;
+          align-items: center;
+        }
+        .craft_img_wrap{
+          width: calc(100% - 120px);
+          .sp_img{
+            display: none;
+          }
+          .pc_img{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}
