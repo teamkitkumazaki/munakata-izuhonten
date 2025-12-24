@@ -531,11 +531,11 @@ header .header_inner .header_left .header_logo {
   position: relative;
   width: 160px;
   height: 36px;
-  -webkit-transition: -webkit-filter 0.3s;
-  transition: -webkit-filter 0.3s;
-  transition: filter 0.3s;
-  transition: filter 0.3s, -webkit-filter 0.3s;
-  will-change: filter;
+  -webkit-transition: opacity 0.3s, -webkit-filter 0.3s;
+  transition: opacity 0.3s, -webkit-filter 0.3s;
+  transition: filter 0.3s, opacity 0.3s;
+  transition: filter 0.3s, opacity 0.3s, -webkit-filter 0.3s;
+  will-change: filter, opacity;
 }
 header .header_inner .header_left .header_logo img {
   position: absolute;
@@ -650,6 +650,18 @@ header .header_inner .header_right .hummenu_wrap button span:nth-of-type(1) {
 header .header_inner .header_right .hummenu_wrap button span:nth-of-type(2) {
   bottom: 22px;
 }
+header.index .header_inner .header_left .header_logo, header.index2 .header_inner .header_left .header_logo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+header.index .header_inner .header_right .lang_shifter, header.index2 .header_inner .header_right .lang_shifter {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+header.index .header_inner .header_right .navigation_wrapper .nav_item, header.index2 .header_inner .header_right .navigation_wrapper .nav_item {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
 header.hum_open .header_inner .header_left .header_logo {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -696,6 +708,14 @@ header.hum_open .header_inner .header_right .hummenu_wrap button span:nth-of-typ
     transition: filter 0.3s, -webkit-filter 0.3s;
     will-change: filter;
   }
+  header .header_inner .header_left .header_logo a {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    will-change: opacity;
+  }
+  header .header_inner .header_left .header_logo a:hover {
+    opacity: 0.75;
+  }
   header .header_inner .header_left .header_logo img {
     position: absolute;
     top: 0;
@@ -731,6 +751,9 @@ header.hum_open .header_inner .header_right .hummenu_wrap button span:nth-of-typ
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     will-change: opacity;
+    -webkit-transition: color 0.3s, opacity 0.3s;
+    transition: color 0.3s, opacity 0.3s;
+    will-change: color, opacity;
   }
   header .header_inner .header_left .header_navigation li a:hover {
     opacity: 0.75;
@@ -813,6 +836,21 @@ header.hum_open .header_inner .header_right .hummenu_wrap button span:nth-of-typ
   }
   header .header_inner .header_right .hummenu_wrap {
     display: none;
+  }
+  header.index .header_inner .header_left .header_logo, header.index2 .header_inner .header_left .header_logo {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  header.index .header_inner .header_left .header_navigation li a, header.index2 .header_inner .header_left .header_navigation li a {
+    color: #fff;
+  }
+  header.index .header_inner .header_right .lang_shifter, header.index2 .header_inner .header_right .lang_shifter {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  header.index .header_inner .header_right .navigation_wrapper .nav_item, header.index2 .header_inner .header_right .navigation_wrapper .nav_item {
+    -webkit-filter: invert(1);
+            filter: invert(1);
   }
 }
 footer {

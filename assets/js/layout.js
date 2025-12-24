@@ -21,10 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // トップに戻るボタン + スクロール + ウィンドウサイズ系の対策処理
   function scrollAnimationSet(target) {
     const scButtonWrap = document.querySelector('#scrollTopWrap');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
     const position = document.documentElement;
     let wHeight = window.innerHeight;
     let preSetWidth = window.innerWidth;
     let scrollCount = 0;
+
+    let footerTop;
 
     // jQuery .offset().top の代替関数
     function getOffsetTop(el) {
@@ -34,12 +38,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setHeightProperty() {
       wHeight = window.innerHeight;
-
+      footerTop = footer.getBoundingClientRect().top + window.scrollY;
       position.style.setProperty('--wHeight', window.innerHeight);
       position.style.setProperty('--wHeightPx', window.innerHeight + 'px');
       position.style.setProperty('--scroll', window.scrollY);
 
       requestAnimationFrame(setHeightProperty);
+
+      if (document.getElementById('index')) {
+        if (window.scrollY > window.innerHeight) {
+          header.classList.remove('index');
+        } else {
+          header.classList.add('index');
+        }
+      }
+
+      if (window.scrollY > footerTop) {
+        header.classList.add('index2');
+      } else {
+        header.classList.remove('index2');
+      }
 
       // jQuery $(".effect").each()
       document.querySelectorAll('.effect').forEach(function(el) {

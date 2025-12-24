@@ -15,8 +15,8 @@ header{
         position: relative;
         width: 160px;
         height: 36px;
-        transition: filter .3s;
-        will-change: filter;
+        transition: filter .3s, opacity .3s;
+        will-change: filter, opacity;
         img{
           position: absolute;
           top:0;
@@ -110,6 +110,25 @@ header{
       }
     }
   }
+  &.index, &.index2{
+    .header_inner{
+      .header_left{
+        .header_logo{
+          filter:invert(1);
+        }
+      }
+      .header_right{
+        .lang_shifter{
+          filter:invert(1);
+        }
+        .navigation_wrapper{
+          .nav_item{
+            filter:invert(1);
+          }
+        }
+      }
+    }
+  }
   &.hum_open{
     .header_inner{
       .header_left{
@@ -158,6 +177,9 @@ header{
           margin-right: 30px;
           transition: filter .3s;
           will-change: filter;
+          a{
+            @include hover;
+          }
           img{
             position: absolute;
             top:0;
@@ -185,6 +207,8 @@ header{
               font-size: 1.6rem;
               color: inherit;
               @include hover;
+              transition: color .3s, opacity .3s;
+              will-change: color, opacity;
             }
           }
         }
@@ -251,6 +275,32 @@ header{
         }
         .hummenu_wrap{
           display: none;
+        }
+      }
+    }
+    &.index, &.index2{
+      .header_inner{
+        .header_left{
+          .header_logo{
+            filter:invert(1);
+          }
+          .header_navigation{
+            li{
+              a{
+                color: #fff;
+              }
+            }
+          }
+        }
+        .header_right{
+          .lang_shifter{
+            filter:invert(1);
+          }
+          .navigation_wrapper{
+            .nav_item{
+              filter:invert(1);
+            }
+          }
         }
       }
     }
