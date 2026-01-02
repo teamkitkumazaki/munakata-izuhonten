@@ -197,6 +197,7 @@ header{
         }
         .header_navigation{
           @include flexSet;
+          height: 70px;
           li{
             line-height: 70px;
             margin-right: 20px;
@@ -219,7 +220,7 @@ header{
         line-height: 70px;
         align-items: center;
         .lang_shifter{
-          display: block;
+          display: none;
           margin-right: 15px;
           .header_lang{
             font-size: 1.6rem;

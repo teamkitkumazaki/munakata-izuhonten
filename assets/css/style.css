@@ -737,6 +737,7 @@ header.hum_open .header_inner .header_right .hummenu_wrap button span:nth-of-typ
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    height: 70px;
   }
   header .header_inner .header_left .header_navigation li {
     line-height: 70px;
@@ -771,7 +772,7 @@ header.hum_open .header_inner .header_right .hummenu_wrap button span:nth-of-typ
             align-items: center;
   }
   header .header_inner .header_right .lang_shifter {
-    display: block;
+    display: none;
     margin-right: 15px;
   }
   header .header_inner .header_right .lang_shifter .header_lang {
@@ -1087,7 +1088,8 @@ footer .footer_inner .footer_lower .copyright {
             flex-direction: row-reverse;
   }
   footer .footer_inner .footer_navigation {
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
   }
   footer .footer_inner .footer_navigation .parent_ul {
     display: -webkit-box;
@@ -1206,14 +1208,22 @@ footer .footer_inner .footer_lower .copyright {
   footer .footer_inner .footer_lower {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 5px;
     margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer .footer_inner .footer_lower ul {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-bottom: 35px;
+    margin-bottom: 0px;
   }
   footer .footer_inner .footer_lower ul li {
     line-height: 1.5;
@@ -3410,11 +3420,11 @@ footer .footer_inner .footer_lower .copyright {
 }
 .comp-product-list .product_item .product_txt .prod_name {
   margin-bottom: 10px;
+  font-size: 2.2rem;
+  line-height: 1.5;
 }
 .comp-product-list .product_item .product_txt .prod_name a {
   display: block;
-  font-size: 2.2rem;
-  line-height: 1.5;
   color: inherit;
 }
 .comp-product-list .product_item .product_txt .prod_description {
@@ -3519,9 +3529,9 @@ footer .footer_inner .footer_lower .copyright {
   }
   .comp-product-list .product_item .product_txt .prod_name {
     margin-bottom: 20px;
+    font-size: 3rem;
   }
   .comp-product-list .product_item .product_txt .prod_name a {
-    font-size: 3rem;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     will-change: opacity;
@@ -3585,10 +3595,8 @@ footer .footer_inner .footer_lower .copyright {
     padding-left: 0px;
   }
   .comp-product-list.flex .product_item .product_txt .prod_name {
-    margin-bottom: 15px;
-  }
-  .comp-product-list.flex .product_item .product_txt .prod_name a {
     font-size: 2.4rem;
+    margin-bottom: 15px;
   }
   .comp-product-list.flex .product_item .product_txt .prod_description {
     font-size: 1.4rem;

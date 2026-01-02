@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" style="--wHeight: 100vh; --wHeightPx: 100vh; --scroll: 0; --wHeightFixedPx: 100vh;">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keyword" content="宗像,伊豆本店,日本酒,米,水,むなかた,MUNAKATA">
-	<link href="/img/izuhonten/icon.png" rel="apple-touch-icon" sizes="200x200">
-	<link rel="shortcut icon" type="image/x-icon" href="/img/izuhonten/icon.png">
 	<meta name="description" content="1717年の創業以来、世界遺産の地 神宿る 福岡・宗像で酒を醸し続けてきた「伊豆本店」。三百余年の歴史を礎に、今、新しい時代に向けた酒造りを目指し蔵を再興しています。三百余年の時を超え、新たな物語へ。「福岡 宗像 酒蔵 伊豆本店」2026年2月・リニューアルオープン。">
 	<meta name="robots" content="index,follow">
-	<title>伊豆本店の歩み | 福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ</title>
-	<link rel="canonical" href="https://kubara.jp/izuhonten/">
+	<title>福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ</title>
+	<link rel="canonical" href="https://kubara.jp/sp/izuhonten">
 
 	<!-- ===== OGP ===== -->
-	<meta property="og:title" content="伊豆本店の歩み | 福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ">
+	<meta property="og:title" content="福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ<">
 	<meta property="og:type" content="article">
-	<meta property="og:url" content="https://kubara.jp/izuhonten/">
+	<meta property="og:url" content="https://kubara.jp/sp/izuhonten">
 	<meta property="og:image" content="/img/izuhonten/ogp.jpg">
-	<meta property="og:site_name" content="福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ">
+	<meta property="og:site_name" content="福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ<">
 	<meta property="og:description" content="1717年の創業以来、世界遺産の地 神宿る 福岡・宗像で酒を醸し続けてきた「伊豆本店」。三百余年の歴史を礎に、今、新しい時代に向けた酒造りを目指し蔵を再興しています。三百余年の時を超え、新たな物語へ。「福岡 宗像 酒蔵 伊豆本店」2026年2月・リニューアルオープン。">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@kubara_honke">
-	<meta name="twitter:title" content="伊豆本店の歩み | 福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ">
-	<meta name="twitter:image:src" content="../img/izuhonten/ogp.jpg">
+	<meta name="twitter:title" content="福岡 宗像 酒蔵 伊豆本店｜久原本家公式通販オンラインショップ">
+	<meta name="twitter:image:src" content="/img/izuhonten/ogp.jpg">
 	<meta name="twitter:description" content="1717年の創業以来、世界遺産の地 神宿る 福岡・宗像で酒を醸し続けてきた「伊豆本店」。三百余年の歴史を礎に、今、新しい時代に向けた酒造りを目指し蔵を再興しています。三百余年の時を超え、新たな物語へ。「福岡 宗像 酒蔵 伊豆本店」2026年2月・リニューアルオープン。">
 	<!-- ===== /OGP ===== -->
 
@@ -34,31 +32,30 @@
 		・こちらの記述は変更しないでください。
 	-->
 	<script src="/js/lib/jquery-2.0.3.min.js"></script>
-	<script src="/js/lib/jquery-ui.min.js"></script>
+	<script src="/js/lib/jquery.plainoverlay.min.js"></script>
 	<script src="/js/lib/jquery.raty.js"></script>
 	<script src="/js/lib/knockout-3.3.0.js"></script>
 	<script src="/js/lib/knockout-postbox.min.js"></script>
-	<script src="/js/common/common.js"></script>
+	<script src="/js/bkl/bkl.js"></script>
+	<script src="/sp/js/common/common.js"></script>
 	<script src="/js/common_1st/pen_accordion-min.js"></script>
 	<script src="/js/common_1st/pen_modal-min.js"></script>
-	<script src="/js/common_1st/base-min.js"></script>
-	<script src="/js/bkl/bkl.js"></script>
+	<script src="/js/common_1st/sp/base-min.js"></script>
 
-	<link rel="stylesheet" href="/css/mordal.css">
-	<link rel="stylesheet" href="/css/front/base.css">
-	<link rel="stylesheet" href="/css/front/style.css?ver4">
-	<link rel="stylesheet" href="/css/system.css" media="all">
-	<link rel="stylesheet" href="/css/common_1st/base.css">
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Libre+Baskerville">
+	<link rel="stylesheet" href="/sp/css/front/base.css">
+	<link rel="stylesheet" href="/sp/css/front/style.css?ver4">
+	<link rel="stylesheet" href="/sp/css/module.css">
+	<link rel="stylesheet" href="/sp/css/system.css">
+	<link rel="stylesheet" href="/css/common_1st/sp/base.css">
 	<!-- ===== /site ===== -->
 
 	<!-- ===== category ===== -->
 	<!--
 		・カテゴリー共通ファイルになります。
-		・/izuhonten/ 配下で共通するcssを読み込んでください。
+		・/sp/izuhonten/ 配下で共通するcssを読み込んでください。
 		・以下の記述は例になりますので不要な場合は削除、書き換えをしてください。
 	-->
-	<link rel="stylesheet" href="/css/izuhonten/common/base.css">
+	<link rel="stylesheet" href="/css/izuhonten/common/sp/base.css">
 	<!-- ===== /category ===== -->
 
 	<!-- ===== page ===== -->
@@ -67,7 +64,7 @@
 		・ページ固有のcssを読み込んでください。
 		・以下の記述は例になりますので不要な場合は削除、書き換えをしてください。
 	-->
-	<link rel="stylesheet" href="/css/izuhonten/style.css">
+	<link rel="stylesheet" href="/css/izuhonten/sp/style.css">
 	<!-- ===== /page ===== -->
 
 </head>
@@ -86,11 +83,11 @@
 						</a>
 					</div>
 					<ul class="header_navigation">
-						<li><a href="/izuhonten/history">伊豆本店の歩み</a></li>
-						<li><a href="/izuhonten/product">日本酒「宗像」</a></li>
-						<li><a href="/izuhonten/facility">酒蔵について</a></li>
+						<li><a href="/izuhonten/about">伊豆本店の歩み</a></li>
+						<li><a href="/izuhonten/munakata">日本酒「宗像」</a></li>
+						<li><a href="/izuhonten/brewery">酒蔵について</a></li>
 						<li><a href="/izuhonten/company">会社概要</a></li>
-						<li><a href="/izuhonten/facility#section02">アクセス</a></li>
+						<li><a href="/izuhonten/brewery#section02">アクセス</a></li>
 					</ul>
 				</div>
 				<div class="header_right">
@@ -118,12 +115,13 @@
 			</div><!-- header_inner -->
 		</header>
 
+
 		<article id="history" class="page-history">
 			<section class="section-main comp-underpage-main">
 				<div class="under_main_wrapper">
 					<div class="under_main_img">
-						<img class="sp_img" src="/img/izuhonten/history/main.jpg">
-						<img class="pc_img" src="/img/izuhonten/history/main_pc.jpg">
+						<img class="sp_img" src="/img/izuhonten/about/main.jpg">
+						<img class="pc_img" src="/img/izuhonten/about/main_pc.jpg">
 					</div>
 					<div class="under_main_txt">
 						<div class="comp-page-bread">
@@ -156,14 +154,14 @@
 				<div class="sakamai_main_wrapper">
 					<h2 class="sakamai_ttl"><strong>夢と情熱。幻の酒米<span>「亀の尾」復活の物語。</span></strong></h2>
 					<div class="sakamai_main_img">
-						<img class="sp_img" src="/img/izuhonten/history/sakamai_main.jpg">
-						<img class="pc_img" src="/img/izuhonten/history/sakamai_main_pc.jpg">
+						<img class="sp_img" src="/img/izuhonten/about/sakamai_main.jpg">
+						<img class="pc_img" src="/img/izuhonten/about/sakamai_main_pc.jpg">
 					</div>
 				</div>
 				<div class="sakamai_detail_wrapper">
 					<div class="sakamai_detail_flex">
 						<div class="sakamai_img">
-							<img src="/img/izuhonten/history/sakamai_img01.jpg">
+							<img src="/img/izuhonten/about/sakamai_img01.jpg">
 						</div>
 						<div class="sakamai_txt">
 							<p>三百年を超える伊豆本店の歴史で、酒蔵を支えてきた代表銘柄のひとつが「亀の尾」。東北生まれの酒米“亀の尾”で仕込んだ日本酒で、第八代蔵元のもとで誕生しました。</p>
@@ -172,7 +170,7 @@
 					</div>
 					<div class="sakamai_detail_flex">
 						<div class="sakamai_img">
-							<img src="/img/izuhonten/history/sakamai_img02.jpg">
+							<img src="/img/izuhonten/about/sakamai_img02.jpg">
 						</div>
 						<div class="sakamai_txt">
 							<p>その復活に挑んだのが、第十一代蔵元。残されていた二百粒の種もみから、七年もの年月を重ねて奮闘した末に、栽培に成功。大吟醸「亀の尾」として蘇らせました。以来、日本酒「亀の尾」は、代々の蔵元たちに酒造りへの夢と揺るぎない情熱を伝え、伊豆本店の代名詞となる銘柄へと成長します。</p>
@@ -184,8 +182,8 @@
 				<div class="section_inner">
 					<h2 class="method_main_ttl">伝統の“槽搾り”製法の<br>精神を受け継ぎながら</h2>
 					<div class="method_img">
-						<img class="sp_img" src="/img/izuhonten/history/method_main.jpg">
-						<img class="pc_img" src="/img/izuhonten/history/method_main_pc.jpg">
+						<img class="sp_img" src="/img/izuhonten/about/method_main.jpg">
+						<img class="pc_img" src="/img/izuhonten/about/method_main_pc.jpg">
 					</div>
 					<div class="method_description">
 						<p>伊豆本店では、つい近頃まで、昔ながらの「槽搾り」という手作業の製法を採用していました。搾りは、清酒と粕に分ける酒造りの最後の工程。槽搾り製法とは、発酵を終えたもろみを目の粗い酒袋に入れて、“槽(ふね)”と呼ばれる道具に積み重ね、もろみの自重で自然と酒が絞り出されます。その後、重しをおいて、酒を搾り出します。</p>
@@ -207,22 +205,22 @@
 				</div>
 				<div class="comp-photo-gallery">
 					<div class="gallery_item full">
-						<img src="/img/izuhonten/history/gallery01.jpg">
+						<img src="/img/izuhonten/about/gallery01.jpg">
 					</div>
 					<div class="gallery_item">
-						<img src="/img/izuhonten/history/gallery02.jpg">
+						<img src="/img/izuhonten/about/gallery02.jpg">
 					</div>
 					<div class="gallery_item">
-						<img src="/img/izuhonten/history/gallery03.jpg">
+						<img src="/img/izuhonten/about/gallery03.jpg">
 					</div>
 					<div class="gallery_item full">
-						<img src="/img/izuhonten/history/gallery04.jpg">
+						<img src="/img/izuhonten/about/gallery04.jpg">
 					</div>
 					<div class="gallery_item">
-						<img src="/img/izuhonten/history/gallery05.jpg">
+						<img src="/img/izuhonten/about/gallery05.jpg">
 					</div>
 					<div class="gallery_item">
-						<img src="/img/izuhonten/history/gallery06.jpg">
+						<img src="/img/izuhonten/about/gallery06.jpg">
 					</div>
 				</div><!-- comp-photo-gallery -->
 			</section>
@@ -263,18 +261,20 @@
 					</div><!-- comp-history-list -->
 					<div class="history_img_wrap">
 						<div class="history_img_item">
-							<img src="/img/izuhonten/history/history01.jpg">
+							<img src="/img/izuhonten/about/history01.jpg">
 						</div>
 						<div class="history_img_item">
-							<img src="/img/izuhonten/history/history02.jpg">
+							<img src="/img/izuhonten/about/history02.jpg">
 						</div>
 						<div class="history_img_item">
-							<img src="/img/izuhonten/history/history03.jpg">
+							<img src="/img/izuhonten/about/history03.jpg">
 						</div>
 					</div>
 				</div><!-- section_inner -->
 			</section>
 		</article>
+
+
 
 		<div id="hummenu" class="comp-hummenu">
 			<div class="contents">
@@ -282,27 +282,27 @@
 					<nav class="hummenu_navigation">
 						<ul class="parent_ul">
 							<li class="parent_li">
-								<a class="parent" href="/izuhonten/history">伊豆本店の歩み</a>
+								<a class="parent" href="/izuhonten/about">伊豆本店の歩み</a>
 								<ul class="children">
-									<li><a href="/izuhonten/history#section01">酒米について</a></li>
-									<li><a href="/izuhonten/history#section02">伝統の“槽搾り”製法</a></li>
-									<li><a href="/izuhonten/history#section03">沿革</a></li>
+									<li><a href="/izuhonten/about#section01">酒米について</a></li>
+									<li><a href="/izuhonten/about#section02">伝統の“槽搾り”製法</a></li>
+									<li><a href="/izuhonten/about#section03">沿革</a></li>
 								</ul>
 							</li>
 							<li class="parent_li">
-								<a class="parent" href="/izuhonten/facility">酒蔵について</a>
+								<a class="parent" href="/izuhonten/brewery">酒蔵について</a>
 								<ul class="children">
-									<li><a href="/izuhonten/facility#section01">施設紹介</a></li>
-									<li><a href="/izuhonten/facility#section02">アクセス</a></li>
-									<li><a href="/izuhonten/facility#section03">営業カレンダー</a></li>
+									<li><a href="/izuhonten/brewery#section01">施設紹介</a></li>
+									<li><a href="/izuhonten/brewery#section02">アクセス</a></li>
+									<li><a href="/izuhonten/brewery#section03">営業カレンダー</a></li>
 								</ul>
 							</li>
 							<li class="parent_li">
-								<a class="parent" href="/izuhonten/product">日本酒「宗像」</a>
+								<a class="parent" href="/izuhonten/munakata">日本酒「宗像」</a>
 								<ul class="children">
-									<li><a href="/izuhonten/product#section01">日本酒・宗像</a></li>
-									<li><a href="/izuhonten/product#section02">伊豆本店のお酒</a></li>
-									<li><a href="/izuhonten/product#section03">酒造りのこだわり</a></li>
+									<li><a href="/izuhonten/munakata#section01">日本酒・宗像</a></li>
+									<li><a href="/izuhonten/munakata#section02">伊豆本店のお酒</a></li>
+									<li><a href="/izuhonten/munakata#section03">酒造りのこだわり</a></li>
 								</ul>
 							</li>
 							<li class="parent_li">
@@ -325,7 +325,7 @@
 										</a>
 									</div>
 									<div class="nav_item">
-										<a target="_blank" href="https://www.kubara.jp/">
+										<a target="_blank" href="https://www.kubara.jp/item/search/%E4%BC%8A%E8%B1%86%E6%9C%AC%E5%BA%97/?sid=4">
 											<span class="txt">オンラインショップ</span>
 											<span class="caret">
 												<img class="outer" src="/img/izuhonten/common/outer_link.svg">
@@ -352,9 +352,6 @@
 						<ul>
 							<li><a target="_blank" href="https://www.kubara.jp/law/">特商法に基づく表示</a></li>
 							<li><a target="_blank" href="https://www.kubara.jp/privacy/">プライバシーポリシー</a></li>
-							<li class="reline"></li>
-							<li><a target="_blank" href="https://kubarahonke.com/">運営会社</a></li>
-							<li><a target="_blank" href="https://www.kubara.jp/support/">お問い合わせ</a></li>
 						</ul>
 					</div><!-- hummenu_lower -->
 				</div><!-- hummenu_inner -->
@@ -366,27 +363,27 @@
 				<nav class="footer_navigation">
 					<ul class="parent_ul">
 						<li class="parent_li">
-							<a class="parent" href="/izuhonten/history">伊豆本店の歩み</a>
+							<a class="parent" href="/izuhonten/about">伊豆本店の歩み</a>
 							<ul class="children">
-								<li><a href="/izuhonten/history#section01">酒米について</a></li>
-								<li><a href="/izuhonten/history#section02">伝統の“槽搾り”製法</a></li>
-								<li><a href="/izuhonten/history#section03">沿革</a></li>
+								<li><a href="/izuhonten/about#section01">酒米について</a></li>
+								<li><a href="/izuhonten/about#section02">伝統の“槽搾り”製法</a></li>
+								<li><a href="/izuhonten/about#section03">沿革</a></li>
 							</ul>
 						</li>
 						<li class="parent_li">
-							<a class="parent" href="/izuhonten/facility">酒蔵について</a>
+							<a class="parent" href="/izuhonten/brewery">酒蔵について</a>
 							<ul class="children">
-								<li><a href="/izuhonten/facility#section01">施設紹介</a></li>
-								<li><a href="/izuhonten/facility#section02">アクセス</a></li>
-								<li><a href="/izuhonten/facility#section03">営業カレンダー</a></li>
+								<li><a href="/izuhonten/brewery#section01">施設紹介</a></li>
+								<li><a href="/izuhonten/brewery#section02">アクセス</a></li>
+								<li><a href="/izuhonten/brewery#section03">営業カレンダー</a></li>
 							</ul>
 						</li>
 						<li class="parent_li">
-							<a class="parent" href="/izuhonten/product">日本酒「宗像」</a>
+							<a class="parent" href="/izuhonten/munakata">日本酒「宗像」</a>
 							<ul class="children">
-								<li><a href="/izuhonten/product#section01">日本酒・宗像</a></li>
-								<li><a href="/izuhonten/product#section02">伊豆本店のお酒</a></li>
-								<li><a href="/izuhonten/product#section03">酒造りのこだわり</a></li>
+								<li><a href="/izuhonten/munakata#section01">日本酒・宗像</a></li>
+								<li><a href="/izuhonten/munakata#section02">伊豆本店のお酒</a></li>
+								<li><a href="/izuhonten/munakata#section03">酒造りのこだわり</a></li>
 							</ul>
 						</li>
 						<li class="parent_li">
@@ -409,7 +406,7 @@
 									</a>
 								</div>
 								<div class="nav_item">
-									<a target="_blank" href="https://www.kubara.jp/">
+									<a target="_blank" href="https://www.kubara.jp/item/search/%E4%BC%8A%E8%B1%86%E6%9C%AC%E5%BA%97/?sid=4">
 										<span class="txt">オンラインショップ</span>
 										<span class="caret">
 											<img class="outer" src="/img/izuhonten/common/outer_link.svg">
@@ -447,9 +444,6 @@
 					<ul>
 						<li><a target="_blank" href="https://www.kubara.jp/law/">特商法に基づく表示</a></li>
 						<li><a target="_blank" href="https://www.kubara.jp/privacy/">プライバシーポリシー</a></li>
-						<li class="reline"></li>
-						<li><a target="_blank" href="https://kubarahonke.com/">運営会社</a></li>
-						<li><a target="_blank" href="https://www.kubara.jp/support/">お問い合わせ</a></li>
 					</ul>
 					<p class="copyright">Copyright 株式会社伊豆本店 All Rights Reserved.</p>
 				</div>
@@ -467,22 +461,13 @@
 	<script src="/js/content/products/vm_products.js"></script>
 	<!-- ===== /site ===== -->
 
-	<!-- ===== category ===== -->
-	<!--
-		・カテゴリー共通ファイルになります。
-		・/izuhonten/ 配下で共通するjsを読み込んでください。
-		・以下の記述は例になりますので不要な場合は削除、書き換えをしてください。
-	-->
-	<script src="/js/izuhonten/common/script.js?ver4"></script>
-	<!-- ===== /category ===== -->
-
 	<!-- ===== page ===== -->
 	<!--
 		・ページ固有ファイルになります。
 		・ページ固有のjsを読み込んでください。
 		・以下の記述は例になりますので不要な場合は削除、書き換えをしてください。
 	-->
-	<script src="/js/izuhonten/script.js"></script>
+	<script src="/js/izuhonten/sp/script.js?ver4"></script>
 	<!-- ===== /page ===== -->
 
 </body>

@@ -181,7 +181,8 @@ footer{
       justify-content: space-between;
       flex-direction:row-reverse;
       .footer_navigation{
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 0px;
         .parent_ul{
           @include flexSet;
           align-items: flex-start;
@@ -265,11 +266,13 @@ footer{
       .footer_lower{
         position: absolute;
         right:0;
-        bottom:0;
+        bottom:5px;
         margin-top: 0px;
+        @include flexSet;
+        align-items: center;
         ul{
           justify-content: flex-end;
-          margin-bottom: 35px;
+          margin-bottom: 0px;
           li{
             line-height: 1.5;
             padding-right: 15px;
