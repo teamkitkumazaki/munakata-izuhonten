@@ -1,0 +1,761 @@
+@charset "utf-8";
+
+/**
+ * system use styles.
+ */
+.b-link-btn {
+    color: #80590e;
+}
+.b-link-btn:hover {
+    cursor: pointer;
+}
+
+.b-search-address-container {
+    display: none;
+}
+
+.b-content-display-lock > .loading_wrap,
+.b-display-lock {
+    background:rgba(255,255,255,0);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 40000;
+    display: none;
+}
+
+.b-content-display-lock > .loading_wrap .loadingbox {
+    background: none;
+}
+
+.b-overlay-loading {
+    position:absolute !important;
+    top:50% !important;
+    left:50% !important;
+    z-index:40001 !important;
+    width:60px !important;
+    height:60px !important;
+
+    margin:-30px 0 0 -30px !important;
+
+    background:url(../img/common/loading.gif) 0 0 no-repeat !important;
+    background-size:60px auto !important;
+}
+
+/*========== Loading（ローディング） ============*/
+.loading_wrap{
+    position:fixed;
+    background:rgba(255,255,255,1);
+
+    height:100%;
+    width:100%;
+
+    top:0;
+    left:0;
+    z-index:40000;
+    /**/
+    display:none;
+}
+.loading_wrap .loadingbox{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:40001;
+    width:60px;
+    height:60px;
+
+    margin:-30px 0 0 -30px;
+
+    background:url(../img/common/loading.gif) 0 0 no-repeat;
+    background-size:60px auto;
+}
+.loading_wrap .loadingtxt {
+  position: absolute;
+  top: calc(50% + 30px);
+  left: calc(50% - 60px);
+  margin: auto;
+  text-align: center;
+}
+
+/* エラー表示非表示コントロールボックス */
+.b-error-change-box {
+    margin:0 -10px 0px;
+    padding:15px 10px;
+    border-top: 1px solid #222;
+}
+.b-error-change-box ul {
+    overflow:hidden;
+}
+.b-error-change-box ul li {
+    width:51.3%;
+    float:left;
+}
+.b-error-change-box ul li:last-child {
+    width:46%;
+    float:right !important;
+}
+.b-error-change-box ul li:last-child a{
+    padding: 11px 3px 5px 3px !important;
+    font-size:15px;
+}
+
+.send_choice_box .buy_item_box_wrap:last-child {
+    border: none;
+}
+
+.message_card_input {
+    display: block;
+}
+.other_comment {
+    display: block;
+}
+
+/* TODO: add sakamoto moc2を取り込んだら削除すること */
+/*======= O-1,2 (商品番号からご注文) ============*/
+
+#catalog_ph{
+	padding:20px 0px;
+}
+
+#catalog_buy_wrap{
+	border-top:1px solid #bdbdbd;
+	padding-top:20px;
+}
+
+#catalog_buy_wrap_in{
+}
+
+.catalog_buy_box{
+	overflow:hidden;
+	border-bottom:1px dotted #bdbdbd;
+	margin-bottom:20px;
+}
+#catalog_buy_wrap_in .catalog_buy_box:last-child{
+	border-bottom:none !important;
+	margin-bottom:0px;
+}
+.catalog_buy_box .catalog_btn{
+	width:110px;
+	float:right;
+	margin-bottom:20px;
+}
+.catalog_buy_box .catalog_btn .ui_btn_w{
+	padding: 13px 3px 3px 3px;
+}
+.catalog_buy_box .catalog_buy_input{
+	margin-right:120px;
+	width:auto;
+}
+
+.catalog_count_box{
+	overflow:hidden;
+
+	border-top:1px solid #bdbdbd;
+	padding-top:20px;
+	vertical-align:middle;
+	margin-bottom:20px;
+}
+
+.catalog_count_box a{
+	display:block;
+	color:#212121 !important;
+}
+
+.catalog_count_box img{
+	vertical-align:middle;
+	margin-right:10px;
+}
+
+.catalog_itemname{
+	font-size:16px;
+	padding-top:15px;
+	margin-bottom:0;
+}
+
+.catalog_buy_box .buy_item_box_wrap{
+	margin-bottom: 0px;
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.catalog_buy_error{
+	color:#b43636;
+	font-size:14px;
+	line-height:1.4;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+
+
+.icon_cata_degree{
+	text-align:left;
+	font-size:12px;
+	background:url(../img/common/icon_degree.png) 0 50% no-repeat;
+	background-size:18px auto;
+	padding-left:22px;
+	margin-bottom:5px;
+}
+.icon_cata_packing{
+	text-align:left;
+	font-size:12px;
+	background:url(../img/common/icon_packing.png) 0 50% no-repeat;
+	background-size:18px auto;
+	padding-left:22px;
+	margin-bottom:5px;
+}
+
+.catalog_favorite_btn{
+	margin-bottom:10px;
+}
+
+.favorite_btn_off,
+.favorite_btn_on{
+	font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+
+	display:block;
+	border:2px solid #cccccc;
+	text-align:center;
+	color:#cccccc !important;
+	font-size:16px;
+	line-height:1;
+	background-color:#fff;
+	margin-bottom:20px;
+}
+.favorite_btn_on{
+	color:#222222 !important;
+	border:2px solid #222222;
+}
+
+.favorite_btn_off span{
+	display:inline-block;
+	padding:18px 0 18px 25px;
+	background:url(../img/common/icon_heart2_gray.png) 0 50% no-repeat;
+	background-size:16px auto;
+}
+.favorite_btn_on span{
+	display:inline-block;
+	padding:18px 0 18px 25px;
+	background:url(../img/common/icon_heart2_pink.png) 0 50% no-repeat;
+	background-size:16px auto;
+}
+
+.catalog_buy_icon{
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.catalog_buy_icon li{
+	float:left;
+	margin-bottom:5px;
+	padding:5px 3px;
+
+	text-align:center;
+	font-size:14px;
+	color:#fff;
+	line-height:1;
+
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+
+	margin-right:5px;
+}
+.icon_cata_type1{
+	background:#b43636;
+	min-width:145px;
+}
+.icon_cata_type2{
+	background:#475366;
+	min-width:70px;
+}
+/* ↑↑↑↑↑↑ TODO: add sakamoto moc2を取り込んだら削除すること */
+
+.tab_box_wrap div.tab_box div.b-tab {
+	display: none;
+}
+
+/*========== 在庫無し表記 ============*/
+/* 在庫無し表記とアイコン (1:入荷待ち) */
+.b-soldoutItem-1 {
+	display: inline-block;
+	text-align: center;
+	color: #b43636;
+	font-weight: bold;
+	font-size: 16px;
+	background: url(../img/common/icon_inv_x_backordered.png) left center no-repeat;
+	padding-left: 20px;
+}
+
+/* 在庫無し表記とアイコン (2:在庫切れ) */
+.b-soldoutItem-2 {
+	display: inline-block;
+	text-align: center;
+	color: #b43636;
+	font-weight: bold;
+	font-size: 16px;
+	background: url(../img/common/icon_inv_x_no_stock.png) left center no-repeat;
+	padding-left: 20px;
+}
+
+/* 在庫無し表記とアイコン (3:販売終了) */
+.b-soldoutItem-3 {
+	display: inline-block;
+	text-align: center;
+	color: #b43636;
+	font-weight: bold;
+	font-size: 16px;
+	background: url(../img/common/icon_inv_x_end_of_sale.png) left center no-repeat;
+	padding-left: 20px;
+}
+.tab_box_wrap div.tab_box div.b-tab-sort {
+	border-bottom:1px solid #bdbdbd;
+}
+
+div.b-more-btn {
+    border: 2px solid #555555;
+	margin: 20px 0 0;
+	text-align: center;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	color: #555555;
+    width: auto;
+	padding: initial;
+}
+
+div.b-more-btn:after {
+	content: "+";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    line-height: initial;
+    margin: -9px 0 0 0;
+}
+
+div.favorite_box span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+div.favorite_box span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.customervoice_box > ul > li > div > ul > li:nth-of-type(1) img, .customervoice_box > dl > dd > ul > li > div > ul > li:nth-of-type(1) img {
+	margin: 0 0 0 0;
+}
+.customervoice_box > ul > li > div > ul > li:nth-of-type(1) span, .customervoice_box > dl > dd > ul > li > div > ul > li:nth-of-type(1) span {
+	margin: 0 0 0 10px;
+}
+
+.b-star {
+    margin-left: 10px;
+}
+
+.b-star img {
+    height: 29px;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.campaignmain_box > div > ul > li > ul > li.pricecon {
+	margin-top: 48px;
+}
+/*========== 商品詳細ページ配送形態表記 ============*/
+/* div.postage_box ul.itemtemperature_box,
+div.postage_box ul.itemfreeze_box{
+	margin:0px 0px 5px;
+} */
+
+/*div.postage_box ul.itemtemperature_box li:nth-of-type(2) {
+	color: #37a04c;
+    border: 2px solid #37a04c;
+    width: 39px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+div.postage_box ul.itemfreeze_box li:nth-of-type(2) {
+	color: #0093dd;
+    border: 2px solid #0093dd;
+    width: 39px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 10px;
+}*/
+
+/*========== パンくず ============*/
+/* フロント*/
+#footer .plist_box ul li {
+	float:left;
+}
+
+#footer .plist_box a {
+	text-decoration:underline;
+}
+/* マイページ*/
+#footer .plist_box ul {
+	display: table-cell;
+    vertical-align: middle;
+    height: auto;
+}
+
+#footer .plist_box ul li {
+	float:left;
+}
+
+#footer .plist_box a {
+    color: #333;
+	text-decoration:underline;
+}
+
+ul.siprice_box > li:nth-of-type(2).b-black,
+.itemcoprice a.b-black
+{
+	color: black;
+}
+
+div.end_sale_message {
+    padding: 15px;
+    font-weight:bold;
+    font-size: 20px;
+    color: #b80000;
+    text-align: center;
+}
+
+/*========== 商品詳細ページ内リンク(お客様の声) ============*/
+.customervoice_box_pagelink {
+    margin-top : -60px;
+    padding-top : 60px;
+}
+
+/* エラー */
+.b-error {
+	background-color:#ffd4cc;
+	border:1px solid #de4f33;
+}
+.b-relative {
+	position: relative;
+	height: 30px;
+}
+
+.b-relative span {
+	position: absolute;
+}
+
+#secitate_box > dl > dd > select {
+    display: block;
+}
+
+.seasonrecipe_box > ul > li > a > ul > li:nth-of-type(2) span {
+	margin-top: 4px;
+}
+.seasonrecipe_box > ul > li > a > ul > li:nth-of-type(2) img {
+	width: initial;
+	float: initial;
+}
+
+.seasonrecipe_box.product_detail > ul > li:nth-of-type(2n) {
+	margin: 0;
+}
+
+.b-maintenance {
+    position: fixed;
+    bottom: 0;
+    z-index: 10000;
+    background: #d9534f;
+    padding: 2px 10px;
+    margin:5px;
+    color: #fff;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+}
+
+#poprank_box {
+	margin:0px 5px 40px;
+}
+
+#poprank_box h2 {
+	text-align:center;
+	padding:0px 0px 20px;
+	border-bottom:1px solid ;
+	margin:0px 0px 20px;
+	font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+}
+
+#poprank_box h3 {
+	text-align:center;
+	margin:0px 0px 20px;
+}
+
+#poprank_box > div > div > div {
+	margin:0px 0px 20px;
+}
+
+#poprank_box > div > div > div > ul > li > a > ul > li {
+	word-break:break-all;
+}
+
+#poprank_box > div > div > div > ul > li > a > ul > li:nth-of-type(1) {
+	margin:0px 0px 6px;
+	padding:2px 0px 0px;
+	position:relative;
+}
+
+#poprank_box > div > div > div > ul > li > a > ul > li:nth-of-type(2) {
+	font-size:12px;
+}
+
+#poprank_box > div > div > div > ul > li > a > ul > li:nth-of-type(3) {
+	font-size:12px;
+}
+
+.b-select-order-detail.accordion_wrap {
+    margin-bottom:20px;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn {
+    padding:0;
+    /*color:#fff;*/
+    color:#222;
+    /*font-size:16px;*/
+    font-size:14px;
+    font-weight:normal;
+    cursor:pointer;
+    /*background:#222222;*/
+    background:#fff;
+    /*font-family:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;*/
+}
+
+.teikiTokutenBox .accordion_btn {
+	color:#000;
+	background:#FFF!important;
+	border:1px solid #000;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn span,
+.teikiTokutenBox .accordion_wrap .accordion_btn span {
+    background:url(../img/common/icon_plus2.png) 100% 50% no-repeat;
+    background-size:15px auto;
+    display:block;
+    padding:15px 21px 15px 0px;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn.open span,
+.teikiTokutenBox .accordion_wrap .accordion_btn.open span {
+    background:url(../img/common/icon_minus2.png) 100% 50% no-repeat;
+    background-size:15px auto;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_box,
+.teikiTokutenBox .accordion_wrap .accordion_box {
+    display:none;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_box.open,
+.teikiTokutenBox .accordion_wrap .accordion_box.open {
+    display:block;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn span.b-select-order-detail-open,
+.teikiTokutenBox .accordion_wrap .accordion_btn span.teiki-tokuten-open {
+    display:block;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn.open span.b-select-order-detail-open,
+.teikiTokutenBox .accordion_wrap .accordion_btn.open span.teiki-tokuten-open {
+    display:none;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn span.b-select-order-detail-close,
+.teikiTokutenBox .accordion_wrap .accordion_btn span.teiki-tokuten-close {
+    display:none;
+}
+
+.b-select-order-detail.accordion_wrap .accordion_btn.open span.b-select-order-detail-close,
+.teikiTokutenBox .accordion_wrap .accordion_btn.open span.teiki-tokuten-close {
+    display:block;
+}
+
+.mihassouBox {
+	padding: 10px;
+	background: url(../img/common/bg_type2.png) 0 0 repeat;
+	background-size: 82px auto;
+}
+
+.mihassouBox .subtxt {
+	color: #b43636;
+	margin: 10px;
+}
+.mihassouBox .subtxt a {
+	color: #80590e;
+	text-decoration: underline;
+}
+
+.mihassouBox h4 {
+	text-align:center;
+}
+
+.mihassouBox .accordion_btn {
+	color:#000;
+	background:#FFF!important;
+	border:1px solid #000;
+	text-align: center;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn p {
+	background:url(../img/common/icon_plus2.png) 100% 50% no-repeat;
+	background-size:15px auto;
+	display:block;
+	padding:15px 21px 15px 0px;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn.open p {
+	background:url(../img/common/icon_minus2.png) 100% 50% no-repeat;
+	background-size:15px auto;
+}
+
+.mihassouBox .accordion_wrap .accordion_box {
+	display:none;
+}
+
+.mihassouBox .accordion_wrap .accordion_box.open {
+	display:block;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn p.mihassou-open {
+	display:block;
+	color: #b43636;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn.open p.mihassou-open {
+	display:none;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn p.mihassou-close {
+	display:none;
+}
+
+.mihassouBox .accordion_wrap .accordion_btn.open p.mihassou-close {
+	display:block;
+	color: #b43636;
+}
+
+.popupMihassouBox {
+	text-align:center;
+	border-bottom:2px solid #000;
+	color:#b43636;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.popupMihassouBox span {
+	color: #000;
+	font-size:14px;
+}
+
+.slide_detail_point {
+	font-family:Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+	padding:0 10px;
+}
+
+.slide_detail_point div.top_boxs{
+	border:2px solid #a62038;
+	padding:20px;
+	text-align:center;
+	color:#a62038;
+	font-size:110%;
+	font-weight: bold;
+}
+
+.slide_detail_point h3 {
+	margin:20px 0;
+	background-color:#a62038;
+	padding: 10px;
+	text-align:center;
+	font-size:120%;
+	color:#FFF;
+	font-family:Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+.slide_detail_point div.h3_box1 p.con1 {
+	width:55%;
+	float:left;
+}
+
+.slide_detail_point div.h3_box1 p.con1 span {
+	color:#a62038;
+	font-weight: bold;
+}
+
+.slide_detail_point div.h3_box1 p.con2 {
+	width: 40%;
+	float:right;
+}
+
+.slide_detail_point div.h3_box2 {
+	margin:30px 0 40px 0;
+}
+
+.slide_detail_point div.h3_box2 p.con1 {
+	border-bottom: 1px dotted #000;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+}
+
+.slide_detail_point div.h3_box2 p.con2 {
+	margin-top: 20px;
+}
+
+.slide_detail_point .dott_box {
+	border-top:1px dotted #000;
+}
+
+.slide_detail_point .dott_box p.txt1 {
+	margin:20px 0 40px 0;
+}
+
+.slide_detail_point .dott_box p.txt1 span.ruby {
+	position: relative;
+	display: inline-block;
+}
+
+.slide_detail_point .dott_box p.txt1 span.rt1 {
+	position: absolute;
+	font-size: 10px;
+	line-height: 1;
+	left:-0.5em;
+	top: -0.9em;
+	width: 100%;
+	text-align: center;
+}
+
+.slide_detail_point .dott_box p.txt1 span.rt2 {
+	position: absolute;
+	font-size: 10px;
+	line-height: 1;
+	left: -0.9em;
+	top: -0.9em;
+	width: 100%;
+	text-align: center;
+}
+
+.slide_detail_point .dott_box p.btn {
+	width:80%;
+	border:1px solid #000;
+	margin:0 auto;
+	padding:10px;
+	text-align:center;
+}
+
+.edit_order_change_postage {
+    color: #e60012;
+    font-weight: bold;
+}

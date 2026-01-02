@@ -9,9 +9,12 @@
         line-height: 1.5;
         writing-mode: vertical-rl;
         margin-bottom: 20px;
+        br{
+          display: none;
+        }
       }
       .lead_desciption{
-        @include wrapper;
+        width: 100%;
         text-align: center;
         font-size: 1.5rem;
         line-height: 2;
@@ -131,6 +134,9 @@
           line-height: 1.5;
           margin-left: 30px;
           margin-bottom: 0px;
+          br{
+            display: block;
+          }
         }
         .lead_desciption{
           width: auto;
