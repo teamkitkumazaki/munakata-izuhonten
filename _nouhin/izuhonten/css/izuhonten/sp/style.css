@@ -1604,7 +1604,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-index .section-craftmanship .craftman_wrapper .craftman_txt .craftman_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1634,7 +1634,7 @@ footer .footer_inner .footer_lower .copyright {
   margin-top: -10px;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1814,7 +1814,7 @@ footer .footer_inner .footer_lower .copyright {
     margin-top: -10px;
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.87;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -1873,7 +1873,7 @@ footer .footer_inner .footer_lower .copyright {
   color: #fff;
 }
 .page-about .section-history-lead .txt_flex_wrap .lead_ttl {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.67;
   text-align: center;
   color: #fff;
@@ -1882,7 +1882,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-about .section-history-lead .txt_flex_wrap .lead_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1899,7 +1899,7 @@ footer .footer_inner .footer_lower .copyright {
   }
 }
 .page-about .section-sakamai .sakamai_main_wrapper {
-  padding-top: 13vw;
+  padding-top: 15vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1911,7 +1911,7 @@ footer .footer_inner .footer_lower .copyright {
   margin-bottom: 13vw;
 }
 .page-about .section-sakamai .sakamai_main_wrapper .sakamai_ttl {
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 1.65;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
@@ -1948,7 +1948,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-about .section-sakamai .sakamai_detail_wrapper .sakamai_detail_flex .sakamai_txt {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1971,7 +1971,7 @@ footer .footer_inner .footer_lower .copyright {
   padding-top: 15vw;
 }
 .page-about .section-method .method_main_ttl {
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.67;
   margin-bottom: 30px;
@@ -1987,7 +1987,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-about .section-method .method_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2012,7 +2012,7 @@ footer .footer_inner .footer_lower .copyright {
   padding-bottom: 55vw;
 }
 .page-about .section-renovation .renovation_ttl {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.67;
   text-align: center;
   margin-bottom: 20px;
@@ -2020,7 +2020,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-about .section-renovation .renovation_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2040,7 +2040,7 @@ footer .footer_inner .footer_lower .copyright {
   padding-top: 16vw;
 }
 .page-about .section-history .history_main_ttl {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.67;
   text-align: center;
   margin-bottom: 20px;
@@ -2076,12 +2076,13 @@ footer .footer_inner .footer_lower .copyright {
             justify-content: space-between;
   }
   .page-about .section-history-lead .txt_flex_wrap .lead_ttl {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: left;
     margin-bottom: 0px;
   }
   .page-about .section-history-lead .txt_flex_wrap .lead_description {
-    width: 50%;
+    width: 55%;
+    min-width: 620px;
   }
   .page-about .section-sakamai .sakamai_main_wrapper {
     padding-top: 120px;
@@ -2102,12 +2103,12 @@ footer .footer_inner .footer_lower .copyright {
   }
   .page-about .section-sakamai .sakamai_main_wrapper .sakamai_ttl {
     width: 160px;
-    font-size: 3rem;
+    font-size: 2.8rem;
     line-height: 1.65;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
-    margin-bottom: 0;
+    margin-bottom: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2171,7 +2172,7 @@ footer .footer_inner .footer_lower .copyright {
     padding-top: 160px;
   }
   .page-about .section-method .method_main_ttl {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: center;
     line-height: 1.67;
     margin-bottom: 60px;
@@ -2200,7 +2201,7 @@ footer .footer_inner .footer_lower .copyright {
     padding-bottom: 50vw;
   }
   .page-about .section-renovation .renovation_ttl {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 50px;
   }
   .page-about .section-renovation .renovation_description {
@@ -2211,7 +2212,7 @@ footer .footer_inner .footer_lower .copyright {
     padding-top: 140px;
   }
   .page-about .section-history .history_main_ttl {
-    font-size: 3rem;
+    font-size: 2.8rem;
     text-align: center;
     margin-bottom: 60px;
   }
@@ -2246,10 +2247,13 @@ footer .footer_inner .footer_lower .copyright {
   margin-bottom: 40px;
 }
 .page-product .section-gift .gift_inner .gift_main_wrap .gift_ttl {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.6;
   text-align: center;
   margin-bottom: 30px;
+}
+.page-product .section-gift .gift_inner .gift_main_wrap .gift_ttl br {
+  display: none;
 }
 .page-product .section-gift .gift_inner .gift_main_wrap .gift_main_img {
   margin-bottom: 50px;
@@ -2290,7 +2294,7 @@ footer .footer_inner .footer_lower .copyright {
   margin-bottom: 50px;
 }
 .page-product .section-craftmanship .craftman_flex_wrap .craft_ttl {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
   margin-bottom: 35px;
 }
@@ -2419,7 +2423,7 @@ footer .footer_inner .footer_lower .copyright {
   }
   .page-product .section-gift .gift_inner .flex_wrapper .gift_flex_wrap .gift_sub_ttl {
     width: 40%;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 1.6;
     text-align: left;
     margin-bottom: 0px;
@@ -2512,7 +2516,7 @@ footer .footer_inner .footer_lower .copyright {
 .page-brewery .section-access .aceess_flex_wrap .access_content .access_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-bottom: 40px;
@@ -2733,7 +2737,7 @@ footer .footer_inner .footer_lower .copyright {
   }
 }
 .comp-underpage-ttl .page_ttl {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   line-height: 1.5;
   text-indent: -0.1em;
 }
@@ -2742,7 +2746,7 @@ footer .footer_inner .footer_lower .copyright {
   padding-right: 6vw;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: justify;
@@ -2765,7 +2769,7 @@ footer .footer_inner .footer_lower .copyright {
 
 @media screen and (min-width: 980px) {
   .comp-underpage-ttl .page_ttl {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
   .comp-underpage-ttl .ttl_description {
     max-width: 50%;
@@ -2794,7 +2798,7 @@ footer .footer_inner .footer_lower .copyright {
 .comp-company-profile .profile_item .content {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2857,7 +2861,7 @@ footer .footer_inner .footer_lower .copyright {
   margin-bottom: 30px;
 }
 .comp-ttl-group .ttl_jp {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   text-indent: -0.1em;
   margin-bottom: 12px;
 }
@@ -2865,7 +2869,7 @@ footer .footer_inner .footer_lower .copyright {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 980px) {
@@ -2873,7 +2877,7 @@ footer .footer_inner .footer_lower .copyright {
     margin-bottom: 30px;
   }
   .comp-ttl-group .ttl_jp {
-    font-size: 3.6rem;
+    font-size: 2.8rem;
     text-indent: -0.1em;
     margin-bottom: 15px;
   }
@@ -3430,14 +3434,14 @@ footer .footer_inner .footer_lower .copyright {
   margin-bottom: 0;
 }
 .comp-product-list .product_item .product_img {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .comp-product-list .product_item .product_img a {
   display: block;
 }
 .comp-product-list .product_item .product_txt .prod_name {
   margin-bottom: 10px;
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 .comp-product-list .product_item .product_txt .prod_name a {
@@ -3447,7 +3451,7 @@ footer .footer_inner .footer_lower .copyright {
 .comp-product-list .product_item .product_txt .prod_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -3495,7 +3499,7 @@ footer .footer_inner .footer_lower .copyright {
   height: 14px;
   margin-left: 10px;
   background-size: 14px;
-  background-image: url(/img/izuhonten/product/prod_button_caret.svg);
+  background-image: url(/img/izuhonten/munataka/prod_button_caret.svg);
   background-position: center left 0px;
 }
 .comp-product-list .product_item .product_txt .prod_button_wrap .button_description {
@@ -3546,7 +3550,7 @@ footer .footer_inner .footer_lower .copyright {
   }
   .comp-product-list .product_item .product_txt .prod_name {
     margin-bottom: 20px;
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .comp-product-list .product_item .product_txt .prod_name a {
     -webkit-transition: opacity 0.3s;
@@ -3669,7 +3673,7 @@ footer .footer_inner .footer_lower .copyright {
 .comp-craft-detail .craft_item .craft_detail_txt .craft_detail_desc {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: justify;
@@ -3863,7 +3867,7 @@ footer .footer_inner .footer_lower .copyright {
 .comp-facility-detail .facility_item .facility_txt .facility_description {
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.8;
+  line-height: 1.87;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: justify;
