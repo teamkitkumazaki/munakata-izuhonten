@@ -1,6 +1,8 @@
 .comp-index-kv{
+  position: relative;
   width: 100%;
   height: var(--wHeightFixedPx);
+  margin-top: -76px;
   .kv_inner{
     position: absolute;
     top:0;
@@ -49,6 +51,7 @@
   .comp-index-kv{
     width: 100%;
     height: 100vh;
+    margin-top: -110px;
     .kv_inner{
       .img_box{
         position: relative;
