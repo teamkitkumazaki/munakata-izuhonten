@@ -2564,6 +2564,18 @@ footer .footer_inner .footer_lower .copyright {
   padding-top: 20vw;
   margin-bottom: 13vw;
 }
+.page-brewery .section-calendar .calendar_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+}
+.page-brewery .section-calendar .calendar_wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 @media screen and (min-width: 980px) {
   .page-brewery {
@@ -2648,6 +2660,10 @@ footer .footer_inner .footer_lower .copyright {
   }
   .page-brewery .section-calendar .calendar_flex_wrap .comp-business-calendar {
     width: 70%;
+  }
+  .page-brewery .section-calendar .calendar_flex_wrap .calendar_wrapper {
+    width: 70%;
+    height: 600px;
   }
 }
 .page-company {

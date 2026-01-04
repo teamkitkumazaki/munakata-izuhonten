@@ -59,6 +59,18 @@
   .section-calendar{
     padding-top: 20vw;
     margin-bottom: 13vw;
+    .calendar_wrapper{
+      position: relative;
+      width: 100%;
+      height: 100vw;
+      iframe{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -67,17 +79,6 @@
     padding-bottom: 0px;
     .section-main{
       margin-bottom: 80px;
-    }
-    .section-facility-map{
-      .map_img_wrap{
-        @include wrapper;
-        .sp_img{
-          display: none;
-        }
-        .pc_img{
-          display: block;
-        }
-      }
     }
     .section-facility-detail{
       padding-top: 160px;
@@ -122,6 +123,10 @@
         justify-content: space-between;
         .comp-business-calendar{
           width:70%;
+        }
+        .calendar_wrapper{
+          width:70%;
+          height: 600px;
         }
       }
     }

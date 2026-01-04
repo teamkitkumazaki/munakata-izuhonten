@@ -245,6 +245,102 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ===============================
+  // トップページ インスタグラム埋め込み表示
+  // ===============================
+
+  function displayInstagramFeed() {
+    const accessToken = 'IGAAVZCjIy21r9BZAGFHaThmYVVkblpDdHVHcWlQX0tCWXk1VEdQc3VYLVZAOXzE3ZATRINVk0ZAVphVU1JQWpXelRmdGF5ZAzZA5OU5XVjYzcl81aFRvbUh6TmotNXQxTDV2elR3aDY2VDVGeEV2ejNqS0NXSzNhVlk0bXIwQlE1cFhOYwZDZD'; // ←ここにアクセストークンを入れる
+    const apiUrl = 'https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=' + accessToken;
+
+    fetch(apiUrl)
+      .then(res => res.json())
+      .then(data => {
+        const feed = document.getElementById('insta-feed');
+        const posts = data.data.slice(0, 20); // 最新15件
+        console.table(posts);
+        posts.forEach(post => {
+          if (post.media_url.indexOf('jpg') != -1) {
+            const postHTML = `<div class="insta-post"><a href="${post.permalink}" target="_blank" rel="noopener"><img src="${post.media_url}" alt="${post.caption}"></a></div>`;
+            feed.insertAdjacentHTML('beforeend', postHTML);
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Instagramフィードの取得に失敗しました:', err);
+      });
+  }
+
+  if (document.getElementById('insta-feed')) {
+    displayInstagramFeed();
+  }
+
+  // ===============================
+  // トップページ noteの埋め込み表示
+  // ===============================
+  function displayNoteFeed() {
+
+    const USER_ID = "izu_munakata"; // ← ここだけ書き換え
+    const RSS_URL = `https://note.com/${USER_ID}/rss`;
+    const PROXY = "https://api.allorigins.win/raw?url="; // CORS回避
+
+    fetch(PROXY + encodeURIComponent(RSS_URL))
+      .then(res => {
+        if (!res.ok) throw new Error("RSS fetch failed");
+        return res.text();
+      })
+      .then(xmlString => {
+        const xml = new DOMParser().parseFromString(xmlString, "text/xml");
+        const items = Array.from(xml.querySelectorAll("item")).slice(0, 4);
+
+        let html = "";
+
+        items.forEach(item => {
+          const titleEl = item.querySelector("title");
+          const linkEl = item.querySelector("link");
+          const dateEl = item.querySelector("pubDate");
+
+          const title = titleEl ? titleEl.textContent : "";
+          const link = linkEl ? linkEl.textContent : "";
+          const pubDate = dateEl ? dateEl.textContent : "";
+
+          // note特有：<media:thumbnail> はテキストノード
+          const thumbNode = item.getElementsByTagName("media:thumbnail")[0];
+          const thumbnail = thumbNode ? thumbNode.textContent.trim() : "";
+
+          html += `
+            <div class="journal_item">
+              <a href="${link}" target="_blank" rel="noopener">
+                ${thumbnail ? `
+                  <span class="img_wrap">
+                  <img src="${thumbnail}" alt="${title}">
+                  </span>
+                ` : ``}
+                <span class="ttl_wrap">
+                <span class="date">${new Date(pubDate).toLocaleDateString()}</span>
+                <span class="ttl">${title}</span>
+              </span>
+            </a>
+            </div>
+          `;
+        });
+
+        document.getElementById("noteFeed").innerHTML = html;
+      })
+      .catch(err => {
+        console.error("note RSS error:", err);
+      });
+
+  }
+
+  if (document.getElementById('noteFeed')) {
+    displayNoteFeed();
+  }
+
+
+
+
+
+  // ===============================
   // アンカーリンク
   // ===============================
   function indexAnker(target) {
@@ -286,6 +382,65 @@ document.addEventListener('DOMContentLoaded', () => {
     if (article) {
       indexAnker(article);
     }
+  }
+
+  /**
+   * 施設マップイラスト
+   */
+  function animateFacilityMap() {
+    const facilityMap = document.getElementById('facilityMap');
+    if (!facilityMap) return;
+
+    const facilityImg = Array.from(facilityMap.querySelectorAll('.img_item'));
+    const mapButton = Array.from(facilityMap.querySelectorAll('button'));
+
+    /**
+     * 表示切り替え
+     */
+    function changeMapImg(index) {
+      facilityImg.forEach(img => {
+        img.classList.remove('active_img');
+      });
+
+      mapButton.forEach(btn => {
+        btn.classList.remove('active_button');
+      });
+
+      if (facilityImg[index]) {
+        facilityImg[index].classList.add('active_img');
+      }
+      if (mapButton[index]) {
+        mapButton[index].classList.add('active_button');
+      }
+    }
+
+    /**
+     * 初期化
+     */
+    function init() {
+      mapButton.forEach((button, index) => {
+        console.log(index);
+
+        button.addEventListener('click', function() {
+          changeMapImg(index);
+        });
+
+        button.addEventListener('mouseover', function() {
+          changeMapImg(index);
+        });
+
+        button.addEventListener('mouseout', function() {
+          changeMapImg(0);
+        });
+      });
+    }
+
+    init();
+  }
+
+  // DOMに #facilityMap があれば実行
+  if (document.getElementById('facilityMap')) {
+    animateFacilityMap();
   }
 
 

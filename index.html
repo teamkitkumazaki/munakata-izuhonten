@@ -315,8 +315,8 @@
 							</a>
 						</div>
 					</div><!-- journal_ttl_wrap -->
-					<div class="comp-journal-list">
-						<div class="journal_item">
+					<div id="noteFeed" class="comp-journal-list">
+						<!-- <div class="journal_item">
 							<a href="#aaaa">
 								<span class="img_wrap">
 									<img src="assets/img/index/journal01.jpg">
@@ -326,40 +326,8 @@
 									<span class="ttl">酒・食・器の３つの要素をペアリングするトリプリングの体験を提供開始</span>
 								</span>
 							</a>
-						</div>
-						<div class="journal_item">
-							<a href="#aaaa">
-								<span class="img_wrap">
-									<img src="assets/img/index/journal02.jpg">
-								</span>
-								<span class="ttl_wrap">
-									<span class="date">2025.10.10</span>
-									<span class="ttl">イチゴとブルーチーズの白和他 魚介類とのペアリング等</span>
-								</span>
-							</a>
-						</div>
-						<div class="journal_item">
-							<a href="#aaaa">
-								<span class="img_wrap">
-									<img src="assets/img/index/journal03.jpg">
-								</span>
-								<span class="ttl_wrap">
-									<span class="date">2025.10.10</span>
-									<span class="ttl">蔵の意匠を巡る vol.6 - 覚悟を決めて手掛けた「宗像酵母」の波及効果】</span>
-								</span>
-							</a>
-						</div>
-						<div class="journal_item">
-							<a href="#aaaa">
-								<span class="img_wrap">
-									<img src="assets/img/index/journal04.jpg">
-								</span>
-								<span class="ttl_wrap">
-									<span class="date">2025.10.10</span>
-									<span class="ttl">宗像に根付く・手仕事の担い手たち Vol.4 - 好きなものを、純粋に、どこまでも突き詰める。ガラス作家・波多野裕子氏</span>
-								</span>
-							</a>
-						</div>
+						</div> -->
+
 					</div><!-- comp-journal-list -->
 				</div><!-- journal_flex_wrap -->
 			</div><!-- section_inner -->
@@ -372,36 +340,6 @@
 				</div><!-- insta_ttl_wrap -->
 				<div class="comp-insta-feed">
 					<div id="insta-feed" class="feed_inner">
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post01.jpg">
-							</a>
-						</div>
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post02.jpg">
-							</a>
-						</div>
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post03.jpg">
-							</a>
-						</div>
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post04.jpg">
-							</a>
-						</div>
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post05.jpg">
-							</a>
-						</div>
-						<div class="insta-post">
-							<a href="aaaa" target="_blank" rel="noopener">
-								<img src="assets/img/index/post06.jpg">
-							</a>
-						</div>
 					</div><!-- feed_inner -->
 					<div class="link_button">
 						<a target="_blank" href="#aaaa">
@@ -588,5 +526,62 @@
 
 </body>
 <script type="text/javascript" src="assets/js/layout.js"></script>
+
+<script>
+(function () {
+  const USER_ID = "skillup_next"; // ← ここだけ書き換え
+  const RSS_URL = `https://note.com/${USER_ID}/rss`;
+  const PROXY = "https://api.allorigins.win/raw?url="; // CORS回避
+
+  fetch(PROXY + encodeURIComponent(RSS_URL))
+    .then(res => {
+      if (!res.ok) throw new Error("RSS fetch failed");
+      return res.text();
+    })
+    .then(xmlString => {
+      const xml = new DOMParser().parseFromString(xmlString, "text/xml");
+      const items = Array.from(xml.querySelectorAll("item")).slice(0, 4);
+
+      let html = "";
+
+      items.forEach(item => {
+				const titleEl = item.querySelector("title");
+				const linkEl = item.querySelector("link");
+				const dateEl = item.querySelector("pubDate");
+
+				const title = titleEl ? titleEl.textContent : "";
+				const link = linkEl ? linkEl.textContent : "";
+				const pubDate = dateEl ? dateEl.textContent : "";
+
+        // note特有：<media:thumbnail> はテキストノード
+        const thumbNode = item.getElementsByTagName("media:thumbnail")[0];
+        const thumbnail = thumbNode ? thumbNode.textContent.trim() : "";
+
+        html += `
+					<div class="journal_item">
+						<a href="${link}" target="_blank" rel="noopener">
+							${thumbnail ? `
+								<span class="img_wrap">
+								<img src="${thumbnail}" alt="${title}">
+								</span>
+							` : ``}
+							<span class="ttl_wrap">
+							<span class="date">${new Date(pubDate).toLocaleDateString()}</span>
+							<span class="ttl">${title}</span>
+						</span>
+					</a>
+					</div>
+        `;
+      });
+
+      document.getElementById("noteFeed").innerHTML = html;
+    })
+    .catch(err => {
+      console.error("note RSS error:", err);
+    });
+})();
+</script>
+
+
 
 </html>
