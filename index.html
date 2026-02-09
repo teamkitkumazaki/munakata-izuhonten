@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="assets/css/style.css?ver2410223_30">
 </head>
 
-<body class="shippori">
+<body>
 	<header id="header" class="index">
 		<div class="header_inner">
 			<div class="header_left">
@@ -115,7 +115,7 @@
 				<h2 class="lead_ttl">ひとしずくに<br>物語を。</h2>
 				<div class="lead_desciption">
 					<p>風土の恵みを、五感で醸す。<br>素材に導かれながら行う酒造りは、<br>ひとつひとつ物語があります。</p>
-					<p>その一滴が、味わう人のこころに。<br>新銘柄「宗像」</p>
+					<p>その一滴が、味わう人のこころに。<br>新銘柄「<ruby><rb>宗像</rb><rt>むなかた</rt></ruby>」</p>
 					<p>大切な人と囲む食卓に<span>ささやかな彩りを。</span></p>
 				</div>
 			</div><!-- lead_txt_wrapper -->
@@ -154,7 +154,7 @@
 							<img src="assets/img/index/link_img02.jpg">
 						</div>
 						<div class="facility_txt">
-							<h3 class="facility_ttl">日本酒「宗像」</h3>
+							<h3 class="facility_ttl">日本酒「<ruby><rb>宗像</rb><rt>むなかた</rt></ruby>」</h3>
 							<div class="facility_description">
 								<p>地域とともに歩む日本酒を造るー。<br>その想いを込めて、新しい銘柄を「宗像」と命名。神さまとのご縁が深い土地で山々を巡った地下水と、地元の酒米などで仕込みます。オンラインでもご購入いただけます。</p>
 							</div>
@@ -526,61 +526,6 @@
 
 </body>
 <script type="text/javascript" src="assets/js/layout.js"></script>
-
-<script>
-(function () {
-  const USER_ID = "skillup_next"; // ← ここだけ書き換え
-  const RSS_URL = `https://note.com/${USER_ID}/rss`;
-  const PROXY = "https://api.allorigins.win/raw?url="; // CORS回避
-
-  fetch(PROXY + encodeURIComponent(RSS_URL))
-    .then(res => {
-      if (!res.ok) throw new Error("RSS fetch failed");
-      return res.text();
-    })
-    .then(xmlString => {
-      const xml = new DOMParser().parseFromString(xmlString, "text/xml");
-      const items = Array.from(xml.querySelectorAll("item")).slice(0, 4);
-
-      let html = "";
-
-      items.forEach(item => {
-				const titleEl = item.querySelector("title");
-				const linkEl = item.querySelector("link");
-				const dateEl = item.querySelector("pubDate");
-
-				const title = titleEl ? titleEl.textContent : "";
-				const link = linkEl ? linkEl.textContent : "";
-				const pubDate = dateEl ? dateEl.textContent : "";
-
-        // note特有：<media:thumbnail> はテキストノード
-        const thumbNode = item.getElementsByTagName("media:thumbnail")[0];
-        const thumbnail = thumbNode ? thumbNode.textContent.trim() : "";
-
-        html += `
-					<div class="journal_item">
-						<a href="${link}" target="_blank" rel="noopener">
-							${thumbnail ? `
-								<span class="img_wrap">
-								<img src="${thumbnail}" alt="${title}">
-								</span>
-							` : ``}
-							<span class="ttl_wrap">
-							<span class="date">${new Date(pubDate).toLocaleDateString()}</span>
-							<span class="ttl">${title}</span>
-						</span>
-					</a>
-					</div>
-        `;
-      });
-
-      document.getElementById("noteFeed").innerHTML = html;
-    })
-    .catch(err => {
-      console.error("note RSS error:", err);
-    });
-})();
-</script>
 
 
 

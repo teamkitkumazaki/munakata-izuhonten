@@ -134,6 +134,9 @@
               img{
                 width: auto;
                 height: 20px;
+                &.note{
+                  height: 15px;
+                }
               }
             }
           }

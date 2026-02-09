@@ -18,6 +18,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ================================
+  // アンカーリンクを全て再読み込みに変更
+  // ================================
+  // ページ内アンカー（#〜）クリックを「必ず再読み込み」にする
+  document.addEventListener('click', function(e) {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+
+    const hash = a.getAttribute('href');
+
+    // href="#" みたいなダミーは除外（必要なら消してOK）
+    if (!hash || hash === '#' || hash === '#0') return;
+
+    // ここが重要：デフォルト＋他ハンドラも止める
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof e.stopImmediatePropagation === 'function') {
+      e.stopImmediatePropagation();
+    }
+
+    const baseUrl = location.href.split('#')[0];
+    /*location.href = baseUrl + hash;*/ // これで常に再読み込み
+  }, true); // ← capture = true（他のJSより先に拾う）
+
+  // ================================
   // トップに戻るボタン + スクロール + ウィンドウサイズ系の対策処理
   function scrollAnimationSet(target) {
     const scButtonWrap = document.querySelector('#scrollTopWrap');
@@ -111,37 +135,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const humButton = document.getElementById('humButton');
     const humMenu = document.getElementById('hummenu');
     const header = document.getElementById('header');
-    let menuState = 0;
-    let currentScrollY = 0;
+    let isOpen = false;
+    let scrollY = 0;
 
-    function humMenuShift() {
-      const body = document.body;
-      if (menuState === 0) {
-        currentScrollY = window.scrollY;
-        body.style.position = 'fixed';
-        body.style.top = `-${currentScrollY}px`;
-        body.classList.add('fixed');
+    function toggleMenu() {
+      if (!isOpen) {
+        scrollY = window.scrollY;
         humMenu.classList.add('open');
         header.classList.add('hum_open');
-        menuState = 1;
       } else {
-        body.classList.remove('fixed');
-        body.style.position = '';
-        body.style.top = '';
         humMenu.classList.remove('open');
         header.classList.remove('hum_open');
-        window.scrollTo(0, currentScrollY);
-        menuState = 0;
+        window.scrollTo(0, scrollY);
       }
+      isOpen = !isOpen;
     }
 
-    function init() {
-      if (humButton) {
-        humButton.addEventListener('click', humMenuShift);
-      }
+    if (humButton) {
+      humButton.addEventListener('click', toggleMenu);
     }
 
-    init();
+    humMenu.querySelectorAll('a').forEach(function(link) {
+      setTimeout(function() {
+        link.addEventListener('click', toggleMenu);
+      }, 200);
+    });
   }
 
   humMenuToggle();
@@ -278,61 +296,61 @@ document.addEventListener('DOMContentLoaded', () => {
   // トップページ noteの埋め込み表示
   // ===============================
   function displayNoteFeed() {
-  const USER_ID = "izu_munakata"; // noteユーザーID
-  const RSS_URL = "https://note.com/" + USER_ID + "/rss";
+    const USER_ID = "izu_munakata"; // noteユーザーID
+    const RSS_URL = "https://note.com/" + USER_ID + "/rss";
 
-  // CORSプロキシ（優先順）
-  const PROXIES = [
-    "https://corsproxy.io/?",
-    "https://api.codetabs.com/v1/proxy?quest=",
-    "https://thingproxy.freeboard.io/fetch/"
-  ];
+    // CORSプロキシ（優先順）
+    const PROXIES = [
+      "https://corsproxy.io/?",
+      "https://api.codetabs.com/v1/proxy?quest=",
+      "https://thingproxy.freeboard.io/fetch/"
+    ];
 
-  /**
-   * プロキシを順番に試す fetch
-   */
-  function fetchWithFallback(url, proxies) {
-    if (!proxies.length) {
-      return Promise.reject(new Error("All proxies failed"));
+    /**
+     * プロキシを順番に試す fetch
+     */
+    function fetchWithFallback(url, proxies) {
+      if (!proxies.length) {
+        return Promise.reject(new Error("All proxies failed"));
+      }
+
+      const proxy = proxies[0];
+
+      return fetch(proxy + encodeURIComponent(url))
+        .then(function(res) {
+          if (!res.ok) throw new Error("Fetch failed");
+          return res.text();
+        })
+        .catch(function() {
+          // 次のプロキシで再試行
+          return fetchWithFallback(url, proxies.slice(1));
+        });
     }
 
-    const proxy = proxies[0];
+    /**
+     * RSSを取得して描画
+     */
+    fetchWithFallback(RSS_URL, PROXIES)
+      .then(function(xmlString) {
+        const xml = new DOMParser().parseFromString(xmlString, "text/xml");
+        const items = Array.from(xml.querySelectorAll("item")).slice(0, 4);
 
-    return fetch(proxy + encodeURIComponent(url))
-      .then(function (res) {
-        if (!res.ok) throw new Error("Fetch failed");
-        return res.text();
-      })
-      .catch(function () {
-        // 次のプロキシで再試行
-        return fetchWithFallback(url, proxies.slice(1));
-      });
-  }
+        let html = "";
 
-  /**
-   * RSSを取得して描画
-   */
-  fetchWithFallback(RSS_URL, PROXIES)
-    .then(function (xmlString) {
-      const xml = new DOMParser().parseFromString(xmlString, "text/xml");
-      const items = Array.from(xml.querySelectorAll("item")).slice(0, 4);
+        items.forEach(function(item) {
+          const titleEl = item.querySelector("title");
+          const linkEl = item.querySelector("link");
+          const dateEl = item.querySelector("pubDate");
 
-      let html = "";
+          const title = titleEl ? titleEl.textContent : "";
+          const link = linkEl ? linkEl.textContent : "";
+          const pubDate = dateEl ? dateEl.textContent : "";
 
-      items.forEach(function (item) {
-        const titleEl = item.querySelector("title");
-        const linkEl = item.querySelector("link");
-        const dateEl = item.querySelector("pubDate");
+          // note特有：<media:thumbnail> はテキストノード
+          const thumbNode = item.getElementsByTagName("media:thumbnail")[0];
+          const thumbnail = thumbNode ? thumbNode.textContent.trim() : "";
 
-        const title = titleEl ? titleEl.textContent : "";
-        const link = linkEl ? linkEl.textContent : "";
-        const pubDate = dateEl ? dateEl.textContent : "";
-
-        // note特有：<media:thumbnail> はテキストノード
-        const thumbNode = item.getElementsByTagName("media:thumbnail")[0];
-        const thumbnail = thumbNode ? thumbNode.textContent.trim() : "";
-
-        html += `
+          html += `
           <div class="journal_item">
             <a href="${link}" target="_blank" rel="noopener">
               ${thumbnail ? `
@@ -347,25 +365,21 @@ document.addEventListener('DOMContentLoaded', () => {
           </a>
           </div>
         `;
-      });
+        });
 
-      const container = document.getElementById("noteFeed");
-      if (container) {
-        container.innerHTML = html;
-      }
-    })
-    .catch(function (err) {
-      console.error("note RSS error:", err);
-    });
+        const container = document.getElementById("noteFeed");
+        if (container) {
+          container.innerHTML = html;
+        }
+      })
+      .catch(function(err) {
+        console.error("note RSS error:", err);
+      });
   }
 
   if (document.getElementById('noteFeed')) {
     displayNoteFeed();
   }
-
-
-
-
 
   // ===============================
   // アンカーリンク
