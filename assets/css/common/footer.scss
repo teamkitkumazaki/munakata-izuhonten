@@ -115,6 +115,9 @@ footer{
             img{
               width: auto;
               height: 20px;
+              &.note{
+                height: 15px;
+              }
             }
           }
         }
@@ -253,11 +256,14 @@ footer{
           @include flexSet;
           justify-content: flex-start;
           .sns_item{
-            margin-right: 20px;
+            margin-right: 15px;
             a{
               @include hover;
               img{
                 height: 24px;
+                &.note{
+                  height: 16px;
+                }
               }
             }
           }

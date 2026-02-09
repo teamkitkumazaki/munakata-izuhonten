@@ -1,13 +1,13 @@
 .comp-ttl-group{
   margin-bottom: 30px;
   .ttl_jp{
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     text-indent: -0.1em;
     margin-bottom: 12px;
   }
   .ttl_en{
     @include lato;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -15,7 +15,7 @@
   .comp-ttl-group{
     margin-bottom: 30px;
     .ttl_jp{
-      font-size: 3.6rem;
+      font-size: 2.8rem;
       text-indent: -0.1em;
       margin-bottom: 15px;
     }

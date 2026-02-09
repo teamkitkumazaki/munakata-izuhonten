@@ -1,5 +1,5 @@
 header{
-  position: fixed;
+  position: relative;
   z-index: 1000;
   top:0;
   left:0;
@@ -65,7 +65,7 @@ header{
       }
       .navigation_wrapper{
         @include flexSet;
-        margin-right: 5px;
+        margin-right: 45px;
         .nav_item{
           margin-right: 10px;
           transition: filter .3s;
@@ -81,6 +81,10 @@ header{
 
       }
       .hummenu_wrap{
+        position: fixed;
+        top: 20px;
+        right: 15px;
+        z-index: 1000;
         button{
           position: relative;
           display: block;
@@ -172,7 +176,7 @@ header{
         @include flexSet;
         height: 70px;
         .header_logo{
-          position: relative;
+          position: fixed;
           width: 70px;
           height: 255px;
           margin-right: 30px;
@@ -198,6 +202,7 @@ header{
         .header_navigation{
           @include flexSet;
           height: 70px;
+          margin-left: 100px;
           li{
             line-height: 70px;
             margin-right: 20px;
@@ -216,6 +221,9 @@ header{
         }
       }
       .header_right{
+        position: fixed;
+        right:0;
+        top: 15px;
         @include flexSet;
         line-height: 70px;
         align-items: center;

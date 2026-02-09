@@ -10,7 +10,7 @@
     .txt_flex_wrap{
       color: #fff;
       .lead_ttl{
-        font-size: 2.2rem;
+        font-size: 2.0rem;
         line-height: 1.67;
         text-align: center;
         color: #fff;
@@ -23,12 +23,12 @@
   }
   .section-sakamai{
     .sakamai_main_wrapper{
-      padding-top: 13vw;
+      padding-top: 15vw;
       @include flexSet;
       justify-content: center;
       margin-bottom: 13vw;
       .sakamai_ttl{
-        font-size: 2.8rem;
+        font-size: 2.0rem;
         line-height: 1.65;
         writing-mode: vertical-rl;
         margin-bottom: 13vw;
@@ -65,7 +65,7 @@
   .section-method{
     padding-top: 15vw;
     .method_main_ttl{
-      font-size: 2.4rem;
+      font-size: 2.0rem;
       text-align: center;
       line-height: 1.67;
       margin-bottom: 30px;
@@ -92,7 +92,7 @@
       padding-bottom: 55vw;
     }
     .renovation_ttl{
-      font-size: 2.2rem;
+      font-size: 2.0rem;
       line-height: 1.67;
       text-align: center;
       margin-bottom: 20px;
@@ -104,7 +104,7 @@
   .section-history{
     padding-top: 16vw;
     .history_main_ttl{
-      font-size: 2.2rem;
+      font-size: 2.0rem;
       line-height: 1.67;
       text-align: center;
       margin-bottom: 20px;
@@ -133,12 +133,13 @@
         @include flexSet;
         justify-content: space-between;
         .lead_ttl{
-          font-size: 3.0rem;
+          font-size: 2.8rem;
           text-align: left;
           margin-bottom: 0px;
         }
         .lead_description{
-          width: 50%;
+          width: 55%;
+          min-width: 620px;
         }
       }
     }
@@ -147,14 +148,15 @@
         padding-top: 120px;
         @include flexSet;
         flex-direction:row-reverse;
-        justify-content: flex-start;
-        margin-bottom: 160px;
+        justify-content: center;
+        max-width: 1560px;
+        margin: 0 auto 160px;
         .sakamai_ttl{
           width: 160px;
-          font-size: 3.0rem;
+          font-size: 2.8rem;
           line-height: 1.65;
           writing-mode: vertical-rl;
-          margin-bottom: 0;
+          margin-bottom: 120px;
           @include flexSet;
           align-items: center;
           span{
@@ -199,7 +201,7 @@
     .section-method{
       padding-top: 160px;
       .method_main_ttl{
-        font-size: 3.0rem;
+        font-size: 2.8rem;
         text-align: center;
         line-height: 1.67;
         margin-bottom: 60px;
@@ -229,7 +231,7 @@
         padding-bottom: 50vw;
       }
       .renovation_ttl{
-        font-size: 3.0rem;
+        font-size: 2.8rem;
         margin-bottom: 50px;
       }
       .renovation_description{
@@ -240,7 +242,7 @@
     .section-history{
       padding-top: 140px;
       .history_main_ttl{
-        font-size: 3.0rem;
+        font-size: 2.8rem;
         text-align: center;
         margin-bottom: 60px;
       }

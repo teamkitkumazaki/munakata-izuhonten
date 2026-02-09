@@ -1,5 +1,5 @@
 .comp-underpage-main{
-  padding-top: 80px;
+  padding-top: 0px;
   .under_main_wrapper{
     width: calc(100% - 20px);
     margin-left: 20px;
@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 980px){
   .comp-underpage-main{
-    padding-top: 110px;
+    padding-top: 0px;
     .under_main_wrapper{
       width: calc(100% - 120px);
       margin-left: 120px;
