@@ -293,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // トップページ noteの埋め込み表示
   // ===============================
   function displayNoteFeed() {
+    console.log('displayNoteFeed');
     const USER_ID = "izu_munakata"; // noteユーザーID
     const RSS_URL = "https://note.com/" + USER_ID + "/rss";
 
@@ -303,25 +304,16 @@ document.addEventListener('DOMContentLoaded', () => {
       "https://thingproxy.freeboard.io/fetch/"
     ];
 
-    /**
-     * プロキシを順番に試す fetch
-     */
-    function fetchWithFallback(url, proxies) {
-      if (!proxies.length) {
-        return Promise.reject(new Error("All proxies failed"));
-      }
+    // プロキシリストを消して、作成したGASのURLを入れる
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbzYM0qL9g78-uLqicqYSy6pIi8SwaTxRzWbl4v3_k66pi9Bwo87LnXZ1tOO9bb1KOUE/exec";
 
-      const proxy = proxies[0];
-
-      return fetch(proxy + encodeURIComponent(url))
-        .then(function(res) {
-          if (!res.ok) throw new Error("Fetch failed");
-          return res.text();
-        })
-        .catch(function() {
-          // 次のプロキシで再試行
-          return fetchWithFallback(url, proxies.slice(1));
-        });
+    function fetchWithFallback(url) {
+      // 自分のGASだけを叩くようにシンプル化
+      return fetch(GAS_URL)
+      .then(function(res) {
+        if (!res.ok) throw new Error("Fetch failed");
+        return res.text();
+      });
     }
 
     /**
@@ -426,15 +418,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /**
-   * 施設マップイラスト
-   */
+  /** * 施設マップイラスト */
+
   function animateFacilityMap() {
     const facilityMap = document.getElementById('facilityMap');
     if (!facilityMap) return;
 
     const facilityImg = Array.from(facilityMap.querySelectorAll('.img_item'));
     const mapButton = Array.from(facilityMap.querySelectorAll('button'));
+
+    const facilityPop = document.getElementById('facilityPop');
+    const facilityClose = document.getElementById('facilityClose');
+    const facilityBg = document.getElementById('facilityBg');
+    const facilityContent = document.getElementById('facilityContent');
+
+    let mapState = 0;
+
+    // モーダルを開く関数
+    function openFacilityModal(index) {
+      if (facilityPop && facilityContent) {
+        // 1. コンテンツを空にする
+        facilityContent.innerHTML = '';
+
+        // 2. ボタンの属性からターゲットとなるID（またはコンテンツ）を取得
+        // jQuery: .attr('content') -> Vanilla: .getAttribute('content')
+        const targetSelector = mapButton[index].getAttribute('content');
+        const targetElement = document.querySelector(targetSelector);
+
+        console.log('targetSelector:' + targetSelector);
+        console.log('targetElement:' + targetElement);
+        console.log('innerHTML:' + targetElement.innerHTML);
+
+        // 3. ターゲット要素が存在すれば、その中身をコピーして追加
+        if (targetElement) {
+          facilityContent.innerHTML = targetElement.innerHTML;
+        }
+
+        facilityPop.classList.add('open');
+      }
+    }
+
+    // モーダルを閉じる関数
+    function closeFacilityModal() {
+      if (facilityPop) {
+        facilityPop.classList.remove('open');
+      }
+    }
 
     /**
      * 表示切り替え
@@ -447,6 +476,18 @@ document.addEventListener('DOMContentLoaded', () => {
       mapButton.forEach(btn => {
         btn.classList.remove('active_button');
       });
+
+      console.log('mapState:' + mapState);
+      console.log('index:' + index);
+
+      // 同じボタンを再度クリック（またはホバー）した時の判定
+      if (mapState === index) {
+        if (facilityPop) {
+          openFacilityModal(index);
+        }
+      } else {
+        mapState = index;
+      }
 
       if (facilityImg[index]) {
         facilityImg[index].classList.add('active_img');
@@ -461,29 +502,156 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function init() {
       mapButton.forEach((button, index) => {
-        console.log(index);
-
-        button.addEventListener('click', function() {
+        button.addEventListener('click', () => {
           changeMapImg(index);
         });
 
-        button.addEventListener('mouseover', function() {
+        button.addEventListener('mouseover', () => {
           changeMapImg(index);
         });
 
-        button.addEventListener('mouseout', function() {
+        button.addEventListener('mouseout', () => {
           changeMapImg(0);
         });
       });
+
+      if (facilityClose) {
+        facilityClose.addEventListener('click', closeFacilityModal);
+      }
+      if (facilityBg) {
+        facilityBg.addEventListener('click', closeFacilityModal);
+      }
     }
 
     init();
   }
 
-  // DOMに #facilityMap があれば実行
+  // 実行
   if (document.getElementById('facilityMap')) {
     animateFacilityMap();
   }
+
+
+  // 営業カレンダー
+
+  function setBusinessCalendar() {
+
+    let eventContent = [];
+    const popObj = document.getElementById('eventPop');
+    const popBg = popObj.querySelector('#popBg');
+    const closeButton = popObj.querySelector('#closeButton');
+    const eveName = popObj.querySelector('#eveName');
+    const eveDate = popObj.querySelector('#eveDate');
+    const eveTime = popObj.querySelector('#eveTime');
+    const eveDesc = popObj.querySelector('#eveDesc');
+
+    // ポップアップを表示する関数
+    function eventDetailPop(name, start, end, desc) {
+      eveName.innerHTML = name;
+
+      // 日付フォーマットの整形 (YYYY年MM月DD日)
+      if (start) {
+        eveDate.innerHTML = `${start.slice(0, 4)}年${start.slice(5, 7)}月${start.slice(8, 10)}日`;
+      }
+
+      // 説明文の表示
+      eveDesc.innerHTML = (desc !== undefined && desc !== null) ? desc : '';
+
+      // 時間の整形
+      const startTime = start ? start.slice(11, 16) : null;
+      const endTime = end ? end.slice(11, 16) : null;
+
+      if (startTime && startTime.length > 3) {
+        eveTime.innerHTML = `${startTime}~${endTime}`;
+      } else {
+        eveTime.innerHTML = '終日';
+      }
+
+      // クラス付与（アニメーション用）
+      setTimeout(() => {
+        popObj.classList.add('open');
+      }, 100);
+    }
+
+    // カレンダー内の特定のタイトルにクラスを付与する関数
+    function factoryCalendarEdit() {
+      const titles = document.querySelectorAll('.fc-event-container .fc-title, .fc-event-title'); // v6対応
+      titles.forEach((titleEl, index) => {
+        eventContent[index] = titleEl.textContent;
+        const text = eventContent[index];
+
+        if (text === '休業日' || text === '定休日') {
+          titleEl.classList.add('close');
+        } else if (['土曜日営業未定', '営業未定', '短縮営業日', '時間短縮営業'].includes(text)) {
+          titleEl.classList.add('short');
+        }
+      });
+    }
+
+    // 初期化関数
+    function init() {
+      const calendarEl = document.getElementById('calendar');
+      const loadingEl = document.getElementById('loading');
+
+      // FullCalendar v6+ (Standard Bundle) の書き方
+      // ※FullCalendarのJSファイルが読み込まれている前提です
+      if (typeof FullCalendar !== 'undefined') {
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: 'ja',
+          headerToolbar: {
+            left: 'prev',
+            center: 'title',
+            right: 'next'
+          },
+          displayEventTime: false,
+          googleCalendarApiKey: 'AIzaSyCou0PcnugmOWjYpghfw_p8pUJkmlXjVjc',
+          firstDay: 1,
+          events: 'meriyasukun.member@gmail.com',
+
+          eventClick: function(info) {
+            const event = info.event;
+            // FullCalendar v6では event.startStr などで取得
+            eventDetailPop(
+              event.title,
+              event.startStr,
+              event.endStr,
+              event.extendedProps.description
+            );
+            info.jsEvent.preventDefault(); // リンク遷移を防ぐ
+          },
+
+          loading: function(bool) {
+            loadingEl.style.display = bool ? 'block' : 'none';
+            if (!bool) {
+              setTimeout(factoryCalendarEdit, 1200);
+            }
+          }
+        });
+
+        calendar.render();
+      }
+
+      // 初回実行
+      setTimeout(factoryCalendarEdit, 1200);
+
+      // ポップアップを閉じるイベント
+      [popBg, closeButton].forEach(el => {
+        if (el) {
+          el.addEventListener('click', () => {
+            popObj.classList.remove('open');
+          });
+        }
+      });
+    }
+
+    init();
+
+  }
+
+  if (document.getElementById('brewery')) {
+    setBusinessCalendar();
+  }
+
 
 
 });

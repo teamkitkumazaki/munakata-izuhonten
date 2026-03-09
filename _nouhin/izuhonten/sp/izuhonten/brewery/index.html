@@ -43,7 +43,7 @@
 	<script src="/js/common_1st/sp/base-min.js"></script>
 
 	<link rel="stylesheet" href="/sp/css/front/base.css">
-	<link rel="stylesheet" href="/sp/css/front/style.css?ver6">
+	<link rel="stylesheet" href="/sp/css/front/style.css?ver6666">
 	<link rel="stylesheet" href="/sp/css/module.css">
 	<link rel="stylesheet" href="/sp/css/system.css">
 	<link rel="stylesheet" href="/css/common_1st/sp/base.css">
@@ -125,7 +125,7 @@
 					<div class="under_main_txt">
 						<div class="comp-page-bread">
 							<div class="link_wrap">
-								<a href="/sp/izuhonten">ホーム</a>
+								<a href="/izuhonten">ホーム</a>
 								<span class="current">福岡 宗像 酒蔵 伊豆本店</span>
 							</div>
 						</div><!-- comp-page-bread -->
@@ -162,22 +162,40 @@
 					</div>
 					<div class="map_button_wrap">
 						<div class="button_item button01">
-							<button class="active_button">施設全体</button>
+							<button class="active_button">
+								<span class="button_wrapper">施設全体</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 						<div class="button_item button02">
-							<button>醸造蔵</button>
+							<button content="#contents02">
+								<span class="button_wrapper">醸造蔵</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 						<div class="button_item button03">
-							<button>酒蔵BAR</button>
+							<button content="#contents03">
+								<span class="button_wrapper">酒蔵BAR</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 						<div class="button_item button04">
-							<button>直売所</button>
+							<button content="#contents04">
+								<span class="button_wrapper">直売所</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 						<div class="button_item button05">
-							<button>甘味</button>
+							<button content="#contents05">
+								<span class="button_wrapper">甘味</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 						<div class="button_item button06">
-							<button>歴史展示</button>
+							<button content="#contents06">
+								<span class="button_wrapper">歴史展示</span>
+								<span class="detail_button"><span></span></span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -189,7 +207,7 @@
 						<span class="ttl_en">Facility</span>
 					</hgroup>
 					<div class="comp-facility-detail">
-						<div class="facility_item">
+						<div id="contents02" class="facility_item">
 							<div class="facility_img">
 								<img src="/img/izuhonten/brewery/facility01.jpg">
 							</div>
@@ -200,7 +218,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="facility_item">
+						<div id="contents03" class="facility_item">
 							<div class="facility_img">
 								<img src="/img/izuhonten/brewery/facility02.jpg">
 							</div>
@@ -211,7 +229,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="facility_item">
+						<div id="contents04" class="facility_item">
 							<div class="facility_img">
 								<img src="/img/izuhonten/brewery/facility03.jpg">
 							</div>
@@ -233,7 +251,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="facility_item">
+						<div id="contents05" class="facility_item">
 							<div class="facility_img">
 								<img src="/img/izuhonten/brewery/facility04.jpg">
 							</div>
@@ -244,7 +262,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="facility_item">
+						<div id="contents06" class="facility_item">
 							<div class="facility_img">
 								<img src="/img/izuhonten/brewery/facility05.jpg">
 							</div>
@@ -267,7 +285,8 @@
 						</hgroup>
 						<div class="access_content">
 							<div class="access_description">
-								<p>国道3号の冨地原交差点を左折後、石丸交差点を右折。<br>県道29号を道なりに約2km進む。武丸交差点を左折後すぐ。<br>「宗像」の煙突が目印。<span>※お酒をお楽しみいただくお客様は、公共交通機関でのご来場をお願いいたします。</span></p>
+								<p>国道3号の冨地原交差点を左折後、石丸交差点を右折。<br>県道29号を道なりに約2km進む。武丸交差点を左折後すぐ。<br>「伊豆本店」の煙突が目印。<span>※お酒をお楽しみいただくお客様は、公共交通機関でのご来場をお願いいたします。</span></p>
+								<p>営業時間 : 10:00 - 17:00<br>定休日 : 不定休</p>
 							</div>
 							<div class="access_map">
 								<iframe
@@ -286,9 +305,9 @@
 							<span class="ttl_en">Calendar</span>
 						</hgroup>
 						<div class="calendar_wrapper">
-							<iframe src="https://calendar.google.com/calendar/embed?src=c_1ad31d60807c3d74524ac05fd57e2e0a3cd98ee87e8d638a79f6fbb8a75a055b%40group.calendar.google.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+							<iframe src="https://calendar.google.com/calendar/embed?src=web.izu%40kubara.co.jp&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 						</div>
-					</div>
+					</div><!-- calendar_flex_wrap -->
 				</div><!-- section_inner -->
 			</section>
 			<section class="section-gallery">
@@ -489,6 +508,31 @@
 			</div><!-- footer_inner -->
 		</footer>
 
+		<div id="facilityPop" class="comp-facility-pop">
+			<button id="facilityClose" class="profile_close">
+				<svg viewBox="0 0 57.51 57.51"><line class="cls-1" x1=".35" y1=".35" x2="57.15" y2="57.15"/><line class="cls-1" x1="57.15" y1=".35" x2=".35" y2="57.15"/></svg>
+			</button>
+			<div id="facilityBg" class="profile_bg"></div>
+			<div id="facilityInner" class="profile_inner">
+				<div id="facilityContent" class="profile_content">
+					<div class="facility_img">
+						<img src="/img/izuhonten/facility/facility01.jpg">
+					</div>
+					<div class="facility_txt">
+						<h3 class="facility_ttl">醸造蔵</h3>
+						<div class="facility_description">
+							<p>日本酒はどのように造られているのか。どなたでも酒造りの様子をご見学いただけます。伊豆本店は、蔵開きの先駆けとなった酒蔵。昔から、お客様に日本酒ができる様子を知っていただくことで、お酒を愛していただけるという考えを大切にしてきました。</p>
+						</div>
+					</div>
+				</div><!-- profile_content -->
+			</div><!-- profile_inner -->
+		</div>
+
+		<section id="eventPop" class="comp-event-popup open" style="display: none;">
+			<div id="popBg" class="pop_bg"></div>
+			<div id="loading"></div>
+		</section>
+
 	</div><!-- /#work_wrap -->
 	<!-- ==================== /wrapper ==================== -->
 
@@ -506,7 +550,7 @@
 		・ページ固有のjsを読み込んでください。
 		・以下の記述は例になりますので不要な場合は削除、書き換えをしてください。
 	-->
-	<script src="/js/izuhonten/sp/script.js?ver4"></script>
+	<script src="/js/izuhonten/sp/script.js?ver6666"></script>
 	<!-- ===== /page ===== -->
 
 </body>
